@@ -1,0 +1,45 @@
+.input {
+    padding: 12px;
+    width: 306px;
+    background: #FFFFFF;
+    border: 1px solid #E5E0EB;
+    border-radius: 2px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #141f16;
+    transition: all linear 0.1s;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.column__input {
+    position: relative;
+}
+
+.input:focus {
+    border: 1px solid #9D3FE7;
+}
+
+.input:focus ~ .labelForInput,
+.input:valid ~ .labelForInput {
+    top: -10px;
+    font-size: 12px;
+}
+
+.labelForInput {
+    color: #ABA7AF;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 0 3px;
+    text-align: center;
+    transition: all linear 0.1s;
+    cursor: default;
+    background-color: #FFFFFF;
+}

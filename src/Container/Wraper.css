@@ -1,0 +1,10 @@
+.wraper {
+    width: 330px;
+    max-width: 330px;
+}
+
+.login__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

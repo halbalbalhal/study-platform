@@ -1,0 +1,11 @@
+.login__signUp {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ABA7AF;
+}
+
+.login a {
+    color: #000000;
+}

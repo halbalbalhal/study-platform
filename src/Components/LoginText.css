@@ -1,0 +1,18 @@
+.column__group {
+    display: flex;
+}
+
+.group__border {
+    width: 100%;
+    border: 1px solid #1E1E1E;
+}
+
+.group__text {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 132%;
+    text-align: center;
+    color: #1A141F;
+    margin: 20px 0 28px 0;
+}
