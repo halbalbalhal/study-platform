@@ -8,17 +8,13 @@
     background: none;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-}
-
 .login {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
 }
 
 .login__container {
