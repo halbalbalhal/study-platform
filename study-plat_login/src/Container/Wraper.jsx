@@ -1,4 +1,4 @@
-import LoginText from '../Components/LoginText'
+import Text from '../Components/Text'
 import Input from '../Components/Input'
 import Button from '../Components/Button'
 import SecondButton from '../Components/SecondButton'
@@ -9,7 +9,7 @@ function Wraper () {
     return(
         <div className='wraper'>
             <div className='login__column'>
-                <LoginText />
+                <Text title='Login' />
                 <Input title='E-mail' type='text'/>
                 <Input title='Password' type='password'/>
                 <Button title='Login' />

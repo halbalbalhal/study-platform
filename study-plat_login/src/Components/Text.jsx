@@ -1,13 +1,13 @@
-import './LoginText.css'
+import './Text.css'
 
-function LoginText() {
+function Text(props) {
     return(
         <div className='column__group'>
             <div className='group__border'></div>
-            <span className='group__text'>Login</span>
+            <span className='group__text'>{props.title}</span>
             <div className='group__border'></div>
         </div>
     )
 }
 
-export default LoginText
+export default Text

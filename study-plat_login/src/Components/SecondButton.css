@@ -15,7 +15,7 @@
     color: #9D3FE7;
     transition: all linear 0.1s;
     gap: 0 15px;
-    margin: 16px 0 28px 0;
+    margin-top: 16px;
 }
 
 .column__loginGoogleBtn:hover {

@@ -1,9 +1,12 @@
 .column__group {
     display: flex;
+    align-items: center;
+    gap: 0 6px;
 }
 
 .group__border {
-    width: 100%;
+    width: 100px;
+    height: 0;
     border: 1px solid #1E1E1E;
 }
 
@@ -14,5 +17,5 @@
     line-height: 132%;
     text-align: center;
     color: #1A141F;
-    margin: 20px 0 28px 0;
+    margin: 20px 0 12px 0;
 }

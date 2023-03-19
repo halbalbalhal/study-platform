@@ -1,9 +1,10 @@
-.login__signUp {
+.login__textWithLink {
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     color: #ABA7AF;
+    margin-top: 28px;
 }
 
 .login a {

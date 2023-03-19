@@ -1,6 +1,7 @@
 .wraper {
-    width: 330px;
-    max-width: 330px;
+    width: 332px;
+    max-width: 332px;
+    overflow: hidden;
 }
 
 .login__column {
