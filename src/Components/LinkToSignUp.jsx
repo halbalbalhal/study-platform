@@ -1,8 +1,8 @@
 import './LinkToSignUp.css'
 
-function LinkToSignUp () {
+function LinkToSignUp (props) {
     return(
-        <span className='login__signUp'>Don’t have an account?<a href='https://ru.reactjs.org/'> Sign up</a></span>
+        <span className='login__signUp'>Don’t have an account?<a href={props.link}> Sign up</a></span>
     )
 }
 

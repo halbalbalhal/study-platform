@@ -2,6 +2,7 @@ import LoginText from '../Components/LoginText'
 import Input from '../Components/Input'
 import Button from '../Components/Button'
 import SecondButton from '../Components/SecondButton'
+import google_icon from '../Pictures/Google.svg'
 import './Wraper.css'
 
 function Wraper () {
@@ -9,10 +10,10 @@ function Wraper () {
         <div className='wraper'>
             <div className='login__column'>
                 <LoginText />
-                <Input name='E-mail' type='text'/>
-                <Input name='Password' type='password'/>
-                <Button name='Login' />
-                <SecondButton />
+                <Input title='E-mail' type='text'/>
+                <Input title='Password' type='password'/>
+                <Button title='Login' />
+                <SecondButton title='Login with Google' img={google_icon} />
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ function App () {
         <div className='login'>
             <PictureWithText />
             <Wrapper />
-            <LinkToSignUp />
+            <LinkToSignUp link='https://ru.reactjs.org/' />
         </div>
     )
 }

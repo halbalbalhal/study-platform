@@ -4,7 +4,7 @@ function Input(props) {
     return(
         <div className='column__input'>
             <input type={props.type} className='input' required />
-            <label for='' className='labelForInput'>{props.name}</label>
+            <label for='' className='labelForInput'>{props.title}</label>
         </div>
     )
 }

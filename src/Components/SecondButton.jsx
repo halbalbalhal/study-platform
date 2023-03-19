@@ -1,8 +1,8 @@
 import './SecondButton.css'
 
-function SecondButton() {
+function SecondButton(props) {
     return(
-        <button className='column__loginGoogleBtn'><img src='..\Pictures\Google.svg' alt='' className='loginGoogleImg'/>Login with Google</button>
+        <button className='column__loginGoogleBtn'><img src={props.img} alt='' className='loginGoogleImg'/>{props.title}</button>
     )
 }
 
