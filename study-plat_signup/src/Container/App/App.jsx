@@ -1,6 +1,6 @@
-import Wrapper from './Wraper'
-import PictureWithText from '../Components/PictureWithText'
-import Link from '../Components/Link'
+import Wrapper from '../Wraper/Wraper'
+import PictureWithText from '../../Components/PictureWithText/PictureWithText'
+import Link from '../../Components/Link/Link'
 import './App.css'
 
 function App () {

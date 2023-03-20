@@ -1,6 +1,6 @@
-import Text from '../Components/Text'
-import Input from '../Components/Input'
-import Button from '../Components/Button'
+import Text from '../../Components/Text/Text'
+import Input from '../../Components/Input/Input'
+import Button from '../../Components/Button/Button'
 import './Wraper.css'
 
 function Wraper () {

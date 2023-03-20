@@ -1,5 +1,5 @@
 import './PictureWithText.css'
-import cookie from '../Pictures/Cookie.svg'
+import cookie from '../../Pictures/Cookie.svg'
 
 function PictureWithText(props) {
     return(
