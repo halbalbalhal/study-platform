@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap: 0 6px;
+    margin: 20px 0 12px 0;
 }
 
 .group__border {
@@ -17,5 +18,4 @@
     line-height: 132%;
     text-align: center;
     color: #1A141F;
-    margin: 20px 0 12px 0;
 }

@@ -4,8 +4,8 @@ function Button(props) {
     return(
         <button className='column__loginBtn'>{props.title}</button>
     )
-    function Width () {
-        document.querySelector('.column__loginBtn').style.width = '20px'
+    function Width (className) {
+        document.querySelector(className).style.width = '20px'
     }
 }
 

@@ -1,4 +1,4 @@
-import Wrapper from '../Wraper/Wraper'
+import Wrapper from '../Wrapper/Wrapper'
 import PictureWithText from '../../Components/PictureWithText/PictureWithText'
 import Link from '../../Components/Link/Link'
 import './App.css'

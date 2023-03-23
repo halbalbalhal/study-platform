@@ -1,11 +1,11 @@
 import Text from '../../Components/Text/Text'
 import Input from '../../Components/Input/Input'
 import Button from '../../Components/Button/Button'
-import './Wraper.css'
+import './Wrapper.css'
 
-function Wraper () {
+function Wrapper () {
     return(
-        <div className='wraper'>
+        <div className='wrapper'>
             <div className='login__column'>
                 <Text title='Signup' />
                 <Input title='Name' type='text'/>
@@ -17,4 +17,4 @@ function Wraper () {
     )
 }
 
-export default Wraper
+export default Wrapper
