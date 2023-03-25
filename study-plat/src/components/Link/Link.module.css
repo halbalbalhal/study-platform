@@ -10,4 +10,13 @@
 
 .link {
     color: var(--dark-color);
+    transition: var(--transition);
+}
+
+.link:hover {
+    opacity: 0.85;
+}
+
+.link {
+    -webkit-tap-highlight-color: transparent;
 }

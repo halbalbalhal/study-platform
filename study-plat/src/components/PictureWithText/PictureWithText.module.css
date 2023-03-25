@@ -19,3 +19,13 @@
     max-width: 172px;
     width: 155px;
 }
+
+@media screen and (max-width: 545px)
+{
+    .suggestion {
+        max-width: 103px;
+        width: 103px;
+        right: -95px;
+        top: -40px;
+    }
+}

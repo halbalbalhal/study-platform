@@ -6,3 +6,24 @@
     height: 100vh;
     width: 100%;
 }
+
+@media screen and (max-width: 420px)
+{
+    .container {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 390px)
+{
+    .container {
+        transform: scale(0.85);
+    }
+}
+
+@media screen and (max-width: 370px)
+{
+    .container {
+        transform: scale(0.77);
+    }
+}
