@@ -1,0 +1,20 @@
+:root {
+
+    /*Colors*/
+    --dark-color: #1A141F;
+    --white-color: #ffffff;
+    --light-purple-color: #9D3FE7;
+    --dark-purple-color: #6A17AB;
+    --light-gray-color: #ABA7AF;
+    --white-gray-color: #E5E0EB;
+    --red-color: #D51A52;
+    --orange-color: #FF9500;
+    --green-color: #00B998;
+    --blue-color: #0F0BAB;
+
+    /*Borders*/
+    --small-radius: 4px;
+
+    /*Transition*/
+    --trasition: all .25s linear;
+}
