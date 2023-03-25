@@ -1,0 +1,6 @@
+@import '../../styles/constants.css';
+
+.title {
+    font-size: 60px;
+    color: var(--red-color);
+}
