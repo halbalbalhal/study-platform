@@ -1,5 +1,6 @@
 import FirstPage from '../containers/FirstPage'
 import SecondPage from '../containers/SecondPage'
+import Onboard from '../containers/onboardPage/onboard'
 
 const routesConfig = [
     {
@@ -11,6 +12,12 @@ const routesConfig = [
         path: '/secondpage',
         exact: true,
         element: <SecondPage />
+    },
+    // Onboard Page
+    {
+        path: '/onboard',
+        exact: true,
+        element: <Onboard />
     }
 ]
 
