@@ -1,16 +1,16 @@
-import FirstPage from '../containers/FirstPage'
-import SecondPage from '../containers/SecondPage'
+import Login from '../containers/Login/App/App'
+import Signup from '../containers/Signup/App/App'
 
 const routesConfig = [
     {
-        path: '/firstpage',
+        path: '/login',
         exact: true,
-        element: <FirstPage />
+        element: <Login />
     },
     {
-        path: '/secondpage',
+        path: '/signup',
         exact: true,
-        element: <SecondPage />
+        element: <Signup />
     }
 ]
 

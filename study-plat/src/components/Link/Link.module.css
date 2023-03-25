@@ -1,0 +1,13 @@
+@import '../../styles/constants.css';
+
+.textWithLink {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--light-gray-color);
+    margin-top: 28px;
+}
+
+.link {
+    color: var(--dark-color);
+}

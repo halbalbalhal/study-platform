@@ -1,0 +1,22 @@
+import Text from '../../../components/Text/Text'
+import Input from '../../../components/Input/Input'
+import Button from '../../../components/Button/Button'
+import SecondButton from '../../../components/SecondButton/SecondButton'
+import google_icon from '../../../assets/icons/google.svg'
+import styles from './Wrapper.module.css'
+
+function Wrapper () {
+    return(
+        <div className={styles.wrapper}>
+            <div className={styles.column}>
+                <Text title='Login' />
+                <Input title='E-mail' type='text'/>
+                <Input title='Password' type='password'/>
+                <Button title='Login' />
+                <SecondButton title='Login with Google' img={google_icon} />
+            </div>
+        </div>
+    )
+}
+
+export default Wrapper

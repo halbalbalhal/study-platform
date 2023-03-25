@@ -1,0 +1,30 @@
+@import '../../styles/constants.css';
+
+.loginGoogleBtn {
+    padding: 12px 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--light-purple-color);
+    border-radius: var(--small-radius);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--light-purple-color);
+    transition: var(--transition);
+    gap: 0 15px;
+    margin-top: 16px;
+}
+
+.loginGoogleBtn:hover {
+    color: var(--very-light-purple-color);
+    border: 1px solid var(--very-light-purple-color);
+}
+
+.loginGoogleBtn:active {
+    color: var(--dark-purple-color);
+    border: 1px solid var(--dark-purple-color);
+}
