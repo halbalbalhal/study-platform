@@ -38,6 +38,11 @@
     font-size: 15px;
 }
 
+.button:hover {
+    background-color: var(--dark-purple-color);
+    transition: all 0.6s ease-out;
+}
+
 .circles {
     display: flex;
     align-items: center;

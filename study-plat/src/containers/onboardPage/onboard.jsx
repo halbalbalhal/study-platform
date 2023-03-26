@@ -1,6 +1,7 @@
 // Код крайне костыльный
 //(т.к. не знаю как это реализовывать по-другому)
 
+// import for using render in order to render screens
 import { render } from '@testing-library/react'
 import './onboard.css'
 
@@ -16,9 +17,9 @@ const Onboard = () => {
                 <p className='text'>make yourself expert your skill by studying from mentors</p>
 
                 <div className='circles'>
-                    <img src={require("../../assets/images/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
-                    <img src={require("../../assets/images/Onboard/blackCircle.png")} alt="sdasdasasddas" />
-                    <img src={require("../../assets/images/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
+                    <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
+                    <img src={require("../../assets/icons/Onboard/blackCircle.png")} alt="sdasdasasddas" />
+                    <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
                 </div>
 
                 <button className='button' onClick={Click2}>Continue</button>
@@ -36,9 +37,9 @@ const Onboard = () => {
                 <p className='text'>get your certificate after finished your online course</p>
 
                 <div className='circles'>
-                    <img src={require("../../assets/images/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
-                    <img src={require("../../assets/images/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
-                    <img src={require("../../assets/images/Onboard/blackCircle.png")} alt="sdasdasasddas" />
+                    <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
+                    <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
+                    <img src={require("../../assets/icons/Onboard/blackCircle.png")} alt="sdasdasasddas" />
                 </div>
 
                 <button className='button'>Continue</button>
@@ -55,9 +56,9 @@ const Onboard = () => {
             <p className='text'>explore various learning videos based on your passion</p>
 
             <div className='circles'>
-                <img src={require("../../assets/images/Onboard/blackCircle.png")} alt="sdasdasasddas" />
-                <img src={require("../../assets/images/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
-                <img src={require("../../assets/images/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
+                <img src={require("../../assets/icons/Onboard/blackCircle.png")} alt="sdasdasasddas" />
+                <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
+                <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
             </div>
 
             <button className='button' onClick={Click1}>Continue</button>
