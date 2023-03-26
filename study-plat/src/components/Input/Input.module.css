@@ -28,6 +28,7 @@
 .input:valid ~ .labelForInput {
     top: -10px;
     font-size: 12px;
+    z-index: 1;
 }
 
 .labelForInput {

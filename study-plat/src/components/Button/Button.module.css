@@ -23,7 +23,3 @@
 .loginBtn:active {
     background: var(--dark-purple-color);
 }
-
-.loginBtn {
-    -webkit-tap-highlight-color: transparent;
-}

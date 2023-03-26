@@ -28,7 +28,3 @@
     color: var(--dark-purple-color);
     border: 1px solid var(--dark-purple-color);
 }
-
-.loginGoogleBtn {
-    -webkit-tap-highlight-color: transparent;
-}
