@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: appear 1s ease;
+    animation: appear 1.5s ease;
 }
 
 .onboard_title {
