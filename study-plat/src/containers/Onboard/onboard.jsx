@@ -18,13 +18,13 @@ const Onboard = () => {
                 <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
             </div>
 
-            <button className='onboard_button' onClick={Click1}>Continue</button>
+            <button className='onboard_button' onClick={Screen1}>Continue</button>
         </section>
     )
     
     
     // Функция для рендера 2-го экрана
-    function Click1() {
+    function Screen1() {
         document.getElementById("first_slide").style.display = "none"
         render (
             <section className='onboard_slide' id='second_slide'>
@@ -38,13 +38,13 @@ const Onboard = () => {
                     <img src={require("../../assets/icons/Onboard/whiteCircle.png")} alt="sdasdasasddas" />
                 </div>
 
-                <button className='onboard_button' onClick={Click2}>Continue</button>
+                <button className='onboard_button' onClick={Screen2}>Continue</button>
             </section>
         )
     }
 
     // Функция для рендера 3-го экрана
-    function Click2() {
+    function Screen2() {
         document.getElementById("second_slide").style.display = "none"
         render (
             <section className='onboard_slide'>
