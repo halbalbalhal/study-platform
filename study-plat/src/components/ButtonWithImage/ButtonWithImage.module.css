@@ -1,6 +1,6 @@
 @import '../../styles/constants.css';
 
-.loginGoogleBtn {
+.btn {
     padding: 12px 52px;
     display: flex;
     align-items: center;
@@ -19,12 +19,12 @@
     margin-top: 16px;
 }
 
-.loginGoogleBtn:hover {
+.btn:hover {
     color: var(--very-light-purple-color);
     border: 1px solid var(--very-light-purple-color);
 }
 
-.loginGoogleBtn:active {
+.btn:active {
     color: var(--dark-purple-color);
     border: 1px solid var(--dark-purple-color);
 }

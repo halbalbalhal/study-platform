@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.suggestion {
+.container__suggestion {
     top: -22px;
     right: -155px;
     font-weight: 400;
@@ -24,7 +24,7 @@
 
 @media screen and (max-width: 545px)
 {
-    .suggestion {
+    .container__suggestion {
         max-width: 130px;
         width: 130px;
         right: -95px;

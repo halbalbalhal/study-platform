@@ -1,6 +1,12 @@
 @import '../../styles/constants.css';
 
-.input {
+
+.column {
+    position: relative;
+    margin-top: 16px;
+}
+
+.column__input {
     padding: 12px;
     width: 306px;
     border: 1px solid var(--white-gray-color);
@@ -15,24 +21,19 @@
     box-sizing: content-box;
 }
 
-.column {
-    position: relative;
-    margin-top: 16px;
-}
-
-.input:focus {
+.column__input:focus {
     border: 1px solid var(--light-purple-color);
     z-index: -1;
 }
 
-.input:focus ~ .labelForInput,
-.input:valid ~ .labelForInput {
+.column__input:focus ~ .column__labelForInput,
+.column__input:valid ~ .column__labelForInput {
     top: -8px;
     font-size: 12px;
     z-index: 1;
 }
 
-.labelForInput {
+.column__labelForInput {
     color: var(--light-gray-color);
     font-weight: 400;
     font-size: 14px;

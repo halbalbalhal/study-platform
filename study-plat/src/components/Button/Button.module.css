@@ -1,6 +1,6 @@
 @import '../../styles/constants.css';
 
-.loginBtn {
+.btn {
     padding: 12px 52px;
     background-color: var(--light-purple-color);
     border: none;
@@ -16,10 +16,10 @@
     margin-top: 16px;
 }
 
-.loginBtn:hover {
+.btn:hover {
     background: var(--very-light-purple-color);
 }
 
-.loginBtn:active {
+.btn:active {
     background: var(--dark-purple-color);
 }

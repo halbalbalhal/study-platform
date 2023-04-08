@@ -1,9 +1,9 @@
 import Wrapper from '../Wrapper/Wrapper'
 import PictureWithText from '../../../components/PictureWithText/PictureWithText'
 import Link from '../../../components/Link/Link'
-import styles from './App.module.css'
+import styles from './Page.module.css'
 
-function App () {
+function Page () {
     return(
         <div className={styles.container}>
             <PictureWithText text='Login to your personal account' />
@@ -13,4 +13,4 @@ function App () {
     )
 }
 
-export default App
+export default Page

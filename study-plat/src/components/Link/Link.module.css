@@ -8,11 +8,11 @@
     margin-top: 28px;
 }
 
-.link {
+.textWithLink__link {
     color: var(--dark-color);
     transition: var(--transition);
 }
 
-.link:hover {
+.textWithLink__link:hover {
     opacity: 0.85;
 }

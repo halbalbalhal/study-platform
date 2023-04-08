@@ -1,7 +1,7 @@
 import Text from '../../../components/Text/Text'
 import Input from '../../../components/Input/Input'
 import Button from '../../../components/Button/Button'
-import SecondButton from '../../../components/SecondButton/SecondButton'
+import ButtonWithImage from '../../../components/ButtonWithImage/ButtonWithImage'
 import google_icon from '../../../assets/icons/google.svg'
 import styles from './Wrapper.module.css'
 
@@ -13,7 +13,7 @@ function Wrapper () {
                 <Input title='E-mail' type='text'/>
                 <Input title='Password' type='password'/>
                 <Button title='Login' />
-                <SecondButton title='Login with Google' img={google_icon} />
+                <ButtonWithImage title='Login with Google' img={google_icon} />
             </div>
         </div>
     )

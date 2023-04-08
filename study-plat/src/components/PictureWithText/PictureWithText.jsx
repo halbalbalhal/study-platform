@@ -5,7 +5,7 @@ function PictureWithText(props) {
     return(
         <div className={styles.container}>
             <img src={cookie} alt='' />
-            <span className={styles.suggestion}>{props.text}</span>
+            <span className={styles.container__suggestion}>{props.text}</span>
         </div>
     )
 }

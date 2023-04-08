@@ -1,5 +1,5 @@
-import Login from '../containers/Login/App/App'
-import Signup from '../containers/Signup/App/App'
+import Login from '../containers/Login/Page/Page'
+import Signup from '../containers/Signup/Page/Page'
 
 const routesConfig = [
     {
