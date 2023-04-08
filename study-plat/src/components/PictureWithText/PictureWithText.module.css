@@ -2,6 +2,8 @@
 
 .container {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .suggestion {
@@ -17,14 +19,14 @@
     padding: 5px 10px;
     position: absolute;
     max-width: 172px;
-    width: 155px;
+    width: 165px;
 }
 
 @media screen and (max-width: 545px)
 {
     .suggestion {
-        max-width: 103px;
-        width: 103px;
+        max-width: 130px;
+        width: 130px;
         right: -95px;
         top: -40px;
     }

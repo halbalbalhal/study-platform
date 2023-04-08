@@ -10,6 +10,7 @@
     text-decoration: none;
     text-transform: none;
     font-family: 'Poppins';
+    box-sizing: border-box;
 }
 
 button, a {
