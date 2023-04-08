@@ -18,6 +18,10 @@ button, a {
     -webkit-tap-highlight-color: transparent;
 }
 
+#root {
+    height: 100vh;
+}
+
 body {
     width: 100%;
 }
