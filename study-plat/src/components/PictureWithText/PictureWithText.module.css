@@ -1,0 +1,33 @@
+@import '../../styles/constants.css';
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container__suggestion {
+    top: -22px;
+    right: -155px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 132%;
+    color: var(--dark-color);
+    background: var(--white-color);
+    border: 1px solid var(--transparent-purple-color);
+    border-radius: 16px;
+    padding: 5px 10px;
+    position: absolute;
+    max-width: 172px;
+    width: 165px;
+}
+
+@media screen and (max-width: 545px)
+{
+    .container__suggestion {
+        max-width: 130px;
+        width: 130px;
+        right: -95px;
+        top: -40px;
+    }
+}

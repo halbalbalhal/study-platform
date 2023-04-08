@@ -3,6 +3,8 @@
     /*Colors*/
     --dark-color: #1A141F;
     --white-color: #ffffff;
+    --transparent-purple-color: rgba(106, 23, 171, 0.2);
+    --very-light-purple-color: #AE60EB;
     --light-purple-color: #9D3FE7;
     --dark-purple-color: #6A17AB;
     --light-gray-color: #ABA7AF;
@@ -16,5 +18,5 @@
     --small-radius: 4px;
 
     /*Transition*/
-    --trasition: all .25s linear;
+    --transition: all .25s linear;
 }
