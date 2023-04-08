@@ -3,7 +3,7 @@ import PictureWithText from '../../../components/PictureWithText/PictureWithText
 import Link from '../../../components/Link/Link'
 import styles from './Page.module.css'
 
-function Page () {
+const Page = () => {
     return(
         <div className={styles.container}>
             <PictureWithText text='Create your personal account' />

@@ -1,6 +1,6 @@
 import styles from './Text.module.css'
 
-function Text(props) {
+const Text = (props) => {
     return(
         <div className={styles.group}>
             <div className={styles.group__border}></div>

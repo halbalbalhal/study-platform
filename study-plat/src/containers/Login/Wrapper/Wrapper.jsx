@@ -5,7 +5,7 @@ import ButtonWithImage from '../../../components/ButtonWithImage/ButtonWithImage
 import google_icon from '../../../assets/icons/google.svg'
 import styles from './Wrapper.module.css'
 
-function Wrapper () {
+const Wrapper = () => {
     return(
         <div className={styles.wrapper}>
             <div className={styles.column}>
