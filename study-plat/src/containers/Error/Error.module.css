@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    text-align: center;
 }
 
 .error__value {
@@ -19,6 +20,7 @@
     font-weight: 500;
     font-size: 30px;
     color: var(--dark-color);
+
 }
 
 .error__description{
@@ -38,4 +40,38 @@
 .error__btn {
     width: 330px;
     margin-top: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .error__value {
+        font-size: 200px;
+        line-height: 200px;
+    }
+
+    .error__description {
+        margin-top: 8px;
+    }
+    
+    .error__btn {
+        margin-top: 17px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .error__description {
+        max-width: 500px;
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .error {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 352px) {
+    .error {
+        transform: scale(0.8);
+    }
 }
