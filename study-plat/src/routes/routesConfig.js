@@ -1,4 +1,4 @@
-import Onboard from '../containers/Onboard/onboard'
+import Onboard from "../containers/Onboard/Onboard"
 
 const routesConfig = [
     // Onboard Page

@@ -1,16 +1,16 @@
 @import url('../../styles/constants.css');
 
-.onboard_slide {
+.onboard__slide {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: appear 1.5s ease;
+    animation: Appear 1.5s ease;
 }
 
-.onboard_title {
+.onboard__title {
     font-size: 30px;
     text-align: center;
     max-width: 400px;
@@ -21,7 +21,7 @@
     margin-top: 36px;
 }
 
-.onboard_text {
+.onboard__text {
     font-size: 18px;
     text-align: center;
     margin-top: 36px;
@@ -29,7 +29,7 @@
     color: var(--light-gray-color);
 }
 
-.onboard_button {
+.onboard__button {
     border-radius: 4px;
     background-color: var(--light-purple-color);
     width: 200px;
@@ -39,12 +39,12 @@
     font-size: 15px;
 }
 
-.onboard_button:hover {
+.onboard__button:hover {
     background-color: var(--dark-purple-color);
     transition: all 0.6s ease-out;
 }
 
-.onboard_circles {
+.onboard__circles {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,15 +52,9 @@
     width: 50px;
 }
 
-@keyframes appear {
+@keyframes Appear {
     0% {
         opacity: 0;
-    } 25% {
-        opacity: 0,25;
-    } 50% {
-        opacity: 0,5;
-    } 75% {
-        opacity: 0,75;
     } 100% {
         opacity: 1;
     }
