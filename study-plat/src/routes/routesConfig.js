@@ -1,5 +1,6 @@
 import FirstPage from '../containers/FirstPage'
 import SecondPage from '../containers/SecondPage'
+import Homescreen from '../containers/Homescreen/Homescreen'
 
 const routesConfig = [
     {
@@ -11,6 +12,11 @@ const routesConfig = [
         path: '/secondpage',
         exact: true,
         element: <SecondPage />
+    },
+    {
+        path: '/homescreen',
+        exact: true,
+        element: <Homescreen />
     }
 ]
 

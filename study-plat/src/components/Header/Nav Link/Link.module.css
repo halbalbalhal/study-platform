@@ -1,0 +1,12 @@
+@import '../../../styles/constants.css';
+
+.link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark-color);
+}

@@ -1,0 +1,11 @@
+@import '../../../styles/constants.css';
+
+.nav {
+    height: calc(100% + 50px);
+    display: flex;
+    align-items: center;
+}
+
+.highlight {
+    border-bottom: 1px solid var(--light-purple-color);
+}

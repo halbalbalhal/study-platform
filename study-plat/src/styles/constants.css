@@ -11,6 +11,7 @@
     --orange-color: #FF9500;
     --green-color: #00B998;
     --blue-color: #0F0BAB;
+    --line-color: rgba(0,0,0,0.3);
 
     /*Borders*/
     --small-radius: 4px;
