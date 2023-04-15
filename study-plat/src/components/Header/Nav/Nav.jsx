@@ -6,10 +6,10 @@ const Nav = () => {
     useEffect(highlight)
     return (
         <nav className={styles.nav} id='header__nav'>
-            <Link value = {'Home'} />
-            <Link value = {'Course'} />
-            <Link value = {'Profile'} />
-            <Link value = {'About'} />
+            <Link value={'Home'} />
+            <Link value={'Course'} />
+            <Link value={'Profile'} />
+            <Link value={'About'} />
         </nav>
     )
 }
@@ -43,6 +43,5 @@ function highlight() {
     const selected = getSelected()
     selected.classList.add(styles.highlight)
 }
-
 
 export default Nav
