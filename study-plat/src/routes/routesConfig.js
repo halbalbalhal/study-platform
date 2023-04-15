@@ -1,17 +1,24 @@
-import FirstPage from '../containers/FirstPage'
-import SecondPage from '../containers/SecondPage'
 import Homescreen from '../containers/Homescreen/Homescreen'
+import Onboard from "../containers/Onboard/onboard"
+import Login from '../containers/Login/Page/Page'
+import Signup from '../containers/Signup/Page/Page'
 
 const routesConfig = [
+    // Onboard Page
     {
-        path: '/firstpage',
+        path: '/onboard',
         exact: true,
-        element: <FirstPage />
+        element: <Onboard />
+    }, 
+    {
+        path: '/login',
+        exact: true,
+        element: <Login />
     },
     {
-        path: '/secondpage',
+        path: '/signup',
         exact: true,
-        element: <SecondPage />
+        element: <Signup />
     },
     {
         path: '/homescreen',

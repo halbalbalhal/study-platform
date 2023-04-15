@@ -3,7 +3,6 @@
 *, *::after, *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     outline: none;
     background: none;
     background-color: none;
@@ -11,10 +10,12 @@
     text-decoration: none;
     text-transform: none;
     font-family: 'Poppins';
+    box-sizing: border-box;
 }
 
-button {
+button, a {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {

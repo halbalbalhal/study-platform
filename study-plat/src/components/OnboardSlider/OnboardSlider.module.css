@@ -1,0 +1,62 @@
+@import url('../../styles/constants.css');
+
+.onboard__slide {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: Appear 1.5s ease;
+    transition: all 0.5s ease;
+}
+
+.onboard__title {
+    font-size: 30px;
+    text-align: center;
+    max-width: 400px;
+    color: var(--dark-color);
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    margin-top: 36px;
+}
+
+.onboard__text {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 26px;
+    max-width: 300px;
+    color: var(--light-gray-color);
+}
+
+.onboard__button {
+    border-radius: 4px;
+    background-color: var(--light-purple-color);
+    width: 200px;
+    height: 50px;
+    color: var(--white-color);
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.onboard__button:hover {
+    background-color: var(--dark-purple-color);
+    transition: all 0.6s ease-out;
+}
+
+.onboard__circles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 50px;
+}
+
+@keyframes Appear {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
