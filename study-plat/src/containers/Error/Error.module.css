@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    text-align: center;
 }
 
 .error__value {
@@ -20,7 +19,7 @@
     font-weight: 500;
     font-size: 30px;
     color: var(--dark-color);
-
+    text-align: center;
 }
 
 .error__description{
@@ -28,6 +27,7 @@
     font-size: 18px;
     color: var(--dark-color);
     margin-top: 16px;
+    text-align: center;
 }
 
 .error__border{
