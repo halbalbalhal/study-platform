@@ -14,7 +14,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    color: #141f16;
+    color: var(--dark-color);
     transition: var(--transition);
     position: relative;
     z-index: 1;
