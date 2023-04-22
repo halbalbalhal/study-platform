@@ -1,0 +1,39 @@
+@import url('../../styles/constants.css');
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contact__point {
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 13px;
+}
+
+.contact__block {
+    margin-top: 24px;
+}
+
+.contact__social {
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+    margin-top: 33px;
+}
