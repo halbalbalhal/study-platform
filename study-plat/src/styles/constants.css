@@ -1,5 +1,6 @@
 :root {
-
+    --body_background: white;
+    --text_color: black;
     /*Colors*/
     --dark-color: #1A141F;
     --white-color: #ffffff;
@@ -28,7 +29,7 @@
     --toggle-shadow: inset 12px -4px 0px 0px;
 
     /*Images*/
-    --cookie-image: url(../assets/images/cookie.svg);
+    --cookie-image: url(../assets/images/SignUp/cookie.svg);
 }
 
 [data-theme="dark"] {

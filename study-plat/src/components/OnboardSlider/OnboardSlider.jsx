@@ -18,7 +18,8 @@ const OnboardSlider = ({ data }) => {
                 {data.map((element, index) => {
                     return (
                         <button onClick={() => setCurrentSlideData(data[currentSlideIndex])}>
-                            <img src={currentSlideData.title === element.title ? blackCircle : whiteCircle} alt="Page didn't find" />
+                            <img src={currentSlideData.title === element.title ? blackCircle : whiteCircle} alt="Page didn't find"
+                            />
                         </button>
                     )
                 })}
@@ -33,7 +34,6 @@ const OnboardSlider = ({ data }) => {
                     setCurrentSlideIndex(currentSlideIndex + 1)     
                 }
                 }}>Continue</button>
-
         </section>
     )
 }
