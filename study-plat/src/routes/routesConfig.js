@@ -1,9 +1,9 @@
-import Onboard from "../containers/Onboard/Onboard"
+import Onboard from '../containers/Onboard/Onboard'
 import Login from '../containers/Login/Page/Page'
 import Signup from '../containers/Signup/Page/Page'
+import Contact from '../containers/Contacts/Contact'
 
 const routesConfig = [
-    // Onboard Page
     {
         path: '/onboard',
         exact: true,
@@ -18,6 +18,11 @@ const routesConfig = [
         path: '/signup',
         exact: true,
         element: <Signup />
+    },
+    {
+        path: '/contact',
+        exact: true,
+        element: <Contact />
     }
 ]
 
