@@ -25,7 +25,7 @@ const OnboardSlider = ({ data }) => {
             </div>
 
             <button className={styles.onboard__button} onClick={() => {
-                if (currentSlideIndex == 2) {
+                if (currentSlideIndex === 2) {
                     setCurrentSlideData(data[0])
                     setCurrentSlideIndex(0)                       
                 } else {

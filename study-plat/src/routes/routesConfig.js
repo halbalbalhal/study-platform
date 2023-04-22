@@ -1,10 +1,9 @@
-import Onboard from "../containers/Onboard/Onboard"
+import Onboard from '../containers/Onboard/onboard'
 import Login from '../containers/Login/Page/Page'
 import Signup from '../containers/Signup/Page/Page'
 import Error from '../containers/Error/Error'
 
 const routesConfig = [
-    // Onboard Page
     {
         path: '/onboard',
         exact: true,
