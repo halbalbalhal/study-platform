@@ -42,7 +42,7 @@ const ContactsInfo = () => {
 
             <div className={styles.contact__maps}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9969.177721640008!2d4.205374424624546!3d7.435261221031079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039c794bdefa103%3A0xaef13c3108f7fb18!2zMjIxMTA0LCDQkNCx0L7QsdCwLCDQntGB0YPQvSwg0J3QuNCz0LXRgNC40Y8!5e0!3m2!1sru!2sby!4v1682262986632!5m2!1sru!2sby"
-                    width="600" height="400" loading="fast" 
+                    width="600" height="400" loading="quick" 
                     className={styles.contact__maps__frame}></iframe>
             </div>
 
