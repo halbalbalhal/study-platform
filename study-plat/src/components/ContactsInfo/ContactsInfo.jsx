@@ -41,10 +41,9 @@ const ContactsInfo = () => {
             </div>
 
             <div className={styles.contact__maps}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.7324481778833!2d12.474292612359786!3d41.89861077111956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f604f678640a9%3A0xcad165fa2036ce2c!2z0J_QsNC90YLQtdC-0L0!5e0!3m2!1sru!2sby!4v1682164586083!5m2!1sru!2sby"
-                width="600" height="400" loading="fast" 
-                referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9969.177721640008!2d4.205374424624546!3d7.435261221031079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039c794bdefa103%3A0xaef13c3108f7fb18!2zMjIxMTA0LCDQkNCx0L7QsdCwLCDQntGB0YPQvSwg0J3QuNCz0LXRgNC40Y8!5e0!3m2!1sru!2sby!4v1682262986632!5m2!1sru!2sby"
+                    width="600" height="400" loading="fast" 
+                    className={styles.contact__maps__frame}></iframe>
             </div>
 
         </section>
@@ -52,4 +51,5 @@ const ContactsInfo = () => {
 }
 
 export default ContactsInfo
+
 

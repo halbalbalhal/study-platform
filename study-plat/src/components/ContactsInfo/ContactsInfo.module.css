@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .contact__info {
@@ -36,4 +37,29 @@
     width: 130px;
     justify-content: space-between;
     margin-top: 33px;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__maps {
+        margin-top: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .contact {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact__maps__frame {
+        width: 400px;
+        height: 200px;
+    }
 }
