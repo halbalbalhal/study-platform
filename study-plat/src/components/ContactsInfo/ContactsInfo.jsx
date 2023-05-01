@@ -1,4 +1,4 @@
-import styles from "./ContactsInfo.module.css"
+import styles from './ContactsInfo.module.css'
 
 import phone from '../../assets/icons/Contacts/phone.svg'
 import letter from '../../assets/icons/Contacts/letter.svg'
@@ -33,8 +33,8 @@ const ContactsInfo = () => {
 
                 <div className={styles.contact__social}>
                     <img src={instagram} alt="page didn't find" />
-                    <img src={telegram} alt="page didn't find" />
-                    <img src={youtube} alt="page didn't find" />
+                    <a href="https://t.me/myitby" target="__link"><img src={telegram} alt="page didn't find" /></a>
+                    <a href="https://www.youtube.com/@itschoolbrest/featured"><img src={youtube} alt="page didn't find" /></a>
                     <img src={ini} alt="page didn't find" />
                 </div>
 
