@@ -20,12 +20,14 @@
 .contact__title {
     font-size: 30px;
     font-weight: 500;
+    color: var(--dark-color);
 }
 
 .contact__point {
     font-weight: 400;
     font-size: 24px;
     margin-left: 13px;
+    color: var(--dark-color);
 }
 
 .contact__block {

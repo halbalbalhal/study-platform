@@ -19,6 +19,11 @@
     margin-top: 16px;
 }
 
+.btn__icon {
+    fill: var(--light-purple-color);
+    transition: var(--transition);
+}
+
 .btn:hover {
     color: var(--very-light-purple-color);
     border: 1px solid var(--very-light-purple-color);
@@ -27,4 +32,12 @@
 .btn:active {
     color: var(--dark-purple-color);
     border: 1px solid var(--dark-purple-color);
+}
+
+.btn:hover .btn__icon {
+    fill: var(--very-light-purple-color);
+}
+
+.btn:active  .btn__icon {
+    fill: var(--dark-purple-color);
 }
