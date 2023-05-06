@@ -1,13 +1,13 @@
 import styles from "./ContactsInfo.module.css"
 
-import phone from '../../assets/images/Contacts/phone.svg'
-import letter from '../../assets/images/Contacts/letter.svg'
-import location from '../../assets/images/Contacts/location.svg'
+import phone from '../../assets/icons/Contacts/phone.svg'
+import letter from '../../assets/icons/Contacts/letter.svg'
+import location from '../../assets/icons/Contacts/location.svg'
 
-import instagram from '../../assets/images/Contacts/instagram.svg'
-import telegram from '../../assets/images/Contacts/telegram.svg'
-import youtube from '../../assets/images/Contacts/youtube.svg'
-import ini from '../../assets/images/Contacts/ini.svg'
+import instagram from '../../assets/icons/Contacts/instagram.svg'
+import telegram from '../../assets/icons/Contacts/telegram.svg'
+import youtube from '../../assets/icons/Contacts/youtube.svg'
+import ini from '../../assets/icons/Contacts/ini.svg'
 
 const ContactsInfo = () => {
     return (
@@ -17,34 +17,35 @@ const ContactsInfo = () => {
                 <h1 className={styles.contact__title}>Contact us</h1>
 
                 <div className={styles.contact__block}>
-                    <img src={phone} />
+                    <img src={phone} alt="page didn't find" />
                     <span className={styles.contact__point}>+375 (33) 123-45-66</span>
                 </div>
 
                 <div className={styles.contact__block}>
-                    <img src={letter} />
+                    <img src={letter} alt="page didn't find" />
                     <span className={styles.contact__point}>myit@gmail.com</span>
                 </div>
 
                 <div className={styles.contact__block}>
-                    <img src={location} />
+                    <img src={location} alt="page didn't find" />
                     <span className={styles.contact__point}>Brest, st. Pionerskaya 52</span>
                 </div>
 
                 <div className={styles.contact__social}>
-                    <img src={instagram} />
-                    <img src={telegram} />
-                    <img src={youtube} />
-                    <img src={ini} />
+                    <img src={instagram} alt="page didn't find" />
+                    <img src={telegram} alt="page didn't find" />
+                    <img src={youtube} alt="page didn't find" />
+                    <img src={ini} alt="page didn't find" />
                 </div>
 
             </div>
 
             <div className={styles.contact__maps}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.7324481778833!2d12.474292612359786!3d41.89861077111956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f604f678640a9%3A0xcad165fa2036ce2c!2z0J_QsNC90YLQtdC-0L0!5e0!3m2!1sru!2sby!4v1682164586083!5m2!1sru!2sby"
-                width="600" height="400" loading="fast" 
-                referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9969.177721640008!2d4.205374424624546!3d7.435261221031079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039c794bdefa103%3A0xaef13c3108f7fb18!2zMjIxMTA0LCDQkNCx0L7QsdCwLCDQntGB0YPQvSwg0J3QuNCz0LXRgNC40Y8!5e0!3m2!1sru!2sby!4v1682262986632!5m2!1sru!2sby"
+                    width="600" height="400"
+                    loading="quick" 
+                    title="googleFrame"
+                    className={styles.contact__maps__frame}></iframe>
             </div>
 
         </section>
@@ -52,4 +53,5 @@ const ContactsInfo = () => {
 }
 
 export default ContactsInfo
+
 
