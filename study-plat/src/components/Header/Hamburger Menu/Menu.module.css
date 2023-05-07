@@ -1,0 +1,11 @@
+@import '../../../styles/constants.css';
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .menu {
+        display: block;
+    }
+}

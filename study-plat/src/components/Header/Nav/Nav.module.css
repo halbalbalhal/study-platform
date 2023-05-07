@@ -1,6 +1,8 @@
 @import '../../../styles/constants.css';
 
 .nav {
+    width: 45%;
+    max-width: 460px;
     height: calc(100% + 50px);
     display: flex;
     align-items: center;
@@ -8,4 +10,10 @@
 
 .highlight {
     border-bottom: 1px solid var(--light-purple-color);
+}
+
+@media screen and (max-width: 900px) {
+    .nav {
+        display: none;
+    }
 }
