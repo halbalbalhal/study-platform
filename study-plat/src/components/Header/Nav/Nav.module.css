@@ -9,7 +9,7 @@
 }
 
 .highlight {
-    border-bottom: 1px solid var(--light-purple-color);
+    border-bottom: 2px solid var(--light-purple-color);
 }
 
 @media screen and (max-width: 900px) {

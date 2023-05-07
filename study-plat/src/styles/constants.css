@@ -14,6 +14,8 @@
     --green-color: #00B998;
     --blue-color: #0F0BAB;
     --line-color: rgba(0,0,0,0.3);
+    --graphite-color: #28292C;
+    --sun-color: #FFBF00;
 
     /*Borders*/
     --small-radius: 4px;
@@ -26,8 +28,10 @@
     /*Box-shadow*/
     --toggle-shadow: inset 12px -4px 0px 0px;
 
-    /*Images*/
+    /*Images & icons*/
     --cookie-image: url(../assets/images/SignUp/cookie.svg);
+    --user-icon: url(../assets/icons/Header/user-icon.svg);
+    --exit-icon: url(../assets/icons/Header/exit-icon.svg);
 }
 
 [data-theme="dark"] {
@@ -45,6 +49,7 @@
     --green-color: #00B998;
     --blue-color: #9160be;
     --graphite-color: #28292c;
+    --sun-color: yellow;
 
     /*Borders*/
     --small-radius: 4px;
@@ -56,6 +61,8 @@
     /*Box-shadow*/
     --toggle-shadow: inset 12px -4px 0px 0px;
 
-    /*Images*/
+    /*Images & icons*/
     --cookie-image: url(../assets/images/SignUp/cookie-dark.svg);
+    --user-icon: url(../assets/icons/Header/user-icon-dark.svg);
+    --exit-icon: url(../assets/icons/Header/exit-icon-dark.svg);
 }
