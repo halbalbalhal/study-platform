@@ -15,18 +15,17 @@ const OnboardSlider = ({ data }) => {
             <p className={styles.onboard__text}>{currentSlideData.text}</p>
 
             <div className={styles.onboard__circles}>
-                {data.map((element, index) => {
+                {data.map((element) => {
                     return (
                         <button onClick={() => setCurrentSlideData(data[currentSlideIndex])}>
-                            <img src={currentSlideData.title === element.title ? blackCircle : whiteCircle} alt="Page didn't find"
-                            />
+                            <img src={currentSlideData.title === element.title ? blackCircle : whiteCircle} alt="Page didn't find"/>
                         </button>
                     )
                 })}
             </div>
 
             <button className={styles.onboard__button} onClick={() => {
-                if (currentSlideIndex == 2) {
+                if (currentSlideIndex === 2) {
                     setCurrentSlideData(data[0])
                     setCurrentSlideIndex(0)                       
                 } else {
@@ -37,5 +36,7 @@ const OnboardSlider = ({ data }) => {
         </section>
     )
 }
+
+
 
 export default OnboardSlider
