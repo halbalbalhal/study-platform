@@ -1,3 +1,4 @@
+import Homescreen from '../containers/Homescreen/Homescreen'
 import Onboard from '../containers/Onboard/Onboard'
 import Login from '../containers/Login/Page/Page'
 import Signup from '../containers/Signup/Page/Page'
@@ -22,7 +23,11 @@ const routesConfig = [
         element: <Signup />
     },
     {
-
+        path: '/homescreen',
+        exact: true,
+        element: <Homescreen />
+    },
+    {
         path: '/contact',
         exact: true,
         element: <Contact />
