@@ -2,7 +2,7 @@
     position: relative;
     width: 100px;
     height: 50px;
-    transform: scale(0.7);
+    transform: scale(0.65);
 }
 
 .toggle_switch__label {
@@ -29,7 +29,7 @@
 }
 
 .label__checkbox:checked ~ .label__slider {
-    background-color: var(--white-gray-color);
+    background-color: var(--white-color);
 }
 
 .label__slider::before {
@@ -47,6 +47,6 @@
 
 .label__checkbox:checked ~ .label__slider::before {
     transform: translateX(50px);
-    background-color: var(--graphite-color);
+    background-color: var(--sun-color   );
     box-shadow: none;
 }

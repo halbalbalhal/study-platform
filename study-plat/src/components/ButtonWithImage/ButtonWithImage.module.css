@@ -32,6 +32,7 @@
 .btn:active {
     color: var(--dark-purple-color);
     border: 1px solid var(--dark-purple-color);
+    transform: scale(0.98, 0.98);
 }
 
 .btn:hover .btn__icon {
@@ -40,4 +41,5 @@
 
 .btn:active  .btn__icon {
     fill: var(--dark-purple-color);
+    transform: scale(0.98, 0.98);
 }

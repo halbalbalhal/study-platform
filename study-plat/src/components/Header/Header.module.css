@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--dark-color);
     padding: 25px 7.5%;
     position: relative;
     background-color: var(--white-color);
@@ -17,4 +17,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.burger__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .burger__container {
+        display: none;
+    }
+}
+
+.header__group {
+    display: flex;
+    align-items: center;
 }
