@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import routesConfig from '../../routes/routesConfig'
-import styles from './App.module.css'
+import { setTheme } from '../../utils/themeUtil'
 
 const App = () => {
+    setTheme()
     return (
         <>
             <BrowserRouter>

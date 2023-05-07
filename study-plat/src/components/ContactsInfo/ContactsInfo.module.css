@@ -1,0 +1,82 @@
+@import url('../../styles/constants.css');
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contact__point {
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 13px;
+}
+
+.contact__block {
+    margin-top: 24px;  
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__social {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    margin-top: 33px;
+    align-items: center;
+}
+
+.contact__maps__frame {
+    width: 800px;
+    height: 600px;
+    border-radius: 16px;
+}
+
+.social__icon:hover {
+    -webkit-filter: sepia(1) hue-rotate(150000deg) saturate(10);
+    filter: sepia(1) hue-rotate(150000deg) saturate(10);
+}
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__maps {
+        margin-top: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .contact {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact__maps__frame {
+        width: 300px;
+        height: 300px;
+    }
+}
+
