@@ -16,10 +16,10 @@ const Links = (props) => {
 
     return (
         <div className={styles.container} id="Hamburger-menu">
-            <a href="/Homescreen" className={styles.link}>Home</a>
-            <a href="/Course" className={styles.link}>Course</a>
-            <a href="/Profile" className={styles.link}>Profile</a>
-            <a href="/About" className={styles.link}>About</a>
+            <a href="/homescreen" className={styles.link}>Home</a>
+            <a href="/course" className={styles.link}>Course</a>
+            <a href="/profile" className={styles.link}>Profile</a>
+            <a href="/about" className={styles.link}>About</a>
         </div>
     )
 }

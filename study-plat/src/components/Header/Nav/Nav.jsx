@@ -6,10 +6,10 @@ const Nav = () => {
     useEffect(highlight)
     return (
         <nav className={styles.nav} id='header__nav'>
-            <Link value={'Home'} />
-            <Link value={'Course'} />
-            <Link value={'Profile'} />
-            <Link value={'About'} />
+            <Link value={'Home'} path={'/homescreen'} />
+            <Link value={'Course'} path={'/course'} />
+            <Link value={'Profile'} path={'/profile'} />
+            <Link value={'About'} path={'/about'} />
         </nav>
     )
 }

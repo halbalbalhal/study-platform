@@ -2,7 +2,7 @@ import styles from './Link.module.css'
 
 const Link = (props) => {
     return (
-        <a href='#' className={styles.link}>{props.value}</a>
+        <a href={props.path} className={styles.link}>{props.value}</a>
     )
 }
 
