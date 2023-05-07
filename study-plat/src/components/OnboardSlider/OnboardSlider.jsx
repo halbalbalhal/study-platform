@@ -4,9 +4,21 @@ import styles from './OnboardSlider.module.css'
 import blackCircle from '../../assets/icons/Onboard/blackCircle.png'
 import whiteCircle from '../../assets/icons/Onboard/whiteCircle.png'
 
+import Button from '../Button/Button'
+
 const OnboardSlider = ({ data }) => {
     const [currentSlideData, setCurrentSlideData] = useState(data[0])
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+
+    const tapEvent = () => {
+        if (currentSlideIndex === 2) {
+            setCurrentSlideData(data[0])
+            setCurrentSlideIndex(0)                       
+        } else {
+            setCurrentSlideData(data[currentSlideIndex + 1])
+            setCurrentSlideIndex(currentSlideIndex + 1)     
+        }
+    }
 
     return(
         <section className={styles.onboard__slide}>
@@ -23,16 +35,9 @@ const OnboardSlider = ({ data }) => {
                     )
                 })}
             </div>
-
-            <button className={styles.onboard__button} onClick={() => {
-                if (currentSlideIndex === 2) {
-                    setCurrentSlideData(data[0])
-                    setCurrentSlideIndex(0)                       
-                } else {
-                    setCurrentSlideData(data[currentSlideIndex + 1])
-                    setCurrentSlideIndex(currentSlideIndex + 1)     
-                }
-                }}>Continue</button>
+            <div className={styles.onboard__button}>
+                <Button title='Continue' tapEvent={tapEvent} />
+            </div>
         </section>
     )
 }
