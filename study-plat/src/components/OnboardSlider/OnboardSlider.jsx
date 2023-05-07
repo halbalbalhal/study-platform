@@ -27,11 +27,10 @@ const OnboardSlider = ({ data }) => {
             <p className={styles.onboard__text}>{currentSlideData.text}</p>
 
             <div className={styles.onboard__circles}>
-                {data.map((element, index) => {
+                {data.map((element) => {
                     return (
                         <button onClick={() => setCurrentSlideData(data[currentSlideIndex])}>
-                            <img src={currentSlideData.title === element.title ? blackCircle : whiteCircle} alt="Page didn't find"
-                            />
+                            <img src={currentSlideData.title === element.title ? blackCircle : whiteCircle} alt="Page didn't find"/>
                         </button>
                     )
                 })}
@@ -42,5 +41,7 @@ const OnboardSlider = ({ data }) => {
         </section>
     )
 }
+
+
 
 export default OnboardSlider
