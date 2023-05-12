@@ -4,15 +4,15 @@ import Button from '../Button/Button'
 import PictureWithText from '../PictureWithText/PictureWithText'
 
 import profileicon from '../../assets/images/Profile/profileicon.svg'
-import complete from "../../assets/images/Profile/complete.svg"
-import uncomplete from "../../assets/images/Profile/uncomplete.svg"
+import complete from '../../assets/images/Profile/complete.svg'
+import uncomplete from '../../assets/images/Profile/uncomplete.svg'
 
 const ProfileInfo = () => {
     return (
         <section className={styles.profile}>
             <div className={styles.profile__wrapper}>
                 <div className={styles.profile__info}>
-                    <img src={profileicon} />
+                    <img src={profileicon} alt="didn't find"  />
                     <div className={styles.profile__inputs}>
                         <textarea spellCheck="false">Кирилл</textarea>
                         <textarea spellCheck="false">Максимчик</textarea>
@@ -31,7 +31,7 @@ const ProfileInfo = () => {
                             <div className={styles.profile__lessons__result}>
                                 <div className={styles.profile__lessons__number}>
                                     <span className={styles.lessons__text}>Lesson 1</span>
-                                    <img src={uncomplete} />
+                                    <img src={uncomplete} alt="didn't find" />
                                 </div>
                                 <div className={styles.profile__lessons__line}>
                                     <div className={styles.profile__lessons__greenline}>
@@ -42,11 +42,11 @@ const ProfileInfo = () => {
                             <div className={styles.profile__lessons__result}>
                                 <div className={styles.profile__lessons__number}>
                                     <span className={styles.lessons__text}>Lesson 1</span>
-                                    <img src={complete} />
+                                    <img src={complete} alt="didn't find" />
                                 </div>
 
                                 <div className={styles.profile__lessons__line}>
-                                    <div className={styles.profile__lessons__greenline}>
+                                    <div className={`${styles.profile__lessons__greenline} ${styles.full__lesson}`}>
                                         {/* пустой блок как зеленая линия */}
                                     </div>
                                 </div>

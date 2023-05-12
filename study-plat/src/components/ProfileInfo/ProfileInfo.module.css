@@ -22,7 +22,7 @@ textarea {
 
 .profile__wrapper {
     display: flex;
-    width: 1800px;
+    width: 1600px;
     align-items: center;
     justify-content: space-around;
     margin-top: 150px;
@@ -110,5 +110,19 @@ textarea {
     height: 100%;
     background-color: var(--green-color);
     border-radius: 16px;
+}
+
+.full__lesson {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .profile__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile__progress {
+        margin-top: 60px;
+    }
 }
 
