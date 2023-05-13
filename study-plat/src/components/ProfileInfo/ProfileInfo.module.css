@@ -30,7 +30,6 @@ textarea {
 
 .profile__progress {
     display: flex;
-    width: 783px;
     align-items: center;
     flex-direction: column;
 }
@@ -49,9 +48,9 @@ textarea {
 }
 
 .profile__lessons {
+    width: 110%;
     display: flex;
     background: var(--very-light-purple-color);
-    width: 783px;
     height: 270px;
     align-items: center;
     justify-content: space-around;
@@ -79,7 +78,7 @@ textarea {
 .profile__status__contact {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -123,6 +122,22 @@ textarea {
     }
     .profile__progress {
         margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profile__lessons {
+        display: flex;
+        flex-direction: column;
+        background: none;
+    }
+    .profile__status__contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+    .profile__lessons__result {
+        margin-top: 30px;
     }
 }
 
