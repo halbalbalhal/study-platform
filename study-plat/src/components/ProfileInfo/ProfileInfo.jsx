@@ -35,7 +35,7 @@ const ProfileInfo = () => {
                                 </div>
                                 <div className={styles.profile__lessons__line}>
                                     <div className={styles.profile__lessons__greenline}>
-                                        {/* пустой блок как зеленая линия */}
+                                        {/* Greenline */}
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ const ProfileInfo = () => {
 
                                 <div className={styles.profile__lessons__line}>
                                     <div className={`${styles.profile__lessons__greenline} ${styles.full__lesson}`}>
-                                        {/* пустой блок как зеленая линия */}
+                                        {/* Greenline */}
                                     </div>
                                 </div>
                             </div>
