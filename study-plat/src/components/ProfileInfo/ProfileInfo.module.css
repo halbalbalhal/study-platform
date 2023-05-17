@@ -48,14 +48,15 @@ textarea {
 }
 
 .profile__lessons {
-    width: 100%;
+    width: 783px;
     display: flex;
     background: var(--very-light-purple-color);
     height: 270px;
     align-items: center;
     justify-content: space-around;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 5px 0px 5px;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 .lessons__text {
@@ -70,7 +71,7 @@ textarea {
 }
 
 .profile__lessons__result {
-    width: 340px;
+    width: 350px;
     height: 200px;
     background-color: var(--white-color);
     border-radius: 8px;
@@ -128,7 +129,7 @@ textarea {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
     .profile__lessons {
         display: flex;
         flex-direction: column;
@@ -136,16 +137,20 @@ textarea {
         margin-top: 50px;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
     .profile__status__contact {
         display: flex;
         flex-direction: column;
-        margin-top: 70px;
+        margin-top: 130px;
     }
     .profile__lessons__result {
         margin-top: 30px;
         background-color: var(--light-purple-color);
         padding-bottom: 20px;
+    }
+    .profile__lessons__result span  {
+        color: var(--white-color);
     }
 }
 
