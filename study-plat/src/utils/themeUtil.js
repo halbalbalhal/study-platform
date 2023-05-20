@@ -13,7 +13,6 @@ export const toggleTransition = () => {
         element.style.transition = 'all .25s linear'
         setTimeout(() => element.removeAttribute("style"), 250)
     })
-
 }
 
 export const selectedTheme = localStorage.getItem('selectedTheme')
