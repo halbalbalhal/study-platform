@@ -3,13 +3,21 @@
 .nav {
     width: 45%;
     max-width: 460px;
-    height: calc(100% + 50px);
     display: flex;
     align-items: center;
 }
 
+@keyframes border {
+    to {
+        border-bottom: 2px solid var(--light-purple-color);
+    }
+}
+
 .highlight {
-    border-bottom: 1px solid var(--light-purple-color);
+    animation-name: border;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 900px) {

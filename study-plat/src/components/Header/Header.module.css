@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid var(--line-color);
-    padding: 25px 7.5%;
+    padding: 0 7.5%;
     position: relative;
     background-color: var(--white-color);
 }
@@ -17,4 +17,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 25px 7.5%;
+    }
 }

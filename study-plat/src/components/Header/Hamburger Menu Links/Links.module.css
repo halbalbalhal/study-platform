@@ -14,6 +14,8 @@
     padding: 20px 0;
     border-bottom: 1px solid var(--dark-purple-color);
     transition: top 1s linear;
+    background-color: var(--white-color);
+    opacity: 0.9;
 }
 
 .link {
