@@ -7,7 +7,25 @@ import profileicon from '../../assets/images/Profile/profileicon.svg'
 import complete from '../../assets/images/Profile/complete.svg'
 import uncomplete from '../../assets/images/Profile/uncomplete.svg'
 
+import { getTasks, getTask } from '../../firebase/tasksService'
+
 const ProfileInfo = () => {
+    getTask(
+        "web",
+        "first_lesson",
+        "4smb75Orsex2BFif3MqZ",
+        (data) => {
+            console.log(data)
+        }
+    )
+
+    getTasks(
+        "web",
+        "first_lesson",
+        (data) => {
+            console.log(data)
+        }
+    )
     return (
         <section className={styles.profile}>
             <div className={styles.profile__wrapper}>
