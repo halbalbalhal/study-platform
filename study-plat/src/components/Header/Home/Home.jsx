@@ -1,8 +1,7 @@
 import styles from './Home.module.css'
+
 import Button from '../../Button'
-
 import Berry from '../../Berry/Berry'
-
 
 const Home = () => {
     return (
