@@ -33,7 +33,7 @@
     --cookie-image: url(../assets/images/SignUp/cookie.svg);
     --user-icon: url(../assets/icons/Header/user-icon.svg);
     --exit-icon: url(../assets/icons/Header/exit-icon.svg);
-    --blackberry-image: url(../assets/images/Header/blackberry.png);
+    --blackberry-image: url(../assets/images/Header/blackberry.svg);
 }
 
 [data-theme="dark"] {

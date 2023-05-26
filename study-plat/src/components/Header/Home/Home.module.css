@@ -37,6 +37,10 @@
     color: var(--sun-color);
 }
 
+.homescreen__purple {
+    color: var(--light-purple-color);
+}
+
 .homescreen__title {
     font-weight: 500;
     font-size: 44px;
@@ -54,10 +58,4 @@
 .homescreen__button {
     width: 330px;
     height: 48px;
-}
-
-.homescreen__image {
-    position: absolute;
-    left: 485px;
-    top: -183px;
 }

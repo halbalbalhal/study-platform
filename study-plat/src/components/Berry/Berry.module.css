@@ -1,0 +1,8 @@
+.homescreen__image {
+    position: absolute;
+    left: 320px;
+    top: -300px;
+    background-image: var(--blackberry-image);
+    width: 1050px;
+    height: 890px;
+}
