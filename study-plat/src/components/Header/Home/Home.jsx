@@ -11,7 +11,7 @@ const Home = () => {
                     <p className={styles.homescreen__text}>choose a new <span className={styles.homescreen__red}>profession</span>, that can change the future of the whole <span className={styles.homescreen__yellow}>world</span></p>
                     <Button className={styles.homescreen__button} title='Go study' />
                 </div>
-                    <img src={Berry} className={styles.homescreen__image} />                
+                <img src={Berry} className={styles.homescreen__image} />                
             </div>
         </section>
     )
