@@ -21,6 +21,10 @@
     box-sizing: content-box;
 }
 
+.error {
+    border: 1px solid var(--red-color);
+}
+
 .column__input:focus {
     border: 1px solid var(--light-purple-color);
     z-index: -1;
