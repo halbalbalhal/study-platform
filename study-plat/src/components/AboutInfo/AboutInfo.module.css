@@ -1,11 +1,18 @@
 .container {
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 7.5%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 100px;
-    z-index: -2;
+    position: relative;
 }
 
 .title {
@@ -24,9 +31,22 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+    text-align: center;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
 }
 
 .picture {
-    width: 384px;
+    width: 256px;
     height: 409,6px;
 }
+
+@media screen and (max-width: 550px) {
+    .button_container {
+        flex-direction: column-reverse;
+    }
+}
+
