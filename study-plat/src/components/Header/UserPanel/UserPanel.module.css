@@ -1,3 +1,5 @@
+@import '../../../styles/constants.css';
+
 .container{
     display: flex;
     align-items: center;
@@ -10,24 +12,19 @@
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 24px;
-    color: #1A141F;
+    color: var(--dark-color);
 }
 
 .icon {
-    width: 36px;
-    height: 36px;
-}
+    width: 25px;
+    height: 25px;
+    background-image: var(--user-icon);
+}   
 
-.button {
-    display: inline-flex;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-}
-
-.button img{
-    width: 100%;
-    height: 100%;
+.exit {
+    width: 25px;
+    height: 25px;
+    background-image: var(--exit-icon);
 }
 
 @media screen and (max-width: 900px) {
