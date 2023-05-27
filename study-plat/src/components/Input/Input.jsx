@@ -29,14 +29,15 @@ const Input = ({ name, register, title, type, isValid }) => {
             default: return { errorMessage: '' }
         }
     }
+
+    const data = getData(name)
+
     let reallyType
-    if(name === 'password') {
+    if(name === 'password' || name === 'password_repeat') {
         typeOfText ? reallyType = 'text' : reallyType = 'password'
     } else {
         reallyType = type
     }
-
-    const data = getData(name)
 
     return(
         <div className={styles.column}>
@@ -46,9 +47,9 @@ const Input = ({ name, register, title, type, isValid }) => {
                 className={`${styles.column__input} ${!isValid && styles.error}`}
                 required
             />
-            <label for='' className={styles.column__labelForInput}>{title}</label>
+            <label className={styles.column__labelForInput}>{title}</label>
             {
-                (name === 'password') ? (typeOfText ? <div className={styles.column__icon} onClick={changeType}><ShowEye /></div> : <div className={styles.column__icon} onClick={changeType}><HideEye /></div>) : console.log(type)
+                (name === 'password' || name === 'password_repeat') && (typeOfText ? <div className={styles.column__icon} onClick={changeType}><ShowEye /></div> : <div className={styles.column__icon} onClick={changeType}><HideEye /></div>)
             }
         </div>
     )

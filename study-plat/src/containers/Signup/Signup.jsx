@@ -34,7 +34,7 @@ const Signup = () => {
                     <Input name='name' register={register} title='Name' type='text' isValid={!errors['name']}/>
                     <Input name='email' register={register} title='E-mail' type='text' isValid={!errors['email']}/>
                     <Input name='password' register={register} title='Password' type='password' isValid={!errors['password']}/>
-                    <Input name='password' register={register} title='Repeat password' type='password' isValid={!errors['password']} />
+                    <Input name='password_repeat' register={register} title='Repeat password' type='password' isValid={!errors['password']} />
                     <Button title='Signup' />
                 </div>
             </form>
