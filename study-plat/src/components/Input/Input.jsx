@@ -1,15 +1,13 @@
 import styles from './Input.module.css'
 import {useState} from "react";
-import ShowEye from "../Signup&Login/ShowEye";
-import HideEye from "../Signup&Login/HideEye";
+import ShowEye from "../Signup&Login/ShowEye/ShowEye";
+import HideEye from "../Signup&Login/HideEye/HideEye";
 
 const Input = ({ name, register, title, type, isValid }) => {
-    const [type, setType] = useState(false)
+    const [typeOfText, setTypeOfText] = useState(false)
     const changeType = () => {
-        type ? setType(false) : setType(true)
+        typeOfText ? setTypeOfText(false) : setTypeOfText(true)
     }
-
-    const data = getData(name)
 
     const getData = (inputName) => {
         switch (inputName) {
@@ -31,17 +29,26 @@ const Input = ({ name, register, title, type, isValid }) => {
             default: return { errorMessage: '' }
         }
     }
+    let reallyType
+    if(name === 'password') {
+        typeOfText ? reallyType = 'text' : reallyType = 'password'
+    } else {
+        reallyType = type
+    }
+
+    const data = getData(name)
 
     return(
         <div className={styles.column}>
             <input
-                type={type}
+                type={reallyType}
                 {...register(name, { required: true, pattern: data.regex })}
                 className={`${styles.column__input} ${!isValid && styles.error}`}
+                required
             />
             <label for='' className={styles.column__labelForInput}>{title}</label>
-            {name == 'password' &&
-                type ? <div className={styles.column__icon} onClick={changeType}><ShowEye /></div> : <div className={styles.column__icon} onClick={changeType}><HideEye /></div>
+            {
+                (name === 'password') ? (typeOfText ? <div className={styles.column__icon} onClick={changeType}><ShowEye /></div> : <div className={styles.column__icon} onClick={changeType}><HideEye /></div>) : console.log(type)
             }
         </div>
     )
