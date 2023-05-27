@@ -7,8 +7,15 @@ const Links = (props) => {
 
         if (!props.isActive) {
             menu.classList.remove(styles.active)
+            if(props.countRender > 0) {
+                menu.classList.add(styles.disable)
+                setTimeout(() => {
+                    menu.classList.remove(styles.disable)
+                }, 1000)
+            }
             return
         }
+        menu.classList.remove(styles.disable)
         menu.classList.add(styles.active)
     }
 

@@ -9,10 +9,13 @@
 }
 
 .highlight {
-    border-bottom: 2px solid var(--light-purple-color);
+    position: relative;
+    bottom: -6px;
+    border-bottom: 4px solid var(--very-light-purple-color);
+    transform: scale(0.9);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
     .nav {
         display: none;
     }

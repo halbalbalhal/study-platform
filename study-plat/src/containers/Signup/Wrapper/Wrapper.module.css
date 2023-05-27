@@ -3,3 +3,9 @@
     max-width: 332px;
     overflow: hidden;
 }
+
+.column {
+    gap: 22px;
+    display: flex;
+    flex-direction: column;
+}

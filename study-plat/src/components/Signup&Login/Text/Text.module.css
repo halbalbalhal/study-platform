@@ -1,10 +1,9 @@
-@import '../../styles/constants.css';
+@import '../../../styles/constants.css';
 
 .group {
     display: flex;
     align-items: center;
     gap: 0 6px;
-    margin: 20px 0 12px 0;
 }
 
 .group__border {

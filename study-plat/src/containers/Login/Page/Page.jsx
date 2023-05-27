@@ -1,6 +1,6 @@
 import Wrapper from '../Wrapper/Wrapper'
-import PictureWithText from '../../../components/PictureWithText/PictureWithText'
-import Link from '../../../components/Link/Link'
+import PictureWithText from '../../../components/Signup&Login/PictureWithText/PictureWithText'
+import Link from '../../../components/Signup&Login/Link/Link'
 import styles from './Page.module.css'
 
 const Page = () => {
