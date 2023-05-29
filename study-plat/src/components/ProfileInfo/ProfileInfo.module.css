@@ -143,7 +143,7 @@ textarea {
     .profile__status__contact {
         display: flex;
         flex-direction: column;
-        margin-top: 130px;
+        margin-top: 100px;
     }
     .profile__lessons__result {
         margin-top: 30px;
@@ -152,6 +152,12 @@ textarea {
     }
     .profile__lessons__result span  {
         color: var(--white-color);
+    }
+    .profile__status__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
     }
 }
 

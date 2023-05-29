@@ -36,7 +36,7 @@ const ProfileInfo = () => {
                         <textarea spellCheck="false">Максимчик</textarea>
                         <textarea spellCheck="false">20</textarea>
                         <textarea spellCheck="false">post@gmail.com</textarea>
-                        <Button title='Log Out' />
+                        <a href='/signup'><Button title='Log Out' /></a>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@ const ProfileInfo = () => {
                         </div>
                         <div className={styles.profile__status__contact}>
                             <span className={styles.profile__status__title}>Do you have any error?</span>
-                            <a href="http://localhost:3000/contact"><Button title='Contact Us' /></a>
+                            <a href="http://localhost:3000/contact"><Button title='Contact Us' href='/contact' /></a>
                         </div>
                     </div>
                 </div>

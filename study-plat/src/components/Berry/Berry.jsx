@@ -1,6 +1,6 @@
 import styles from './Berry.module.css'
 
-const Berry = (props) => {
+const Berry = () => {
     return (
         <div className={styles.homescreen__image}></div>
     )

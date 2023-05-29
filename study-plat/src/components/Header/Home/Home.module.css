@@ -6,7 +6,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .homescreen__wrapper {
@@ -28,6 +28,7 @@
 
 .homescreen__green {
     color: var(--green-color);
+    font-weight: 600;
 }
 
 .homescreen__red {
@@ -59,4 +60,9 @@
 .homescreen__button {
     width: 330px;
     height: 48px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1500px) {
+
 }
