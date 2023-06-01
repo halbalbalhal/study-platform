@@ -35,7 +35,7 @@
 }
 
 .column {
-    gap: 20px;
+    gap: 14px;
     display: flex;
     flex-direction: column;
 }

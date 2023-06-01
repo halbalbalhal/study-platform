@@ -31,11 +31,11 @@
 .wrapper {
     width: 332px;
     max-width: 332px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .column {
-    gap: 22px;
+    gap: 13px;
     display: flex;
     flex-direction: column;
 }

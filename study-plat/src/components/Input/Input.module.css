@@ -3,7 +3,7 @@
 
 .column {
     position: relative;
-    height: 38px;
+    height: 100%;
 }
 
 .column__input {
@@ -65,4 +65,9 @@
     border: 1px solid var(--dark-gray-color);
     background-color: var(--dark-gray-color);
     border-radius: 9px;
+}
+
+.column__error {
+    color: var(--red-color);
+    font-size: 13px;
 }

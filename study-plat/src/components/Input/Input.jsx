@@ -3,7 +3,7 @@ import {useState} from "react";
 import ShowEye from "../Signup&Login/ShowEye/ShowEye";
 import HideEye from "../Signup&Login/HideEye/HideEye";
 
-const Input = ({ name, register, title, type, isValid }) => {
+const Input = ({ name, register, title, type, isValid, isRegister, watch }) => {
     const [typeOfText, setTypeOfText] = useState(false)
     const changeType = () => {
         typeOfText ? setTypeOfText(false) : setTypeOfText(true)
@@ -13,17 +13,17 @@ const Input = ({ name, register, title, type, isValid }) => {
         switch (inputName) {
             case 'name':
                 return {
-                    errorMessage: 'Имя должно содержать только буквы и состоять из двух слов',
+                    errorMessage: 'The name must contain only letters',
                     regex: /[a-zA-Z]+$/
                 }
             case 'email':
                 return {
-                    errorMessage: 'Почта должна содержать "@" и "."',
+                    errorMessage: 'Mail must contain "@" and "."',
                     regex: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
                 }
             case 'password':
                 return {
-                    errorMessage: 'Пароль должен содержать 1 заглавную букву, 1 маленькую, цифру и быть не короче 6 символов',
+                    errorMessage: 'Password must contain 1 uppercase letter, 1 small letter, number and be at least 6 characters',
                     regex: /((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]))(?=.{6,})/
                 }
             default: return { errorMessage: '' }
@@ -32,24 +32,35 @@ const Input = ({ name, register, title, type, isValid }) => {
 
     const data = getData(name)
 
-    let reallyType
+    let realType
     if(name === 'password' || name === 'password_repeat') {
-        typeOfText ? reallyType = 'text' : reallyType = 'password'
+        typeOfText ? realType = 'text' : realType = 'password'
     } else {
-        reallyType = type
+        realType = type
     }
+
+    let password
+    isRegister === 'true' && (password = watch(['password', 'password_repeat']))
 
     return(
         <div className={styles.column}>
             <input
-                type={reallyType}
-                {...register(name, { required: true, pattern: data.regex })}
-                className={`${styles.column__input} ${!isValid && styles.error}`}
+                type={realType}
+                {
+                    ...isRegister === 'true' && {...register(name, { required: true, pattern: data.regex})}
+                }
+                className={`${styles.column__input} ${!isValid && styles.error} ${(isRegister && (password[0] !== password[1] && name === 'password_repeat')) && styles.error}`}
                 required
             />
+            {
+                !isValid && <span className={styles.column__error}>{data.errorMessage}</span>
+            }
             <label className={styles.column__labelForInput}>{title}</label>
             {
                 (name === 'password' || name === 'password_repeat') && (typeOfText ? <div className={styles.column__icon} onClick={changeType}><ShowEye /></div> : <div className={styles.column__icon} onClick={changeType}><HideEye /></div>)
+            }
+            {
+                (name === 'password_repeat') && (password[0] !== password[1] && <span className={styles.column__error}>Passwords don't match</span>)
             }
         </div>
     )
