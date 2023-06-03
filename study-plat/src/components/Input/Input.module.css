@@ -3,7 +3,7 @@
 
 .column {
     position: relative;
-    margin-top: 16px;
+    height: 100%;
 }
 
 .column__input {
@@ -50,4 +50,24 @@
     transition: var(--transition);
     cursor: text;
     background-color: var(--white-color);
+}
+
+.column__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    border: 1px solid var(--dark-gray-color);
+    background-color: var(--dark-gray-color);
+    border-radius: 9px;
+}
+
+.column__error {
+    color: var(--red-color);
+    font-size: 13px;
 }

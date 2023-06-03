@@ -27,3 +27,15 @@
         transform: scale(0.77);
     }
 }
+
+.wrapper {
+    width: 332px;
+    max-width: 332px;
+    overflow-x: hidden;
+}
+
+.column {
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+}

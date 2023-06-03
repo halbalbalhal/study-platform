@@ -1,7 +1,8 @@
 @import '../../../styles/constants.css';
 
 .container {
-    display: flex;
+    display: none;
+    opacity: 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -12,16 +13,16 @@
     width: 100%;
     height: 200px;
     padding: 20px 0;
-    border-bottom: 1px solid var(--dark-purple-color);
-    transition: top 1s linear;
+    border-bottom: 1px solid var(--dark-color);
+    background-color: var(--white-color);
 }
 
 .link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 20%;
+    width: 100%;
+    height: 23.7%;
     color: var(--dark-color);
     text-align: center;
     transition: var(--transition);
@@ -30,12 +31,59 @@
 }
 
 .link:hover {
-    border: 1px solid var(--dark-purple-color);
+    background-color: var(--dark-purple-color);
+    color: var(--white-gray-color);
+    transform: scale(0.98, 0.98);
+}
+
+.link:active {
+    background-color: var(--light-purple-color);
+    color: var(--white-gray-color);
+    transform: scale(0.95, 0.95);
 }
 
 .active {
-    top: 100%;
+    display: flex;
+    animation: appearing 0.9s linear;
+    animation-fill-mode: both;
 }
 
+@keyframes appearing {
+    0%{
+        opacity: 0.25;
+        top: -100%;
+    }
+    20%{
+        opacity: 0.5;
+    }
+    40%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+        top: 80%;
+    }
+}
 
+.disable {
+    display: flex;
+    animation-fill-mode: both;
+    animation: disappear 0.9s linear;
+}
 
+@keyframes disappear {
+    0%{
+        opacity: 1;
+        top: 80%;
+    }
+    20%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+        top: -100%;
+    }
+}

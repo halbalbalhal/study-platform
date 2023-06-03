@@ -11,7 +11,9 @@ const Error = (props) => {
                 <span className={styles.error__text}>{props.text}</span>
                 <p className={styles.error__description}>{props.description}</p>
                 <div className={styles.error__border}></div>
-                <div className={styles.error__btn}>
+                <div className={styles.error__btn} onClick={() => {
+                    window.location.href = '/homescreen'
+                }}>
                     <Button title='Go to home'/>
                 </div>
             </div>
