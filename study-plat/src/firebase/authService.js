@@ -19,7 +19,7 @@ export const login = (email, password, completion) => {
         .then((userCredential) => {
             const userId = userCredential.user.uid
 
-            console.log(userId)
+            completion(userId)
         })
         .catch((error) => {
             console.log(error.code)
