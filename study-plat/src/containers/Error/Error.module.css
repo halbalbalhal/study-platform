@@ -68,16 +68,20 @@
         max-width: 500px;
         padding: 0 5px;
     }
-}
 
-@media screen and (max-width: 382px) {
-    .error {
+    .error__main {
         transform: scale(0.9);
     }
 }
 
-@media screen and (max-width: 352px) {
-    .error {
+@media screen and (max-width: 382px) {
+    .error__main {
         transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 352px) {
+    .error__main {
+        transform: scale(0.7);
     }
 }

@@ -1,4 +1,4 @@
-@import '../../styles/constants.css';
+@import '../../../styles/constants.css';
 
 .btn {
     padding: 12px 52px;
@@ -16,7 +16,6 @@
     color: var(--light-purple-color);
     transition: var(--transition);
     gap: 0 15px;
-    margin-top: 16px;
 }
 
 .btn__icon {

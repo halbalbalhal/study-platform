@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 const Menu = () => {
     const [isActive, setIsActive] = useState(false)
+    const [countRender, setCountRender] = useState(0)
 
     const toggleIsActive = () => {
         if (isActive === true) {
@@ -13,6 +14,7 @@ const Menu = () => {
         }
 
         setIsActive(true)
+        setCountRender(1)
     }
 
     return (
@@ -20,7 +22,7 @@ const Menu = () => {
             <div onClick={toggleIsActive}>
                 <Button isActive={isActive}/>
             </div>
-            <Links isActive={isActive}/>
+            <Links isActive={isActive} countRender={countRender}/>
         </div>
     )
 }

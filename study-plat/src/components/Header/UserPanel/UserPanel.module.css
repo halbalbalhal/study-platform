@@ -19,15 +19,17 @@
     width: 25px;
     height: 25px;
     background-image: var(--user-icon);
+    cursor: pointer;
 }   
 
 .exit {
     width: 25px;
     height: 25px;
     background-image: var(--exit-icon);
+    cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
     .container {
         display: none;
     }
