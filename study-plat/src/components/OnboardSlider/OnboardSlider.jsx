@@ -12,8 +12,7 @@ const OnboardSlider = ({ data }) => {
 
     const tapEvent = () => {
         if (currentSlideIndex === 2) {
-            setCurrentSlideData(data[0])
-            setCurrentSlideIndex(0)                       
+            window.location.href = '/homescreen'
         } else {
             setCurrentSlideData(data[currentSlideIndex + 1])
             setCurrentSlideIndex(currentSlideIndex + 1)     
