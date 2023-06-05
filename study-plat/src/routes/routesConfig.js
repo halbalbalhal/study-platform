@@ -5,6 +5,8 @@ import Signup from '../containers/Signup/Signup'
 import Contact from '../containers/Contacts/Contact'
 import Error from '../containers/Error/Error'
 import Profile from '../containers/Profile/Profile'
+import Main from '../containers/Main/Main'
+
 
 const routesConfig = [
     {
@@ -31,6 +33,11 @@ const routesConfig = [
         path: '/contact',
         exact: true,
         element: <Contact />
+    },
+    {
+        path: '/course',
+        exact: true,
+        element: <Main />
     },
     {
         path: '/error',

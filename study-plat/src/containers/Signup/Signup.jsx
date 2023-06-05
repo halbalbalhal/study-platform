@@ -19,14 +19,16 @@ const Signup = () => {
     } = useForm()
 
     const onSubmit = (formData) => {
-        console.log(createAccount(
+        createAccount(
             formData['email'],
             formData['password'],
-            (userCredential) => {}
-        ))
+            (userCredential) => {
+                createUser(userCredential.user.uid, formData['name'], formData['email'], formData['password'], () => {
+                    console.log("SUCCESS")
+                })
+            }
+        )
     }
-
-    document.getElementById('root').style.height = '100%'
 
     return(
         <div className={styles.container}>
