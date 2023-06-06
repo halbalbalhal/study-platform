@@ -9,8 +9,7 @@ export const createAccount = async (email, password, completion) => {
             completion(userCredential)
         })
         .catch((error) => {
-            console.log(error.code)
-            console.log(error.message)
+            completion(error.code)
         })
 }
 
@@ -19,10 +18,9 @@ export const login = (email, password, completion) => {
         .then((userCredential) => {
             const userId = userCredential.user.uid
 
-            console.log(userId)
+            completion(userId)
         })
         .catch((error) => {
-            console.log(error.code)
-            console.log(error.message)
+            completion(error.code)
         })
 }

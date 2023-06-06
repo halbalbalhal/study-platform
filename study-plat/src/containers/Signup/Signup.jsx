@@ -7,6 +7,7 @@ import Button from '../../components/Button/Button'
 import { createAccount } from '../../firebase/authService'
 import { createUser } from '../../firebase/userService'
 import { useForm } from 'react-hook-form'
+import Preloader from "../../components/Preloader";
 
 const Signup = () => {
     const {
@@ -14,19 +15,20 @@ const Signup = () => {
         formState: {
             errors
         },
-        handleSubmit,
-        watch
+        handleSubmit
     } = useForm()
 
     const onSubmit = (formData) => {
-        console.log(createAccount(
+        document.getElementById('preloader').style.display = 'flex'
+        document.querySelector('.' + styles.container).style.opacity = 0.6
+        createAccount(
             formData['email'],
             formData['password'],
-            (userCredential) => {}
-        ))
+            (userCredential) => {
+                window.location.href = '/homescreen'
+            }
+        )
     }
-
-    document.getElementById('root').style.height = '100%'
 
     return(
         <div className={styles.container}>
@@ -34,14 +36,15 @@ const Signup = () => {
             <form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.column}>
                     <Text title='Signup' />
-                    <Input name='name' register={register} watch={watch} title='Name' type='text' isValid={!errors['name']} isRegister='true' />
-                    <Input name='email' register={register} watch={watch} title='E-mail' type='text' isValid={!errors['email']} isRegister='true' />
-                    <Input name='password' register={register} watch={watch} title='Password' type='password' isValid={!errors['password']} isRegister='true' />
-                    <Input name='password_repeat' register={register} watch={watch} title='Repeat password' type='password' isValid={!errors['password_repeat']} isRegister='true' />
+                    <Input name='name' register={register} title='Name' type='text' isValid={!errors['name']} isRegister='true' />
+                    <Input name='email' register={register} title='E-mail' type='text' isValid={!errors['email']} isRegister='true' />
+                    <Input name='password' register={register} title='Password' type='password' isValid={!errors['password']} isRegister='true' />
+                    {/*<Input name='password_repeat' register={register} watch={watch} title='Repeat password' type='password' isValid={!errors['password_repeat']} isRegister='true' />*/}
                     <Button title='Signup' />
                 </div>
             </form>
             <Link link='/login' text='Do you have an account? ' textLink='Log in' />
+            <Preloader />
         </div>
     )
 }

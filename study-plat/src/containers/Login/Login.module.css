@@ -1,3 +1,5 @@
+@import "../../styles/constants.css";
+
 .container {
     display: flex;
     flex-direction: column;
@@ -35,7 +37,21 @@
 }
 
 .column {
-    gap: 14px;
+    gap: 11px;
     display: flex;
     flex-direction: column;
+}
+
+.errorEmail {
+    display: none;
+}
+
+.errorPassword {
+    display: none;
+}
+
+.column__error {
+    margin-top: -11px;
+    color: var(--red-color);
+    font-size: 13px;
 }
