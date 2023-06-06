@@ -26,6 +26,9 @@ const Signup = () => {
             formData['password'],
             (userCredential) => {
                 window.location.href = '/homescreen'
+                createUser(userCredential.user.uid, formData['name'], formData['email'], formData['password'], () => {
+                    console.log("SUCCESS")
+                })
             }
         )
     }
