@@ -7,7 +7,7 @@ import Button from '../../components/Button/Button'
 import { createAccount } from '../../firebase/authService'
 import { createUser } from '../../firebase/userService'
 import { useForm } from 'react-hook-form'
-import Preloader from "../../components/Preloader";
+import Preloader from "../../components/Preloader/Preloader";
 
 const Signup = () => {
     const {
