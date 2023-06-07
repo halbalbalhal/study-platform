@@ -4,9 +4,15 @@
     width: 100%;
     display: flex;
     border-bottom: 1px solid var(--dark-color);
-    padding: 36px 80px;
+    padding: 0 80px;
     position: relative;
     background-color: var(--white-color);
+}
+
+@media screen and (max-width: 1050px) {
+    .header {
+        padding: 30px 80px;
+    }
 }
 
 .wrapper {
