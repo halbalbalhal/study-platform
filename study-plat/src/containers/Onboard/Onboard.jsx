@@ -22,7 +22,7 @@ const Onboard = () => {
                     title: 'Get your graduate with extraordinary skills',
                     text: 'get your certificate after finished your online course',
                     image: Board3
-                },
+                }
             ]}
         />
     )
