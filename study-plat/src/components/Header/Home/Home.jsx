@@ -11,7 +11,9 @@ const Home = () => {
                     <span className={styles.homescreen__title}>Explore new <span className={styles.homescreen__blue}>skills</span> <span className={styles.homescreen__purple}>with</span> <span className={styles.homescreen__green}>School</span></span>
                     <p className={styles.homescreen__text}>choose a new <span className={styles.homescreen__red}>profession</span>, that can change the future of the whole <span className={styles.homescreen__yellow}>world</span></p>
                     <div className={styles.homescreen__button}>
-                        <Button title='Go study' />
+                        <a onClick={() => {
+                            window.location.href = '/course'
+                        }}><Button title='Go study' /></a>
                     </div>
                 </div>
                 <Berry />
