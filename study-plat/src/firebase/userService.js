@@ -10,9 +10,9 @@ export const getUser = (id, completion) => {
 
 export const createUser = (id, name, email, password, completion) => {
 
-    const doc = doc(db, "users", id)
+    const docPath = doc(db, "users", id)
 
-    setObject(doc, {
+    setObject(docPath, {
         id: id,
         name: name,
         email: email,

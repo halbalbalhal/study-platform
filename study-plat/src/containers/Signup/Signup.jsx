@@ -24,7 +24,7 @@ const Signup = () => {
             formData['password'],
             (userCredential) => {
                 createUser(userCredential.user.uid, formData['name'], formData['email'], formData['password'], () => {
-                    console.log("SUCCESS")
+                    alert("Succes")
                 })
             }
         )
