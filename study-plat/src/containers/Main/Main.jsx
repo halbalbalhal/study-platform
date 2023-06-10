@@ -11,14 +11,14 @@ const Main = () => {
     const [course, setCourse] = useState(null)
     const [lessons, setLessons] = useState([])
 
-    getCourse('web', (course) => {
-        setCourse(course)
-    })
-
-    getLessons('web', (lessons) => {
-        console.log(lessons)
-        setLessons(lessons)
-    })
+    // getCourse('web', (course) => {
+    //     setCourse(course)
+    // })
+    //
+    // getLessons('web', (lessons) => {
+    //     console.log(lessons)
+    //     setLessons(lessons)
+    // })
 
     return (
         <>
