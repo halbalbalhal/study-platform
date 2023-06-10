@@ -9,16 +9,22 @@ import Header from '../../components/Header/Header'
 import arrowImg from '../../assets/icons/arrow-forward.svg'
 const Main = () => {
     const [course, setCourse] = useState(null)
-    const [lessons, setLessons] = useState([])
+    const [lessons, setLessons] = useState(null)
 
-    // getCourse('web', (course) => {
-    //     setCourse(course)
-    // })
-    //
-    // getLessons('web', (lessons) => {
-    //     console.log(lessons)
-    //     setLessons(lessons)
-    // })
+    if(course === null){
+        console.log(course)
+        getCourse('web', (course) => {
+            setCourse(course)
+        })
+    }
+
+    if(lessons === null){
+        console.log('sdkgls')
+        getLessons('web', (lessons) => {
+            console.log(lessons)
+            setLessons(lessons)
+        })
+    }
 
     return (
         <>
@@ -40,7 +46,7 @@ const Main = () => {
                 </div>
 
                 <div className={styles.lessons}>
-                    {lessons.map((lesson) => {
+                    {lessons && lessons.map((lesson) => {
                         return (
                             <div className={styles.lesson}>
                                 <span className={styles.lesson__title}>{lesson.title}</span>
