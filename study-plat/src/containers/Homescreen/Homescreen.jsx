@@ -1,7 +1,8 @@
-import Header from '../../components/Header'
 import styles from './Homescreen.module.css'
 
-const Homescreen = () => {
+import Header from '../../components/Header'
+
+function Homescreen() {
     return (
         <div className= {styles.container}>
             <Header />

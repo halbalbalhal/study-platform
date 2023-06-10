@@ -40,9 +40,9 @@ const routesConfig = [
         element: <Main />
     },
     {
-        path: '/error',
+        path: '/*',
         exact: true,
-        element: <Error value='500' text='Server error' description='There was an error on the server. Please wait, we will fix it soon.' />
+        element: <Error value='404' text='Server error' description='Page not found' />
 
     },
     {

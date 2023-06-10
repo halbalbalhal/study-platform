@@ -23,3 +23,7 @@
     background: var(--dark-purple-color);
     transform: scale(0.98, 0.98);
 }
+
+.btn:disabled {
+    background-color: var(--red-color);
+}
