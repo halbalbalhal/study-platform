@@ -1,0 +1,55 @@
+@import "../../styles/constants.css";
+
+.preloader {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.preloader__firstCircle,
+.preloader__secondCircle {
+    border: 5px solid var(--light-purple-color);
+    border-radius: 50px;
+}
+
+.preloader__firstCircle {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: load1 1s linear infinite;
+}
+
+.preloader__secondCircle {
+    width: 40px;
+    height: 40px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    margin: 7px;
+    animation: load2 2s linear infinite;
+}
+
+@keyframes load1 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load2 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

@@ -4,10 +4,17 @@ import ShowEye from "../Signup&Login/ShowEye/ShowEye"
 import HideEye from "../Signup&Login/HideEye/HideEye"
 import input from "./Input";
 
-const Input = ({ name, register, title, type, isValid, isRegister, watch }) => {
+const Input = ({ name, register, title, type, isValid, isRegister, isLogin, onChange }) => {
     const [typeOfText, setTypeOfText] = useState(false)
+
     const changeType = () => {
         typeOfText ? setTypeOfText(false) : setTypeOfText(true)
+    }
+
+    const changeInput = (event) => {
+        if(isLogin === 'true') {
+            onChange(event.target.value, name)
+        }
     }
 
     const getData = (inputName) => {
@@ -40,8 +47,8 @@ const Input = ({ name, register, title, type, isValid, isRegister, watch }) => {
         realType = type
     }
 
-    let password
-    isRegister === 'true' && (password = watch(['password', 'password_repeat']))
+    // let password
+    // isRegister === 'true' && (password = watch(['password', 'password_repeat']))
 
     return(
         <div className={styles.column}>
@@ -50,7 +57,10 @@ const Input = ({ name, register, title, type, isValid, isRegister, watch }) => {
                 {
                     ...isRegister === 'true' && {...register(name, { required: true, pattern: data.regex})}
                 }
-                className={`${styles.column__input} ${!isValid && styles.error} ${(isRegister && (password[0] !== password[1] && name === 'password_repeat')) && styles.error}`}
+                className={`${styles.column__input} ${!isValid && styles.error}`}
+                id={`input_${name}`}
+                //${(isRegister && (password[0] !== password[1] && name === 'password_repeat')) && styles.error}
+                onChange={changeInput}
                 required
             />
             {
@@ -60,9 +70,9 @@ const Input = ({ name, register, title, type, isValid, isRegister, watch }) => {
             {
                 (name === 'password' || name === 'password_repeat') && (typeOfText ? <div className={styles.column__icon} onClick={changeType}><ShowEye /></div> : <div className={styles.column__icon} onClick={changeType}><HideEye /></div>)
             }
-            {
-                (name === 'password_repeat') && (password[0] !== password[1] && <span className={styles.column__error}>Passwords don't match</span>)
-            }
+            {/*{*/}
+            {/*    (name === 'password_repeat') && (password[0] !== password[1] && <span className={styles.column__error}>Passwords don't match</span>)*/}
+            {/*}*/}
         </div>
     )
 }
