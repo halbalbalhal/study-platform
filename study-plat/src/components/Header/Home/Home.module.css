@@ -6,7 +6,8 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .homescreen__wrapper {
@@ -63,6 +64,8 @@
     margin-top: 16px;
 }
 
-@media screen and (max-width: 1500px) {
-
+@media screen and (max-height: 650px) {
+    .homescreen {
+        overflow-y: auto;
+    }
 }

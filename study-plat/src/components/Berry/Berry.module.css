@@ -6,3 +6,18 @@
     width: 1050px;
     height: 890px;
 }
+
+@media screen and (max-width: 1500px) {
+    .homescreen__image {
+        left: 250px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .homescreen__image {
+        width: 900px;
+        height: 800px;
+        left: 220px;
+        top: -200px;
+    }
+}

@@ -1,7 +1,7 @@
 import styles from './ProfileInfo.module.css'
 
 import Button from '../Button/Button'
-import PictureWithText from '../PictureWithText/PictureWithText'
+import PictureWithText from '../Signup&Login/PictureWithText/PictureWithText'
 
 import profileicon from '../../assets/images/Profile/profileicon.svg'
 import complete from '../../assets/images/Profile/complete.svg'
@@ -32,11 +32,13 @@ const ProfileInfo = () => {
                 <div className={styles.profile__info}>
                     <img src={profileicon} alt="didn't find"  />
                     <div className={styles.profile__inputs}>
-                        <textarea spellCheck="false">Кирилл</textarea>
-                        <textarea spellCheck="false">Максимчик</textarea>
-                        <textarea spellCheck="false">20</textarea>
-                        <textarea spellCheck="false">post@gmail.com</textarea>
-                        <a href='/signup'><Button title='Log Out' /></a>
+                        <textarea spellCheck="false" readOnly>Кирилл</textarea>
+                        <textarea spellCheck="false" readOnly>Максимчик</textarea>
+                        <textarea spellCheck="false" readOnly>20</textarea>
+                        <textarea spellCheck="false" readOnly>post@gmail.com</textarea>
+                        <a href='/signup'><Button title='Log Out' onClick = {() => {
+                            window.location = '/signup'
+                        }} /></a>
                     </div>
                 </div>
 
@@ -72,7 +74,9 @@ const ProfileInfo = () => {
                         </div>
                         <div className={styles.profile__status__contact}>
                             <span className={styles.profile__status__title}>Do you have any error?</span>
-                            <a href="http://localhost:3000/contact"><Button title='Contact Us' href='/contact' /></a>
+                            <a href="http://localhost:3000/contact"><Button title='Contact Us' onClick = {() => {
+                                window.location.href='/contact'
+                            }} /></a>
                         </div>
                     </div>
                 </div>

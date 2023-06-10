@@ -40,7 +40,7 @@ const Signup = () => {
                     <Input name='email' register={register} watch={watch} title='E-mail' type='text' isValid={!errors['email']} isRegister='true' />
                     <Input name='password' register={register} watch={watch} title='Password' type='password' isValid={!errors['password']} isRegister='true' />
                     <Input name='password_repeat' register={register} watch={watch} title='Repeat password' type='password' isValid={!errors['password_repeat']} isRegister='true' />
-                    <Button title='Signup' />
+                    <Button title='Signup' onClick={Signup} />
                 </div>
             </form>
             <Link link='/login' text='Do you have an account? ' textLink='Log in' />
