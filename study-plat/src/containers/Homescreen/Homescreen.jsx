@@ -1,6 +1,8 @@
-import Header from '../../components/Header'
 import styles from './Homescreen.module.css'
 import Home from '../../components/Header/Home/Home'
+import Header from '../../components/Header'
+
+
 
 const Homescreen = () => {
     return (

@@ -14,7 +14,7 @@ const Error = (props) => {
                 <div className={styles.error__btn} onClick={() => {
                     window.location.href = '/homescreen'
                 }}>
-                    <Button title='Go to home'/>
+                    <Button title='Go home'/>
                 </div>
             </div>
         </div>
