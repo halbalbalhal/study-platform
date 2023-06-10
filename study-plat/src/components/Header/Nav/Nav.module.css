@@ -8,12 +8,6 @@
     align-items: center;
 }
 
-@keyframes border {
-    to {
-        border-bottom: 2px solid var(--light-purple-color);
-    }
-}
-
 .highlight {
     position: relative;
     border-bottom: 3px solid var(--very-light-purple-color);
