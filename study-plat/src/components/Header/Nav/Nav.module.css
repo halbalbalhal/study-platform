@@ -3,7 +3,7 @@
 .nav {
     width: 45%;
     max-width: 460px;
-    height: calc(100% + 50px);
+    height: 110px;
     display: flex;
     align-items: center;
 }
@@ -11,7 +11,7 @@
 .highlight {
     position: relative;
     bottom: -6px;
-    border-bottom: 4px solid var(--very-light-purple-color);
+    border-bottom: 3px solid var(--very-light-purple-color);
     transform: scale(0.9);
 }
 
