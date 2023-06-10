@@ -39,3 +39,10 @@
     display: flex;
     flex-direction: column;
 }
+
+.error {
+    margin-top: -11px;
+    color: var(--red-color);
+    font-size: 13px;
+    display: none;
+}
