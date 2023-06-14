@@ -1,6 +1,9 @@
 import { db } from './firebaseConfig'
 import { getObject, getObjects, setObject } from '../utils/requestUtil'
 import { doc, collection } from 'firebase/firestore'
+import { getAuth } from "firebase/auth";
+
+export const auth = getAuth()
 
 export const getUser = (id, completion) => {
     const docRef = doc(db, "users", id)
@@ -17,3 +20,4 @@ export const createUser = (id, name, email, password, completion) => {
         email: email
     }, completion)
 }
+
