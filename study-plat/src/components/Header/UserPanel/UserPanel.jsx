@@ -1,25 +1,21 @@
 import styles from './UserPanel.module.css'
-import { getUser, auth } from "../../../firebase/userService";
+import { auth } from "../../../firebase/userService";
 import { useState } from "react";
 import { onAuthStateChanged } from "firebase/auth"
 import { signOut } from "firebase/auth"
 const UserPanel = () => {
     const [userName, setUserName] = useState()
     const [render, setRender] = useState(0)
-    const [userUid, setUserUid] = useState()
 
     if(!render){
         onAuthStateChanged(auth, (user) => {
-            setUserUid(user.uid)
+            setUserName(user.displayName)
             setRender(1)
         })
     }
 
-    if(userUid && !userName){
-        getUser(userUid, (user) => {
-            setUserName(user.name)
-        })
-    }
+    console.log(auth)
+
 
     const toProfile = () => {
         window.location.href = '/profile'
@@ -37,11 +33,11 @@ const UserPanel = () => {
         <div className={styles.container}>
             <div className={styles.icon} onClick={toProfile}></div>
             {
-                userUid && userName &&
+                userName &&
                 <span className={styles.text}>{userName}</span>
             }
             {
-                (!userUid || !userName) &&
+                !userName &&
                 <div>
                     <a href='/login' className={styles.text}>Login</a>
                     <span className={styles.text}>/</span>

@@ -68,6 +68,9 @@
 }
 
 .column__error {
+    margin-top: 3px;
+    display: inline-block;
     color: var(--red-color);
     font-size: 13px;
+    line-height: 18px;
 }

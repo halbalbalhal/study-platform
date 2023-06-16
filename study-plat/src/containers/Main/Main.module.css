@@ -22,7 +22,7 @@ iframe {
 }
 
 .description {
-    background-color: rgba(106, 23, 171, 0.05);
+    background-color: var(--dark-gray-always-color);
     border-radius: 8px;
     padding: 32px;
 }
@@ -42,8 +42,8 @@ iframe {
     width: 35%;
     height: 100%;
     border-radius: 8px;
-    background-color: rgba(106, 23, 171, 0.05);
-    padding: 32px 32px 0px 32px;
+    background-color: var(--dark-gray-always-color);
+    padding: 32px 32px 0 32px;
 }
 
 .lesson {
@@ -55,9 +55,26 @@ iframe {
     justify-content: space-between;
     padding: 15px;
     align-items: center;
+        cursor: pointer;
 }
 
 .lesson__title {
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+.lesson__arrow {
+    width: 9px;
+    height: 9px;
+    border-bottom: 2px solid var(--dark-color);
+    border-left: 2px solid var(--dark-color);
+    transform: rotate(-45deg);
+    transition: var(--transition);
+    margin-top: -2px;
+}
+
+.active {
+    transform: rotate(-225deg);
+    margin-top: 5px;
 }

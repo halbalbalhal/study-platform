@@ -16,6 +16,7 @@
     --line-color: rgba(0,0,0,0.3);
     --graphite-color: #28292C;
     --dark-gray-color: #E5E0EB;
+    --dark-gray-always-color: #E5E0EB;
     --sun-color: #FFBF00;
 
     /*Borders*/
@@ -52,6 +53,7 @@
     --blue-color: #9160be;
     --graphite-color: #28292c;
     --dark-gray-color: #28292c;
+    --dark-gray-always-color: #3f3f3f;
     --sun-color: yellow;
 
     /*Borders*/
