@@ -5,6 +5,7 @@ textarea {
     height: 44px;
     border: 1px solid var(--white-gray-color);
     margin-top: 20px;
+    margin-bottom: 10px;
     padding-left: 12px;
     border-radius: 5px;
     resize: none;

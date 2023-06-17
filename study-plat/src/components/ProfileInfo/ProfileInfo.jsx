@@ -7,25 +7,20 @@ import profileicon from '../../assets/images/Profile/profileicon.svg'
 import complete from '../../assets/images/Profile/complete.svg'
 import uncomplete from '../../assets/images/Profile/uncomplete.svg'
 
-import { getTasks, getTask } from '../../firebase/tasksService'
+import { getLessons } from '../../firebase/lessonsService'
+// import { getUser } from '../../firebase/userService'
+
 
 const ProfileInfo = () => {
-    getTask(
-        "web",
-        "first_lesson",
-        "4smb75Orsex2BFif3MqZ",
-        (data) => {
-            console.log(data)
-        }
-    )
 
-    getTasks(
-        "web",
-        "first_lesson",
-        (data) => {
-            console.log(data)
-        }
-    )
+    getLessons('web', (lessons) => {
+        console.log(lessons)
+    })
+
+    // getUser('users', (component) => {
+    //     console.log(component)
+    // })
+
     return (
         <section className={styles.profile}>
             <div className={styles.profile__wrapper}>
@@ -33,8 +28,6 @@ const ProfileInfo = () => {
                     <img src={profileicon} alt="didn't find"  />
                     <div className={styles.profile__inputs}>
                         <textarea spellCheck="false" readOnly>Кирилл</textarea>
-                        <textarea spellCheck="false" readOnly>Максимчик</textarea>
-                        <textarea spellCheck="false" readOnly>20</textarea>
                         <textarea spellCheck="false" readOnly>post@gmail.com</textarea>
                         <a href='/signup'><Button title='Log Out' onClick = {() => {
                             window.location = '/signup'
@@ -74,9 +67,9 @@ const ProfileInfo = () => {
                         </div>
                         <div className={styles.profile__status__contact}>
                             <span className={styles.profile__status__title}>Do you have any error?</span>
-                            <a href="http://localhost:3000/contact"><Button title='Contact Us' onClick = {() => {
+                            <Button title='Contact Us' onClick = {() => {
                                 window.location.href='/contact'
-                            }} /></a>
+                            }} />
                         </div>
                     </div>
                 </div>

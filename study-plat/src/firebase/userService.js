@@ -8,7 +8,7 @@ export const getUser = (id, completion) => {
     getObject(docRef, completion)
 }
 
-export const createUser = (id, name, email, password, completion) => {
+export const createUser = (id, name, email, completion) => {
     const docPath = doc(db, "users", id)
 
     setObject(docPath, {
@@ -17,4 +17,3 @@ export const createUser = (id, name, email, password, completion) => {
         email: email
     }, completion)
 }
-
