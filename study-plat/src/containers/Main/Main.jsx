@@ -3,6 +3,7 @@ import { getCourse } from '../../firebase/coursesService'
 import { getLessons } from '../../firebase/lessonsService'
 import { useState } from 'react'
 import Header from '../../components/Header/Header'
+import Arrow from "../../components/Arrow";
 
 const Main = () => {
     const [course, setCourse] = useState(null)
@@ -16,14 +17,8 @@ const Main = () => {
 
     if(lessons === null){
         getLessons('web', (lessons) => {
-            console.log(lessons)
             setLessons(lessons)
         })
-    }
-
-    const lessonClick = () => {
-        document.querySelector('.' + styles.lesson__arrow).classList.toggle(styles.active)
-
     }
 
     return (
@@ -48,9 +43,9 @@ const Main = () => {
                 <div className={styles.lessons}>
                     {lessons && lessons.map((lesson) => {
                         return (
-                            <div className={styles.lesson} onClick={lessonClick}>
-                                <span className={styles.lesson__title}>{lesson.title}</span>
-                                <div className={styles.lesson__arrow}></div>
+                            <div key={lesson.id} className={styles.lesson}>
+                                <span key={lesson.id} className={styles.lesson__title}>{lesson.title}</span>
+                                <Arrow id={lesson.id} onClick={() => {}} />
                             </div>
                         )
                     })}

@@ -14,9 +14,6 @@ const UserPanel = () => {
         })
     }
 
-    console.log(auth)
-
-
     const toProfile = () => {
         window.location.href = '/profile'
     }
