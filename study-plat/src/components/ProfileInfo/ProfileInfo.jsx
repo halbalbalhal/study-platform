@@ -8,7 +8,7 @@ import complete from '../../assets/images/Profile/complete.svg'
 import uncomplete from '../../assets/images/Profile/uncomplete.svg'
 
 import { getLessons } from '../../firebase/lessonsService'
-// import { getUser } from '../../firebase/userService'
+import { getUser } from '../../firebase/userService'
 
 
 const ProfileInfo = () => {
@@ -17,9 +17,9 @@ const ProfileInfo = () => {
         console.log(lessons)
     })
 
-    // getUser('users', (component) => {
-    //     console.log(component)
-    // })
+    getUser('users', (component) => {
+        console.log(component)
+    })
 
     return (
         <section className={styles.profile}>
@@ -27,7 +27,9 @@ const ProfileInfo = () => {
                 <div className={styles.profile__info}>
                     <img src={profileicon} alt="didn't find"  />
                     <div className={styles.profile__inputs}>
-                        <textarea spellCheck="false" readOnly>Кирилл</textarea>
+                        <textarea spellCheck="false" readOnly>Alexander</textarea>
+                        <textarea spellCheck="false" readOnly>Birulya</textarea>
+                        <textarea spellCheck="false" readOnly>15</textarea>
                         <textarea spellCheck="false" readOnly>post@gmail.com</textarea>
                         <a href='/signup'><Button title='Log Out' onClick = {() => {
                             window.location = '/signup'
