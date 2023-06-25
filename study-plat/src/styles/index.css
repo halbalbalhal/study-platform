@@ -17,6 +17,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+    background-color: var(--very-light-purple-color);
+}
+
 button, a {
     cursor: pointer;
 }

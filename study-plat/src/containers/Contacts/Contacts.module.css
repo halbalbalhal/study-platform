@@ -1,5 +1,8 @@
+@import url('../../styles/constants.css');
+
 .group {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+

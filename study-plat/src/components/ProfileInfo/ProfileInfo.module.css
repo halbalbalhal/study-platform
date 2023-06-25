@@ -1,0 +1,164 @@
+@import url('../../styles/constants.css');
+
+textarea {
+    width: 330px;
+    height: 44px;
+    border: 1px solid var(--white-gray-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 15px;
+    padding-top: 10px;
+    color: var(--dark-color);    
+}
+
+.profile {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__wrapper {
+    display: flex;
+    width: 1400px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+
+.profile__progress {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile__status__title {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.profile__lessons {
+    width: 783px;
+    display: flex;
+    background: var(--very-light-purple-color);
+    height: 270px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 5px 0px 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.lessons__text {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--dark-color);
+}
+
+.profile__inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__lessons__result {
+    width: 350px;
+    height: 200px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+.profile__status__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.profile__status__contact button {
+    width: 343px;
+}
+
+.profile__lessons__number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.profile__lessons__line {
+    width: 290px;
+    height: 36px;
+    background-color: #D9D9D9;
+    border-radius: 16px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.profile__lessons__greenline {
+    width: 40%;
+    height: 100%;
+    background-color: var(--green-color);
+    border-radius: 16px;
+}
+
+.full__lesson {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .profile__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .profile__progress {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .profile__lessons {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .profile__status__contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .profile__lessons__result {
+        margin-top: 30px;
+        background-color: var(--light-purple-color);
+        padding-bottom: 20px;
+    }
+    .profile__lessons__result span  {
+        color: var(--white-color);
+    }
+    .profile__status__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
