@@ -1,7 +1,8 @@
 import styles from './Input.module.css'
-import {useState} from "react";
-import ShowEye from "../Signup&Login/ShowEye/ShowEye";
-import HideEye from "../Signup&Login/HideEye/HideEye";
+import {useState} from "react"
+import ShowEye from "../Signup&Login/ShowEye/ShowEye"
+import HideEye from "../Signup&Login/HideEye/HideEye"
+
 
 const Input = ({ name, register, title, type, isValid, isRegister, isLogin, onChange }) => {
     const [typeOfText, setTypeOfText] = useState(false)
