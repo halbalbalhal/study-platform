@@ -5,9 +5,11 @@ import Text from '../../components/Signup&Login/Text/Text'
 import Input from '../../components/Input/Input'
 import Button from '../../components/Button/Button'
 import { createAccount } from '../../firebase/authService'
-import { createUser } from '../../firebase/userService'
+import { auth, createUser } from '../../firebase/userService'
 import { useForm } from 'react-hook-form'
 import Preloader from "../../components/Preloader/Preloader";
+import { updateProfile } from "firebase/auth";
+
 
 const Signup = () => {
     const {
@@ -30,10 +32,15 @@ const Signup = () => {
                     document.getElementById('preloader').style.display = 'none'
                     document.querySelector('.' + styles.container).style.opacity = 1
                     document.querySelector('.' + styles.error).style.display = 'flex'
+                } else {
+                    createUser(userCredential.user.uid, formData['name'], formData['email'], (error) => {
+                        updateProfile(auth.currentUser, { displayName: formData['name'] }).then(() => {
+                            window.location.href = '/homescreen'
+                        }).catch((error) => {
+                            alert(error)
+                        })
+                    })
                 }
-                createUser(userCredential.user.uid, formData['name'], formData['email'], formData['password'], (error) => {
-                    window.location.href = '/homescreen'
-                })
             }
         )
     }

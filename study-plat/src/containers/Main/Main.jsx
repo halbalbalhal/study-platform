@@ -1,27 +1,22 @@
 import styles from './Main.module.css'
-
 import { getCourse } from '../../firebase/coursesService'
 import { getLessons } from '../../firebase/lessonsService'
 import { useState } from 'react'
-
 import Header from '../../components/Header/Header'
+import Arrow from "../../components/Arrow";
 
-import arrowImg from '../../assets/icons/arrow-forward.svg'
 const Main = () => {
     const [course, setCourse] = useState(null)
     const [lessons, setLessons] = useState(null)
 
     if(course === null){
-        console.log(course)
         getCourse('web', (course) => {
             setCourse(course)
         })
     }
 
     if(lessons === null){
-        console.log('sdkgls')
         getLessons('web', (lessons) => {
-            console.log(lessons)
             setLessons(lessons)
         })
     }
@@ -48,9 +43,9 @@ const Main = () => {
                 <div className={styles.lessons}>
                     {lessons && lessons.map((lesson) => {
                         return (
-                            <div className={styles.lesson}>
-                                <span className={styles.lesson__title}>{lesson.title}</span>
-                                <img src={arrowImg} />
+                            <div key={lesson.id} className={styles.lesson}>
+                                <span key={lesson.id} className={styles.lesson__title}>{lesson.title}</span>
+                                <Arrow id={lesson.id} onClick={() => {}} />
                             </div>
                         )
                     })}

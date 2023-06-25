@@ -1,3 +1,5 @@
+@import "../../styles/constants.css";
+
 .container {
     width: 100%;
     height: calc(100% - 123px);
@@ -22,7 +24,7 @@ iframe {
 }
 
 .description {
-    background-color: rgba(106, 23, 171, 0.05);
+    background-color: var(--dark-gray-always-color);
     border-radius: 8px;
     padding: 32px;
 }
@@ -42,8 +44,11 @@ iframe {
     width: 35%;
     height: 100%;
     border-radius: 8px;
-    background-color: rgba(106, 23, 171, 0.05);
-    padding: 32px 32px 0px 32px;
+    background-color: var(--dark-gray-always-color);
+    padding: 32px 32px 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .lesson {
@@ -59,5 +64,6 @@ iframe {
 
 .lesson__title {
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: 400;
+    color: var(--dark-color);
 }

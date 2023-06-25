@@ -4,14 +4,14 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    position: relative;
 }
 
 .text {
     display: inline-flex;
     align-items: center;
-    font-family: 'Poppins';
     font-weight: 400;
-    font-size: 24px;
+    font-size: 23px;
     color: var(--dark-color);
 }
 
