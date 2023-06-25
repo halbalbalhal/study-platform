@@ -10,7 +10,7 @@ import Main from '../containers/Main/Main'
 
 const routesConfig = [
     {
-        path: '/onboard',
+        path: '/',
         exact: true,
         element: <Onboard />
     }, 

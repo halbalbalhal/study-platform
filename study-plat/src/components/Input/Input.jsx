@@ -3,6 +3,7 @@ import {useState} from "react"
 import ShowEye from "../Signup&Login/ShowEye/ShowEye"
 import HideEye from "../Signup&Login/HideEye/HideEye"
 
+
 const Input = ({ name, register, title, type, isValid, isRegister, isLogin, onChange }) => {
     const [typeOfText, setTypeOfText] = useState(false)
 
@@ -20,8 +21,8 @@ const Input = ({ name, register, title, type, isValid, isRegister, isLogin, onCh
         switch (inputName) {
             case 'name':
                 return {
-                    errorMessage: 'The name must contain only letters',
-                    regex: /[a-zA-Z]+$/
+                    errorMessage: 'The name must contain only letters and consist of 2-6 letters',
+                    regex: /(?=^.{2,6}$)[a-zA-Z]/
                 }
             case 'email':
                 return {

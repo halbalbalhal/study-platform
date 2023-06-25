@@ -1,0 +1,17 @@
+@import "../../styles/constants.css";
+
+.arrow {
+    width: 9px;
+    height: 9px;
+    border-bottom: 2px solid var(--dark-color);
+    border-left: 2px solid var(--dark-color);
+    transform: rotate(-45deg);
+    transition: var(--transition);
+    margin-top: -2px;
+    cursor: pointer;
+}
+
+.active {
+    transform: rotate(-225deg);
+    margin-top: 5px;
+}
