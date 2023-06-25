@@ -12,6 +12,7 @@ textarea {
     font-size: 15px;
     padding-top: 10px;
     color: var(--dark-color);    
+    overflow-x: hidden;
 }
 
 .profile {

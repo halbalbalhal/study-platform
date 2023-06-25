@@ -10,6 +10,7 @@ const Nav = () => {
             <Link value={'Course'} path={'/course'} />
             <Link value={'Profile'} path={'/profile'} />
             <Link value={'About'} path={'/about'} />
+            <Link value={'Contact'} path={'/contact'} />
         </nav>
     )
 }
@@ -30,6 +31,9 @@ function getSelected() {
             break
         case '/about':
             index = 3
+            break
+        case '/contact':
+            index = 4
             break
         default: 
             index = 0    
