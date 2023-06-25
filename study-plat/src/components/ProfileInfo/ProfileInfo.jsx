@@ -1,5 +1,9 @@
 import styles from './ProfileInfo.module.css'
 
+import { useState } from "react";
+import { onAuthStateChanged } from "firebase/auth"
+import { auth } from "../../firebase/userService"
+
 import Button from '../Button/Button'
 import PictureWithText from '../Signup&Login/PictureWithText/PictureWithText'
 
@@ -7,19 +11,21 @@ import profileicon from '../../assets/images/Profile/profileicon.svg'
 import complete from '../../assets/images/Profile/complete.svg'
 import uncomplete from '../../assets/images/Profile/uncomplete.svg'
 
-import { getLessons } from '../../firebase/lessonsService'
-import { getUser } from '../../firebase/userService'
-
-
 const ProfileInfo = () => {
 
-    getLessons('web', (lessons) => {
-        console.log(lessons)
-    })
+    const [userName, setUserName] = useState()
+    const [render, setRender] = useState(0)
 
-    getUser('users', (component) => {
-        console.log(component)
-    })
+    const [post, setPost] = useState()
+
+    if(!render){
+        onAuthStateChanged(auth, (user) => {
+            setUserName(user.displayName)
+            setRender(1)
+
+            setPost(user.email)
+        })
+    }
 
     return (
         <section className={styles.profile}>
@@ -27,13 +33,17 @@ const ProfileInfo = () => {
                 <div className={styles.profile__info}>
                     <img src={profileicon} alt="didn't find"  />
                     <div className={styles.profile__inputs}>
-                        <textarea spellCheck="false" readOnly>Alexander</textarea>
-                        <textarea spellCheck="false" readOnly>Birulya</textarea>
-                        <textarea spellCheck="false" readOnly>15</textarea>
-                        <textarea spellCheck="false" readOnly>post@gmail.com</textarea>
-                        <a href='/signup'><Button title='Log Out' onClick = {() => {
+                        {
+                            userName &&
+                            <textarea value={userName} spellCheck="false" readOnly></textarea>
+                        }
+                        {
+                            post &&
+                            <textarea value={post} spellCheck="false" readOnly></textarea>
+                        }
+                        <Button title='Log Out' onClick = {() => {
                             window.location = '/signup'
-                        }} /></a>
+                        }} />
                     </div>
                 </div>
 
