@@ -15,7 +15,6 @@ const ProfileInfo = () => {
 
     const [userName, setUserName] = useState()
     const [render, setRender] = useState(0)
-
     const [post, setPost] = useState()
 
     if(!render){
@@ -79,9 +78,7 @@ const ProfileInfo = () => {
                         </div>
                         <div className={styles.profile__status__contact}>
                             <span className={styles.profile__status__title}>Do you have any error?</span>
-                            <Button title='Contact Us' onClick = {() => {
-                                window.location.href='/contact'
-                            }} />
+                            <a href='/contact'><Button title='Contact Us'/></a>
                         </div>
                     </div>
                 </div>
