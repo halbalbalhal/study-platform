@@ -33,12 +33,3 @@
     border: 1px solid var(--dark-purple-color);
     transform: scale(0.98, 0.98);
 }
-
-.btn:hover .btn__icon {
-    fill: var(--very-light-purple-color);
-}
-
-.btn:active  .btn__icon {
-    fill: var(--dark-purple-color);
-    transform: scale(0.98, 0.98);
-}

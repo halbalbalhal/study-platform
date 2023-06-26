@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 80px;
+    position: relative;
+}
+
+.title {
+    font-size: 44px;
+    font-weight: 500;
+}
+
+.text {
+    max-width: 1000px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.small_container {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.picture {
+    width: 487px;
+    height: 520px;
+    position: absolute;
+    right: 0px;
+    top: -20px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1500px) {
+    .picture {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .text {
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        padding: 25px 10px;
+    }
+}
+
