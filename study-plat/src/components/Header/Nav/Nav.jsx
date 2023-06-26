@@ -6,9 +6,9 @@ const Nav = () => {
     useEffect(highlight)
     return (
         <nav className={styles.nav} id='header__nav'>
+            <Link value={'Profile'} path={'/profile'} />
             <Link value={'Home'} path={'/homescreen'} />
             <Link value={'Course'} path={'/course'} />
-            <Link value={'Profile'} path={'/profile'} />
             <Link value={'About'} path={'/about'} />
             <Link value={'Contact'} path={'/contact'} />
         </nav>
@@ -20,13 +20,13 @@ function getSelected() {
     let index
     
     switch(path) {
-        case '/homescreen':
+        case '/profile':
             index = 0
             break
-        case '/course':
+        case '/homescreen':
             index = 1
             break
-        case '/profile':
+        case '/course':
             index = 2
             break
         case '/about':
