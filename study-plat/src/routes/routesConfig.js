@@ -16,14 +16,14 @@ const routesConfig = [
         element: <Onboard />
     }, 
     {
-        path: '/signup',
-        exact: true,
-        element: <Signup />
-    },
-    {
         path: '/login',
         exact: true,
         element: <Login />
+    },
+    {
+        path: '/signup',
+        exact: true,
+        element: <Signup />
     },
     {
         path: '/homescreen',
@@ -34,6 +34,11 @@ const routesConfig = [
         path: '/contact',
         exact: true,
         element: <Contact />
+    },
+    {
+        path: '/about',
+        exact: true,
+        element: <About />
     },
     {
         path: '/course',
@@ -50,11 +55,6 @@ const routesConfig = [
         path: '/*',
         exact: true,
         element: <Profile />
-    },
-    {
-        path: '/about',
-        exact: true,
-        element: <About />
     }
 ]
 

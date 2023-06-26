@@ -6,7 +6,7 @@ import Text from "../../components/Signup&Login/Text/Text"
 import Input from "../../components/Input/Input"
 import Button from "../../components/Button/Button"
 import ButtonWithImage from "../../components/Signup&Login/ButtonWithImage/ButtonWithImage"
-import { login } from "../../firebase/authService";
+import { login } from "../../firebase/authService"
 import { useState } from "react"
 import Preloader from "../../components/Preloader/Preloader"
 import { auth, createUser, provider } from "../../firebase/userService"

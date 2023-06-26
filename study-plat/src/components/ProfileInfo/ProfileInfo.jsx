@@ -40,7 +40,7 @@ const ProfileInfo = () => {
                             post &&
                             <textarea value={post} spellCheck="false" readOnly></textarea>
                         }
-                        <Button title='Log Out/In' onClick = {() => {
+                        <Button title='Log Out' onClick = {() => {
                             window.location = '/signup'
                         }} />
                     </div>
