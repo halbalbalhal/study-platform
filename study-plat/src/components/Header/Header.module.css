@@ -16,6 +16,12 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .header {
+        padding: 30px 35px;
+    }
+}
+
 .wrapper {
     width: 100%;
     max-width: 1600px;
@@ -29,6 +35,17 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 380px) {
+    .header {
+        padding: 20px 25px;
+    }
+    .burger__container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 @media screen and (min-width: 1051px) {

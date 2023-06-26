@@ -27,6 +27,7 @@ const Links = (props) => {
             <a href="/course" className={styles.link}>Course</a>
             <a href="/profile" className={styles.link}>Profile</a>
             <a href="/about" className={styles.link}>About</a>
+            <a href='/contact' className={styles.link}>Contact Us</a>
         </div>
     )
 }

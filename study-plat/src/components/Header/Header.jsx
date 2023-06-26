@@ -18,7 +18,7 @@ const Header = () => {
                     }
                 </div>
                 <div className={styles.burger__container}>
-                    {window.innerWidth <=    1050 &&
+                    {window.innerWidth <= 1050 &&
                         <ThemeToggle />
                     }
                     <Menu />

@@ -10,6 +10,7 @@
 
 .highlight {
     position: relative;
+    bottom: -1px;
     border-bottom: 3px solid var(--very-light-purple-color);
 }
 

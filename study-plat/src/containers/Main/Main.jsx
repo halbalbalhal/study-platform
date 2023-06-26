@@ -1,24 +1,25 @@
 import styles from './Main.module.css'
-
 import { getCourse } from '../../firebase/coursesService'
 import { getLessons } from '../../firebase/lessonsService'
 import { useState } from 'react'
-
 import Header from '../../components/Header/Header'
+import Arrow from "../../components/Arrow";
 
-import arrowImg from '../../assets/icons/arrow-forward.svg'
 const Main = () => {
     const [course, setCourse] = useState(null)
-    const [lessons, setLessons] = useState([])
+    const [lessons, setLessons] = useState(null)
 
-    getCourse('web', (course) => {
-        setCourse(course)
-    })
+    if(course === null){
+        getCourse('web', (course) => {
+            setCourse(course)
+        })
+    }
 
-    getLessons('web', (lessons) => {
-        console.log(lessons)
-        setLessons(lessons)
-    })
+    if(lessons === null){
+        getLessons('web', (lessons) => {
+            setLessons(lessons)
+        })
+    }
 
     return (
         <>

@@ -1,14 +1,25 @@
 import styles from './About.module.css'
-import Header from '../../components/Header'
-import AboutInfo from '../../components/AboutInfo/AboutInfo'
+import Header from '../../components/Header/Header'
+import Button from '../../components/Button/Button'
+import PictureWithText from '../../components/Signup&Login/PictureWithText/PictureWithText'
+
 
 const About = () => {
     return (
-        <div className={styles.container}>
+        <>
             <Header />
-            <AboutInfo />
-        </div>
-    ) 
+            <section className={styles.about}>
+                <div className={styles.about__wrapper}>
+                    <PictureWithText className={styles.cookie} text='Learn more about us' />
+                    <span className={styles.title}>About Our Project</span>
+                    <p className={styles.text}>We are a little group of people, that merged with common target to give people a lot of different new knowledge </p>
+                    <div className={styles.button}>
+                        <a href='/course'><Button title='Go study' /></a>
+                    </div>
+                </div>
+            </section>
+        </>
+    )
 }
 
 export default About
