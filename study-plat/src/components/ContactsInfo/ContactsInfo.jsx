@@ -28,7 +28,7 @@ const ContactsInfo = () => {
 
                 <div className={styles.contact__block}>
                     <img src={location} alt="page didn't find" />
-                    <span className={styles.contact__point}>Brest, st. Sovetskaya 1</span>
+                    <span className={styles.contact__point}>Brest, st. Sovyetskaya 52</span>
                 </div>
 
                 <div className={styles.contact__social}>
