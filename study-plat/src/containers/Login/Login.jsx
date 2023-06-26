@@ -2,15 +2,15 @@ import styles from './Login.module.css'
 
 import PictureWithText from '../../components/Signup&Login/PictureWithText/PictureWithText'
 import Link from '../../components/Signup&Login/Link/Link'
-import Text from "../../components/Signup&Login/Text/Text";
-import Input from "../../components/Input/Input";
-import Button from "../../components/Button/Button";
-import ButtonWithImage from "../../components/Signup&Login/ButtonWithImage/ButtonWithImage";
+import Text from "../../components/Signup&Login/Text/Text"
+import Input from "../../components/Input/Input"
+import Button from "../../components/Button/Button"
+import ButtonWithImage from "../../components/Signup&Login/ButtonWithImage/ButtonWithImage"
 import { login } from "../../firebase/authService";
-import { useState } from "react";
-import Preloader from "../../components/Preloader/Preloader";
-import { auth, createUser, provider } from "../../firebase/userService";
-import { signInWithPopup, updateProfile } from "firebase/auth";
+import { useState } from "react"
+import Preloader from "../../components/Preloader/Preloader"
+import { auth, createUser, provider } from "../../firebase/userService"
+import { signInWithPopup, updateProfile } from "firebase/auth"
 
 const Login = () => {
     const [valueOfEmailInput, setValueOfEmailInput] = useState('')
