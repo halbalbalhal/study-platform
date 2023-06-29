@@ -4,13 +4,19 @@ import {useEffect} from 'react'
 
 const Nav = () => {
     useEffect(highlight)
+
     return (
         <nav className={styles.nav} id='header__nav'>
+            <>
             <Link value={'Profile'} path={'/profile'} />
             <Link value={'Home'} path={'/homescreen'} />
             <Link value={'Course'} path={'/course'} />
             <Link value={'About'} path={'/about'} />
             <Link value={'Contact'} path={'/contact'} />
+
+            </>
+
+            
         </nav>
     )
 }

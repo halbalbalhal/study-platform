@@ -1,7 +1,35 @@
 import styles from './Links.module.css'
 import { useEffect } from 'react'
+import { signOut } from "firebase/auth"
+import { onAuthStateChanged } from "firebase/auth"
+import { auth } from "../../../firebase/userService"
+import { useState } from 'react'
+
 
 const Links = (props) => {
+
+    const [userName, setUserName] = useState()
+    const [render, setRender] = useState(0)
+
+    if(!render){
+        onAuthStateChanged(auth, (user) => {
+            setUserName(user.displayName)
+            setRender(1)
+        })
+    }
+
+    const toProfile = () => {
+        window.location.href = '/profile'
+    }
+
+    const exit = () => {
+        signOut(auth).then(() => {
+            window.location.href = '/login'
+        }).catch((error) => {
+            alert(error)
+        })
+    }
+
     const activate = () => {
         const menu = document.getElementById('Hamburger-menu')
 
@@ -18,6 +46,8 @@ const Links = (props) => {
         menu.classList.remove(styles.disable)
         menu.classList.add(styles.active)
     }
+
+    
 
     useEffect(activate)
 
