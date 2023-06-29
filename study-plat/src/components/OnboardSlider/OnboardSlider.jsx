@@ -6,9 +6,28 @@ import whiteCircle from '../../assets/icons/Onboard/whiteCircle.png'
 
 import Button from '../Button/Button'
 
+import { onAuthStateChanged } from "firebase/auth"
+import { auth } from "../../firebase/userService"
+
+
+
 const OnboardSlider = ({ data }) => {
     const [currentSlideData, setCurrentSlideData] = useState(data[0])
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+    const [userName, setUserName] = useState()
+    const [render, setRender] = useState(0)
+
+
+    if(!render){
+        onAuthStateChanged(auth, (user) => {
+            setUserName(user.displayName)
+            setRender(1)
+        })
+    }
+
+    if (userName) {
+        window.location.href = '/homescreen'
+    }
 
     const tapEvent = () => {
         if (currentSlideIndex === 2) {
