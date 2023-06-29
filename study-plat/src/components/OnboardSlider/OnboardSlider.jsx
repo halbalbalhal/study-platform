@@ -7,7 +7,8 @@ import whiteCircle from '../../assets/icons/Onboard/whiteCircle.png'
 import Button from '../Button/Button'
 
 import { onAuthStateChanged } from "firebase/auth"
-import { auth } from "../../firebase/userService";
+import { auth } from "../../firebase/userService"
+
 
 
 const OnboardSlider = ({ data }) => {
