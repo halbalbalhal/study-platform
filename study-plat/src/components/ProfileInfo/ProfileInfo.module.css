@@ -92,10 +92,6 @@ textarea {
     width: 343px;
 }
 
-.image {
-    margin-left: 200px;
-}
-
 .profile__lessons__number {
     display: flex;
     align-items: center;
@@ -166,4 +162,5 @@ textarea {
         margin-top: 50px;
     }
 }
+
 

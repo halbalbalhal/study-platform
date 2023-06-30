@@ -36,3 +36,11 @@
         top: -40px;
     }
 }
+
+@media screen and (max-width: 410px) {
+    .container__suggestion {
+        max-width: 90px;
+        width: 90px;
+        right: -80px
+    }
+}

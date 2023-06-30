@@ -63,7 +63,7 @@ const ProfileInfo = () => {
                 </div>
 
                 <div className={styles.profile__progress}>
-                    <PictureWithText text='Check your progress' className={styles.image} />
+                    <PictureWithText text='Check your progress' />
                     <div className={styles.profile__status}>
                         <span className={styles.profile__status__title}>Status</span>
 
