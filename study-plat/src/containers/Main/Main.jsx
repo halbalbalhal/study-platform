@@ -14,15 +14,11 @@ const Main = () => {
     const [lessons, setLessons] = useState(null)
     const [userName, setUserName] = useState()
     const [render, setRender] = useState(0)
-    const [post, setPost] = useState()
-
 
     if(!render){
         onAuthStateChanged(auth, (user) => {
             setUserName(user.displayName)
             setRender(1)
-
-            setPost(user.email)
         })
     }
 

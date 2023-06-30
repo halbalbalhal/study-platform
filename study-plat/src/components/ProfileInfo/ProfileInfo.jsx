@@ -3,6 +3,7 @@ import styles from './ProfileInfo.module.css'
 import { useState } from "react";
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../../firebase/userService"
+import { signOut } from 'firebase/auth'
 
 import Button from '../Button/Button'
 import PictureWithText from '../Signup&Login/PictureWithText/PictureWithText'
@@ -26,6 +27,14 @@ const ProfileInfo = () => {
         })
     }
 
+    const exit = () => {
+        signOut(auth).then(() => {
+            window.location.href = '/login'
+        }).catch((error) => {
+            alert(error)
+        })
+    }
+
     return (
         <section className={styles.profile}>
             <div className={styles.profile__wrapper}>
@@ -40,14 +49,21 @@ const ProfileInfo = () => {
                             post &&
                             <textarea value={post} spellCheck="false" readOnly></textarea>
                         }
-                        <Button id='button' title='Log Out' onClick = {() => {
-                            window.location = '/signup'
-                        }} />
+                        {
+                            !userName &&
+                            <Button id='button' title='Signup' tapEvent={() => {
+                                window.location.href = '/signup'
+                            }} />
+                        }
+                        {
+                            userName &&
+                            <Button id='button' tapEvent={exit} title='Log out' />
+                        }
                     </div>
                 </div>
 
                 <div className={styles.profile__progress}>
-                    <PictureWithText text='Check your progress' />
+                    <PictureWithText text='Check your progress' className={styles.image} />
                     <div className={styles.profile__status}>
                         <span className={styles.profile__status__title}>Status</span>
 
