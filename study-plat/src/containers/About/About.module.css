@@ -5,6 +5,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .about__wrapper {
@@ -12,8 +13,8 @@
     width: 1440px;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    flex-direction: column;
+    margin-top: 70px;
+    flex-direction: column; 
 }
 
 .title {
@@ -33,5 +34,15 @@
 .button {
     width: 500px;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 506px) {
+    .text {
+        max-width: 400px;
+    }
+
+    .button {
+        width: 300px;
+    }
 }
 
