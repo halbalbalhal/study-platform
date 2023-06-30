@@ -34,19 +34,18 @@ const Main = () => {
         })
     }
 
-    if (userName) {
-        document.getElementById("blocker").style.display = "none"
-    }
-
     return (
         <>
-            <div id='blocker' className={styles.blocker}>
-                <PictureWithText text='You must create an account' />
-                <div>
-                    <a href='/login'><Button title='Sign up' /></a>
-                </div>
-            </div>
             <Header />
+            {
+                !userName &&
+                <div id='blocker' className={styles.blocker}>
+                    <PictureWithText text='You must create an account' />
+                    <div>
+                        <a href='/login'><Button title='Sign up' /></a>
+                    </div>
+                </div>
+            }
 
             <div className={styles.container}>
                 <div className={styles.column}>

@@ -14,7 +14,9 @@ const About = () => {
                     <span className={styles.title}>About Our Project</span>
                     <p className={styles.text}>We are a little group of people, that merged with common target to give people a lot of different new knowledge </p>
                     <div className={styles.button}>
-                        <a href='/course'><Button title='Go study' /></a>
+                        <Button title='Go study' tapEvent={() => {
+                            window.location.href = '/course'
+                        }} />
                     </div>
                 </div>
             </section>

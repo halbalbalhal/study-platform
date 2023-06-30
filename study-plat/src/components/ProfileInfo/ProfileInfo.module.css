@@ -15,6 +15,10 @@ textarea {
     overflow-x: hidden;
 }
 
+textarea:first-child {
+    border: 1px solid red;
+}
+
 .profile {
     display: flex;
     width: 100%;

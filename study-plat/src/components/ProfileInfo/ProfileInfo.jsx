@@ -22,7 +22,6 @@ const ProfileInfo = () => {
         onAuthStateChanged(auth, (user) => {
             setUserName(user.displayName)
             setRender(1)
-
             setPost(user.email)
         })
     }
@@ -48,6 +47,10 @@ const ProfileInfo = () => {
                         {
                             post &&
                             <textarea value={post} spellCheck="false" readOnly></textarea>
+                        }
+                        {
+                            !userName &&
+                            <textarea readOnly value='you are logged out!'></textarea>
                         }
                         {
                             !userName &&
