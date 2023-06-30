@@ -4,7 +4,7 @@ const Logo = () => {
     return (
         <div className= {styles.container}>
             <div className={styles.image}></div>
-            <span className={styles.text}>Logo</span>
+            <span className={styles.text}>Learn</span>
         </div>
     )
 }

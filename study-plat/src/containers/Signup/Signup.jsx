@@ -21,17 +21,23 @@ const Signup = () => {
     } = useForm()
 
     const onSubmit = (formData) => {
-        document.querySelector('.' + styles.error).style.display = 'none'
-        document.getElementById('preloader').style.display = 'flex'
-        document.querySelector('.' + styles.container).style.opacity = 0.6
+        // ЭТО НЕ РАБОТАЕТ И РЕГИСТРАЦИЯ НЕ ИДЁТ
+
+
+        // document.querySelector('.' + styles.error).style.display = 'none'
+        // document.getElementById('preloader').style.display = 'flex'
+        // document.querySelector('.' + styles.container).style.opacity = 0.6
         createAccount(
             formData['email'],
             formData['password'],
             (userCredential) => {
                 if(userCredential === 'auth/email-already-in-use'){
-                    document.getElementById('preloader').style.display = 'none'
-                    document.querySelector('.' + styles.container).style.opacity = 1
-                    document.querySelector('.' + styles.error).style.display = 'flex'
+                    //ЭТО ТОЖЕ НЕ РАБОТАЕТ
+
+                    // document.getElementById('preloader').style.display = 'none'
+                    // document.querySelector('.' + styles.container).style.opacity = 1
+                    // document.querySelector('.' + styles.error).style.display = 'flex'
+                    console.log(1)
                 } else {
                     createUser(userCredential.user.uid, formData['name'], formData['email'], (error) => {
                         updateProfile(auth.currentUser, { displayName: formData['name'] }).then(() => {
