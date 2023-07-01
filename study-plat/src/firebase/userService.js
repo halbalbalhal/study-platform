@@ -1,10 +1,13 @@
 import { db } from './firebaseConfig'
 import { getObject, getObjects, setObject } from '../utils/requestUtil'
 import { doc, collection } from 'firebase/firestore'
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth"
+import { FacebookAuthProvider } from "firebase/auth";
+
 
 export const auth = getAuth()
-export const provider = new GoogleAuthProvider()
+export const GoogleProvider = new GoogleAuthProvider()
+export const FacebookProvider = new FacebookAuthProvider()
 
 export const getUser = (id, completion) => {
     const docRef = doc(db, "users", id)
