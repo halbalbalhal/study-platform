@@ -50,7 +50,7 @@ const ProfileInfo = () => {
                         }
                         {
                             !userName &&
-                            <textarea readOnly value='you are logged out!'></textarea>
+                            <textarea className={styles.notextarea} readOnly value='you are logged out!'></textarea>
                         }
                         {
                             !userName &&

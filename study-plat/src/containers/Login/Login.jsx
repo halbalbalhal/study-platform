@@ -9,8 +9,8 @@ import ButtonWithImage from "../../components/Signup&Login/ButtonWithImage/Butto
 import { login } from "../../firebase/authService"
 import { useState } from "react"
 import Preloader from "../../components/Preloader/Preloader"
-import { auth, createUser, provider } from "../../firebase/userService"
-import { signInWithPopup, updateProfile } from "firebase/auth"
+import { auth, createUser, GoogleProvider, FacebookProvider } from "../../firebase/userService"
+import { signInWithPopup, updateProfile, FacebookAuthProvider, signInWithRedirect } from "firebase/auth"
 
 const Login = () => {
     const [valueOfEmailInput, setValueOfEmailInput] = useState('')
@@ -54,7 +54,7 @@ const Login = () => {
         let id, name, email
         document.getElementById('preloader').style.display = 'flex'
         document.querySelector('.' + styles.container).style.opacity = 0.6
-        signInWithPopup(auth, provider)
+        signInWithPopup(auth, GoogleProvider)
             .then((result) => {
                 id = result.user.uid
                 name = result.user.displayName
@@ -83,6 +83,26 @@ const Login = () => {
             })
     }
 
+    const loginWithFacebook = () => {
+        document.getElementById('preloader').style.display = 'flex'
+        document.querySelector('.' + styles.container).style.opacity = 0.6
+        signInWithPopup(auth, FacebookProvider)
+        .then((result) => {
+            window.location.href = '/homescreen'
+            const user = result.user
+            const credential = FacebookAuthProvider.credentialFromResult(result)
+            const accessToken = credential.accessToken
+        
+          })
+          .catch((error) => {
+            const errorCode = error.code
+            const errorMessage = error.message
+            const email = error.customData.email
+            const credential = FacebookAuthProvider.credentialFromError(error);
+        
+          })
+    }
+
     return(
         <div className={styles.container}>
             <PictureWithText text='Login to your personal account' />
@@ -95,6 +115,7 @@ const Login = () => {
                     <span className={`${styles.column__error} ${styles.errorPassword}`}>Wrong password</span>
                     <Button title='Login' tapEvent={loginButton} isDisabled={valueOfEmailInput === '' || valueOfPasswordInput === ''} />
                     <ButtonWithImage title='Login with Google' tapEvent={loginWithGoogle} />
+                    <Button title='Login with Facebook' tapEvent={loginWithFacebook} />
                 </div>
             </div>
             <Link link='/signup' text='Don’t have an account? ' textLink='Sign up' />

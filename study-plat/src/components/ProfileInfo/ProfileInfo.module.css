@@ -15,7 +15,7 @@ textarea {
     overflow-x: hidden;
 }
 
-textarea:first-child {
+.notextarea {
     border: 1px solid red;
 }
 
