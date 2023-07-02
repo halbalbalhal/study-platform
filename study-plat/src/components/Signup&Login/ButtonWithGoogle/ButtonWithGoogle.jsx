@@ -1,4 +1,4 @@
-import styles from './ButtonWithImage.module.css'
+import styles from './ButtonWithGoogle.module.css'
 
 const ButtonWithImage = (props) => {
     return(
