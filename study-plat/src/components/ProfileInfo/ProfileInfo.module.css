@@ -38,6 +38,7 @@ textarea {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation: lessonInfo 2s;
 }
 
 .profile__info {
@@ -45,6 +46,7 @@ textarea {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: 1s userInfo;
 }
 
 .profile__status__title {
@@ -164,6 +166,23 @@ textarea {
         align-items: center;
         justify-content: center;
         margin-top: 50px;
+    }
+}
+
+@keyframes userInfo {
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lessonInfo {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
     }
 }
 

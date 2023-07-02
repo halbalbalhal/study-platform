@@ -84,11 +84,21 @@ const Login = () => {
     }
 
     const loginWithFacebook = () => {
+        let id, name, email
         document.getElementById('preloader').style.display = 'flex'
         document.querySelector('.' + styles.container).style.opacity = 0.6
         signInWithPopup(auth, FacebookProvider)
         .then((result) => {
-            window.location.href = '/homescreen'
+            id = result.user.uid
+            name = result.user.displayName
+            email = result.user.email
+            createUser(id, name, email, (user) => {
+                updateProfile(auth.currentUser, { displayName: name }).then(() => {
+                    window.location.href = '/homescreen'
+                }).catch((error) => {
+                    alert(error)
+                })
+            })
             const user = result.user
             const credential = FacebookAuthProvider.credentialFromResult(result)
             const accessToken = credential.accessToken

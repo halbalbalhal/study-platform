@@ -15,6 +15,7 @@
     width: 330px;
     align-items: center;
     justify-content: space-evenly;
+    animation: 2s info;
 }
 
 .contact__title {
@@ -103,5 +104,14 @@
 
     .contact__info {
         transform: scale(0.87);
+    }
+}
+
+@keyframes info {
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    } 100% {
+        opacity: 1;
     }
 }
