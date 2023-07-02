@@ -22,7 +22,8 @@ const Input = ({ name, register, title, type, isValid, isRegister, isLogin, onCh
             case 'name':
                 return {
                     errorMessage: 'The name must contain only letters and consist of 2-6 letters',
-                    regex: /(?=^.{2,6}$)[a-zA-Z]/
+                    regex: /(?=^.{2,6}$)[а-яА-Я]/,
+                    regex: /[a-zA-Z]/
                 }
             case 'email':
                 return {
