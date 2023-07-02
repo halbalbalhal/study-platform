@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    animation: appearing_animation 1s ease ;
 }
 
 .about__wrapper {
@@ -43,6 +44,16 @@
 
     .button {
         width: 300px;
+    }
+}
+
+@keyframes appearing_animation {
+    0% {
+        opacity: 0;
+        margin-top: 70px;
+    } 100% {
+        opacity: 1;
+        margin-bottom: 70px;
     }
 }
 
