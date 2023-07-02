@@ -1,4 +1,4 @@
-# study-plat
+# study-platform (Learn)
 This project is written by using React framework
 
 Link for the site -> bit.ly/stdpltfm
