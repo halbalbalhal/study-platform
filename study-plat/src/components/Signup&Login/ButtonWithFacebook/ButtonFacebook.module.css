@@ -7,15 +7,15 @@
     justify-content: center;
     width: 100%;
     height: 48px;
-    border: 1px solid var(--light-purple-color);
     border-radius: var(--small-radius);
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-    color: var(--light-purple-color);
+    color: var(--white-color);
     transition: var(--transition);
     gap: 0 15px;
+    background-color: var(--dark-purple-color);
 }
 
 .btn__icon {

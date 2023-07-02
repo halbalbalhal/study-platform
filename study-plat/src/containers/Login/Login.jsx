@@ -5,7 +5,8 @@ import Link from '../../components/Signup&Login/Link/Link'
 import Text from "../../components/Signup&Login/Text/Text"
 import Input from "../../components/Input/Input"
 import Button from "../../components/Button/Button"
-import ButtonWithImage from "../../components/Signup&Login/ButtonWithImage/ButtonWithImage"
+import ButtonWithGoogle from "../../components/Signup&Login/ButtonWithGoogle/ButtonWithGoogle"
+import ButtonWithFacebook from "../../components/Signup&Login/ButtonWithFacebook/ButtonWithFacebook"
 import { login } from "../../firebase/authService"
 import { useState } from "react"
 import Preloader from "../../components/Preloader/Preloader"
@@ -124,8 +125,8 @@ const Login = () => {
                     <Input title='Password' type='password' name='password' isValid='true' isLogin='true' onChange={inputValue} />
                     <span className={`${styles.column__error} ${styles.errorPassword}`}>Wrong password</span>
                     <Button title='Login' tapEvent={loginButton} isDisabled={valueOfEmailInput === '' || valueOfPasswordInput === ''} />
-                    <ButtonWithImage title='Login with Google' tapEvent={loginWithGoogle} />
-                    <Button title='Login with Facebook' tapEvent={loginWithFacebook} />
+                    <ButtonWithGoogle title='Login with Google' tapEvent={loginWithGoogle} />
+                    <ButtonWithFacebook title='Login with Facebook' tapEvent={loginWithFacebook} />
                 </div>
             </div>
             <Link link='/signup' text='Don’t have an account? ' textLink='Sign up' />
