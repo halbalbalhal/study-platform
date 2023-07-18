@@ -7,6 +7,7 @@ import Input from "../../components/Input/Input"
 import Button from "../../components/Button/Button"
 import ButtonWithGoogle from "../../components/Signup&Login/ButtonWithGoogle/ButtonWithGoogle"
 import ButtonWithFacebook from "../../components/Signup&Login/ButtonWithFacebook/ButtonWithFacebook"
+import Dd from '../../components/DdMessage/Dd'
 import { login } from "../../firebase/authService"
 import { useState } from "react"
 import Preloader from "../../components/Preloader/Preloader"
@@ -103,19 +104,25 @@ const Login = () => {
             const user = result.user
             const credential = FacebookAuthProvider.credentialFromResult(result)
             const accessToken = credential.accessToken
-        
-          })
-          .catch((error) => {
+            
+        })
+        .catch((error) => {
             const errorCode = error.code
             const errorMessage = error.message
             const email = error.customData.email
-            const credential = FacebookAuthProvider.credentialFromError(error);
-        
-          })
+            const credential = FacebookAuthProvider.credentialFromError(error)
+    
+            console.log(errorCode)
+            console.log(errorMessage)
+            console.log(credential)
+            console.log(email)
+
+        })
     }
 
     return(
         <div className={styles.container}>
+            <Dd title="Something went wrong" />  
             <PictureWithText text='Login to your personal account' />
             <div className={styles.wrapper}>
                 <div className={styles.column}>
