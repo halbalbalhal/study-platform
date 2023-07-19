@@ -40,11 +40,15 @@ const Login = () => {
                 document.getElementById('preloader').style.display = 'none'
                 document.querySelector('.' + styles.container).style.opacity = 1
                 document.querySelector('.' + styles.errorEmail).style.display = 'flex'
+
+                document.getElementById("dropdown").style.display = 'flex'
             }
             else if(uid === 'auth/wrong-password'){
                 document.getElementById('preloader').style.display = 'none'
                 document.querySelector('.' + styles.container).style.opacity = 1
                 document.querySelector('.' + styles.errorPassword).style.display = 'flex'
+                
+                document.getElementById("dropdown").style.display = 'flex'
             }
             else {
                 window.location.href = '/homescreen'
