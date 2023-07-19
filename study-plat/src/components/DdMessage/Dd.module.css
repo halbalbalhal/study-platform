@@ -1,0 +1,19 @@
+@import url('../../styles/constants.css');
+
+.dd__container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+.dd__title {
+    text-align: center;
+    color: var(--dark-color);
+}

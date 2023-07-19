@@ -5,7 +5,6 @@ import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../../../firebase/userService"
 import { useState } from 'react'
 
-
 const Links = (props) => {
 
     const [userName, setUserName] = useState()
