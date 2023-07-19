@@ -35,8 +35,7 @@ const Signup = () => {
             (userCredential) => {
                 if(userCredential === 'auth/email-already-in-use'){
                     console.log('email is already in use')
-
-
+                    document.getElementById("dropdown").style.display = 'flex'
                 } else {
                     createUser(userCredential.user.uid, formData['name'], formData['email'], (error) => {
                         updateProfile(auth.currentUser, { displayName: formData['name'] }).then(() => {

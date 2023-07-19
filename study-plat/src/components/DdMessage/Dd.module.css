@@ -1,19 +1,39 @@
 @import url('../../styles/constants.css');
 
 .dd__container {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: var(--white-color);
     width: 200px;
-    height: 100px;
+    height: 70px;
     position: absolute;
     top: 50px;
     left: 45%;
     border: 1px solid gray;
     border-radius: 20px;
+    z-index: 2;
+    border: 1px solid var(--red-color);
+    animation: dropdown 1.5s ease;
 }
 
 .dd__title {
     text-align: center;
     color: var(--dark-color);
+    padding-top: 23px;
 }
+
+.dd__image {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
