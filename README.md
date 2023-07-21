@@ -1,5 +1,5 @@
 # study-platform (Learn)
-This project is written by using React framework
+This project is written by using React framework and Firebase service
 
 Link for the site -> bit.ly/stdpltfm
 
