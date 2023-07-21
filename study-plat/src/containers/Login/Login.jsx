@@ -120,7 +120,6 @@ const Login = () => {
             console.log(errorMessage)
             console.log(credential)
             console.log(email)
-
         })
     }
 

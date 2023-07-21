@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
+import { getAnalytics } from 'firebase/analytics'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBnwATRdFN-VZhbJqJ28ssHqoIf3XtxcEM",
@@ -13,3 +14,11 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig)
 
 export const db = getFirestore(app)
+
+export const analytics = getAnalytics(app)
+
+if (analytics) {
+    console.log(
+        "Google Analitycs is working succesfully"
+    )
+}

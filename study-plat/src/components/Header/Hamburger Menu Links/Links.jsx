@@ -4,6 +4,7 @@ import { signOut } from "firebase/auth"
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../../../firebase/userService"
 import { useState } from 'react'
+import UserPanel from '../UserPanel/UserPanel'
 
 const Links = (props) => {
 
@@ -57,6 +58,7 @@ const Links = (props) => {
             <a href="/profile" className={styles.link}>Profile</a>
             <a href="/about" className={styles.link}>About</a>
             <a href='/contact' className={styles.link}>Contact Us</a>
+            <UserPanel />
         </div>
     )
 }
