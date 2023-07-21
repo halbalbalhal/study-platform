@@ -66,9 +66,9 @@ const ProfileInfo = () => {
                 </div>
 
                 <div className={styles.profile__progress}>
-                    <PictureWithText text='Check your progress' />
+                    {/* <PictureWithText text='Check your progress' /> */}
                     <div className={styles.profile__status}>
-                        <span className={styles.profile__status__title}>Status</span>
+                        {/* <span className={styles.profile__status__title}>Status</span>
 
                         <div className={styles.profile__lessons}>
                             <div className={styles.profile__lessons__result}>
@@ -78,7 +78,7 @@ const ProfileInfo = () => {
                                 </div>
                                 <div className={styles.profile__lessons__line}>
                                     <div className={styles.profile__lessons__greenline}>
-                                        {/* Greenline */}
+
                                     </div>
                                 </div>
                             </div>
@@ -90,11 +90,11 @@ const ProfileInfo = () => {
 
                                 <div className={styles.profile__lessons__line}>
                                     <div className={`${styles.profile__lessons__greenline} ${styles.full__lesson}`}>
-                                        {/* Greenline */}
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className={styles.profile__status__contact}>
                             <span className={styles.profile__status__title}>Do you have any error?</span>
                             <a href='/contact'><Button title='Contact Us'/></a>

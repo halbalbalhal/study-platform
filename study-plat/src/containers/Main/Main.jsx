@@ -40,9 +40,9 @@ const Main = () => {
             {
                 !userName &&
                 <div id='blocker' className={styles.blocker}>
-                    <PictureWithText text='You must create an account' />
+                    <PictureWithText text='You must create an account if you want to watch' />
                     <div>
-                        <a href='/login'><Button title='Sign up' /></a>
+                        <a href='/signup'><Button title='Sign up' /></a>
                     </div>
                 </div>
             }
@@ -68,7 +68,9 @@ const Main = () => {
                         return (
                             <div key={lesson.id} className={styles.lesson}>
                                 <span key={lesson.id} className={styles.lesson__title}>{lesson.title}</span>
-                                <Arrow id={lesson.id} onClick={() => {}} />
+                                <Arrow id={lesson.id} onClick={() => {
+                                    
+                                }} />
                             </div>
                         )
                     })}

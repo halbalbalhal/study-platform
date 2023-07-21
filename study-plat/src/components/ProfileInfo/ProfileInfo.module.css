@@ -32,6 +32,7 @@ textarea {
     align-items: center;
     justify-content: space-around;
     margin-top: 150px;
+    flex-direction: column;
 }
 
 .profile__progress {
@@ -92,10 +93,13 @@ textarea {
     justify-content: space-between;
     margin-top: 20px;
     width: 100%;
+    flex-direction: column;
+    margin-top: 90px;
 }
 
 .profile__status__contact button {
     width: 343px;
+    margin-top: 20px;
 }
 
 .profile__lessons__number {
