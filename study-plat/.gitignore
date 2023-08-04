@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /package-lock.json
+/emailjsUtil.js
 
 # testing
 /coverage

@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import styles from './FeedbackForm.module.css'
 import emailjs from '@emailjs/browser'
 import Button from '../Button/Button'
+import { SERVICE_ID, TEMPLATE_ID,  PUBLIC_KEY} from '../../utils/emailjsUtil'
 
 const FeedbackForm = () => {
     const form = useRef()
@@ -9,7 +10,7 @@ const FeedbackForm = () => {
     const sendEmail = (e) => {
         e.preventDefault()
 
-        emailjs.sendForm('service_vlkmrwq', 'template_4ruh4it', form.current, 'bbmjRfeDEx2f1beao')
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then(() => {
                 console.log('Email sent succesfully!')
             }, (error) => {
@@ -17,6 +18,7 @@ const FeedbackForm = () => {
                 console.log('Something went wrong and Email was not sent.')
             })
     }
+
 
     return (
         <div className={styles.feedback}>
@@ -29,7 +31,6 @@ const FeedbackForm = () => {
                     <input type="email" name="user_email" />
                     <label>Message</label>
                     <textarea name="message" />
-                    <input type="submit" value="Send" />
                     <div style={{width: "300px"}} >
                         <Button type='submit' title='Send' />
                     </div>
