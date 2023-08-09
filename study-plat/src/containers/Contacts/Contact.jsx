@@ -14,8 +14,8 @@ import ini from '../../assets/icons/Contacts/ini.svg'
 const Contact = () => {
     return (
         <>
+        <Header />
         <section className={styles.group}>
-            <Header />
             <div className={styles.contact}>
 
                 <div className={styles.contact__info}>
@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
 
             </div>
-            <FeedbackForm />
+            {/* <FeedbackForm /> */}
         </section>
         </>
     )

@@ -64,16 +64,6 @@ const Login = () => {
             .then((result) => {
                 id = result.user.uid
                 name = result.user.displayName
-                name = name.substring(0, 7)
-                if(name[6] === ' '){
-                    name = name.substring(0, 6)
-                    if(name[5] === ' '){
-                        name = name.substring(0, 5)
-                        if(name[4] === ' '){
-                            name = name.substring(0, 4)
-                        }
-                    }
-                }
                 email = result.user.email
                 createUser(id, name, email, (user) => {
                     updateProfile(auth.currentUser, { displayName: name }).then(() => {

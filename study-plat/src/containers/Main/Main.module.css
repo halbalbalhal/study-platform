@@ -97,6 +97,31 @@ iframe {
     color: var(--dark-color);
 }
 
+.lessons__close {
+    display: none;
+}
+
+.hamburger__lessons {
+    display: none;
+    cursor: pointer;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 50px;
+}
+
+.hamburger__lessons:hover {
+    background-color: white;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--dark-color);
+    border-radius: var(--small-radius);
+    transition: var(--transition);
+    margin: 7px 0;
+}
+
 @media screen and (max-width: 1000px) {
     .wrapper {
         flex-direction: column;
@@ -109,15 +134,19 @@ iframe {
         height: auto;
     }
 
-    iframe {
-        height: 400px;
-    }
-
     .lessons {
-        width: 100%;
+        width: 50%;
         height: auto;
         margin-top: 13px;
         padding: 32px;
+        display: none;
+    }
+    .lessons__close {
+        display: flex;
+    }
+
+    .hamburger__lessons {
+        display: block;
     }
 }
 

@@ -74,8 +74,6 @@ const Profile = () => {
                             <Button id='button' tapEvent={exit} title='Log out' />
                         }
 
-                        <button onClick={changeAvatar}>Click me!</button>
-
                     </div>
                 </div>
 

@@ -32,7 +32,9 @@ const UserPanel = () => {
             <div className={styles.icon} onClick={toProfile}></div>
             {
                 userName &&
-                <span className={styles.text}>{userName}</span>
+                <span className={styles.text} onClick={() => {
+                    window.location.href = '/profile'
+                }}>{userName}</span>
             }
             {
                 !userName &&

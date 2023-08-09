@@ -19,3 +19,10 @@
     font-weight: 400;
     color: var(--dark-color);
 }
+
+@media screen and (max-width: 1050px) {
+    .container {
+        display: none;
+        order: 2;
+    }
+}

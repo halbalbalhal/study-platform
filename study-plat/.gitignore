@@ -6,9 +6,6 @@
 .pnp.js
 /package-lock.json
 
-
-src/utils/emailjsUtil.js
-
 # testing
 /coverage
 
