@@ -37,6 +37,7 @@ const Main = () => {
     return (
         <>
             <Header />
+
             {
                 !userName &&
                 <div id='blocker' className={styles.blocker}>
@@ -50,7 +51,7 @@ const Main = () => {
             <div className={styles.container}>
                 <div className={styles.column}>
                     <iframe
-                        src="https://www.youtube.com/embed/uw2EdOytA-o"
+                        src="https://www.youtube.com/embed/kUMe1FH4CHE"
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
@@ -63,18 +64,36 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className={styles.lessons}>
+                <div className={styles.lessons} id='lessons'>
                     {lessons && lessons.map((lesson) => {
                         return (
+                            <>
                             <div key={lesson.id} className={styles.lesson}>
                                 <span key={lesson.id} className={styles.lesson__title}>{lesson.title}</span>
                                 <Arrow id={lesson.id} onClick={() => {
                                     
                                 }} />
-                            </div>
+                            </div>  
+                            </>
                         )
                     })}
+                    <div className={styles.lessons__close}>
+                        <Button title='Close' tapEvent={() => {
+                            document.getElementById('lessons').style.display = 'none'
+                            document.getElementById('hambles').style.display = 'block'
+                        }} />
+                    </div>      
                 </div>
+
+                <div className={styles.hamburger__lessons} id='hambles' onClick={() => {
+                    document.getElementById('lessons').style.display = 'flex'
+                    document.getElementById('hambles').style.display = 'none'
+                }}>
+                    <div className={styles.line}></div>
+                    <div className={styles.line}></div>
+                    <div className={styles.line}></div>
+                </div>
+
             </div>
         </>
     )

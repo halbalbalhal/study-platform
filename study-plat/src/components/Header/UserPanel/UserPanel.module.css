@@ -13,6 +13,11 @@
     font-weight: 400;
     font-size: 23px;
     color: var(--dark-color);
+    cursor: pointer;
+}
+
+.text:hover {
+    text-decoration: underline;
 }
 
 .icon {
@@ -30,7 +35,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .container {
+    .icon {
         display: none;
     }
 }

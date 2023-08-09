@@ -49,7 +49,6 @@ const routesConfig = [
         path: '/**',
         exact: true,
         element: <Error value='404' text='Server error' description='Page not found' />
-
     },
     {
         path: '/*',

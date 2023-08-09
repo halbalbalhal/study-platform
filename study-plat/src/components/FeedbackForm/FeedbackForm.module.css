@@ -1,0 +1,55 @@
+@import url('../../styles/constants.css');
+
+.feedback {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback__wrapper {
+    display: flex;
+    width: 1440px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.feedback span {
+    font-size: 35px;    
+}
+
+.feedback label {
+    margin-left: 80px;
+}
+
+.feedback form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user__forms {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+}
+
+.form__message {
+    height: 100px;
+    width: 500px;
+}
+
+.form__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .feedback {
+        padding-top: 100px;
+    }
+}
