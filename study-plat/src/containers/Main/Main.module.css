@@ -104,7 +104,6 @@ iframe {
 .hamburger__lessons {
     display: none;
     cursor: pointer;
-    right: 0;
     margin-right: 30px;
     margin-top: 50px;
 }

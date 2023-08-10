@@ -44,7 +44,10 @@ const UserPanel = () => {
                     <a href='/signup' className={styles.text}>Signup</a>
                 </div>
             }
-            <div className={styles.exit} onClick={exit}></div>
+            {
+                userName &&
+                <div id='exit__button' className={styles.exit} onClick={exit}></div>
+            }
         </div>
     )
 }
