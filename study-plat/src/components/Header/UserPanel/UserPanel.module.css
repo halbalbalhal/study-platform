@@ -32,6 +32,7 @@
     height: 25px;
     background-image: var(--exit-icon);
     cursor: pointer;
+    display: flex;
 }
 
 @media screen and (max-width: 1050px) {
