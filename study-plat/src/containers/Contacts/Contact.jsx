@@ -38,9 +38,9 @@ const Contact = () => {
 
                     <div className={styles.contact__social}>
                         <a href='https://www.youtube.com/@itschoolbrest/featured' target='_blank' className={styles.social__icon}><img src={instagram} alt="page didn't find" /></a>
-                        <a href="https://t.me/dorogadizajna" className={styles.social__icon} target='_blank'><img src={telegram} alt="page didn't find" /></a>
-                        <a href="https://www.youtube.com/@itschoolbrest/featured" className={styles.social__icon} target='_blank'><img src={youtube} alt="page didn't find" /></a>
-                        <a href='https://www.linkedin.com/school/myit-school/' className={styles.social__icon} target='_blank'><img src={ini} alt="page didn't find" /></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={styles.social__icon} target='_blank'><img src={youtube} alt="page didn't find" /></a>
+                        <a href="https://t.me/tinkivinki1234" className={styles.social__icon} target='_blank'><img src={telegram} alt="page didn't find" /></a>
+                        <a href='https://www.linkedin.com/company/apple/' className={styles.social__icon} target='_blank'><img src={ini} alt="page didn't find" /></a>
                     </div>
 
                 </div>

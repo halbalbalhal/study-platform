@@ -91,10 +91,9 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
     width: 100%;
     flex-direction: column;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .profile__status__contact button {
@@ -155,7 +154,6 @@ textarea {
     .profile__status__contact {
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
     }
     .profile__lessons__result {
         margin-top: 30px;
