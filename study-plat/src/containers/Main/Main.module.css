@@ -152,6 +152,7 @@ iframe {
 @media screen and (max-width: 600px) {
     iframe {
         height: 300px;
+        margin-top: 100px;
     }
 
     .wrapper {
