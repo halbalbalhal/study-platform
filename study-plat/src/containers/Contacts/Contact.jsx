@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
 
             </div>
-            {/* <FeedbackForm /> */}
+            <FeedbackForm />
         </section>
         </>
     )

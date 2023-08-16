@@ -6,7 +6,6 @@
     background-color: var(--white-color);
     width: 200px;
     height: 70px;
-    position: absolute;
     top: 50px;
     left: 45%;
     border: 1px solid gray;
@@ -14,6 +13,9 @@
     z-index: 2;
     border: 1px solid var(--red-color);
     animation: dropdown 1.5s ease;
+    margin-top: 200px;
+    margin-right: 200px;
+    position: fixed;
 }
 
 .dd__title {

@@ -12,7 +12,7 @@ const Nav = () => {
             <Link value={'Home'} path={'/homescreen'} />
             <Link value={'Course'} path={'/course'} />
             <Link value={'About'} path={'/about'} />
-            <Link value={'Info'} path={'/contact'} />
+            <Link value={'Contact'} path={'/contact'} />
         
         </nav>
     )
