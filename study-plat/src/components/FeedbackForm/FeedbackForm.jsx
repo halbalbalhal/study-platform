@@ -27,13 +27,24 @@ const FeedbackForm = () => {
                 <span className={styles.feedback__text}>Want to leave a feedback?</span>
                 <form ref={form} onSubmit={sendEmail}>
                     <div className={styles.user__forms}>
-                        <textarea placeholder='your name' type="text" name="user_name" />
-                        <textarea placeholder='your email' type="email" name="user_email" />
+                        <textarea id='feedbackform1' placeholder='your name' type="text" name="user_name" />
+                        <textarea id='feedbackform2' placeholder='your email' type="email" name="user_email" />
                     </div>
-                    <textarea  placeholder='your message' name="message" className={styles.form__message} />
-                    <div className={styles.form__button} style={{width: "300px", marginLeft: "100px"}} >
+                    <textarea id='feedbackform3' placeholder='your message' name="message" className={styles.form__message} />
+                    <div className={styles.form__button} >
                         <Button type='submit' title='Send' tapEvent={() => {
                             document.getElementById("dropdown").style.display = 'flex'
+                            const textarea1 = document.getElementById('feedbackform1')
+                            const textarea2 = document.getElementById('feedbackform2')
+                            const textarea3 = document.getElementById('feedbackform3')
+                            console.log(
+                                textarea1.value,
+                                textarea2.value,
+                                textarea3.value
+                            )
+                            textarea1.value = ''
+                            textarea2.value = ''
+                            textarea3.value = ''
                         }} />
                     </div>
                 </form>

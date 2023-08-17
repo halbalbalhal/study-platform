@@ -6,7 +6,6 @@ const Dd = (props) => {
 
     const DdClose = () => {
         document.getElementById("dropdown").style.display = 'none'
-        console.log('Something went wrong if this message appears')
     }
 
     return (
