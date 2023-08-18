@@ -15,8 +15,17 @@
     height: 48px;
 }
 
-.btn:hover {
-    background: var(--very-light-purple-color);
+@media (hover: hover) {
+    .btn:hover {
+        background: var(--very-light-purple-color);
+    }
+}
+
+@media (hover: none) {
+    .btn:active {
+        background: var(--dark-purple-color);
+        transform: scale(0.98, 0.98);
+    }
 }
 
 .btn:active {
