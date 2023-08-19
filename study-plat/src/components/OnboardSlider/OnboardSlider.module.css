@@ -50,3 +50,15 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .onboard__slide {
+        transform: scale(0.85);
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .onboard__slide {
+        transform: scale(0.75);
+    }
+}

@@ -15,7 +15,7 @@ const Onboard = () => {
                 },
                 {
                     title: 'Learn your passion, level up your skill',
-                    text: 'make yourself expert your skillby studying from mentors',
+                    text: 'make yourself expert your skill by studying from mentors',
                     image: Board2
                 },
                 {
