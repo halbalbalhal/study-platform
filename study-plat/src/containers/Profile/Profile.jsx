@@ -2,7 +2,7 @@ import styles from './Profile.module.css'
 
 import Header from '../../components/Header/Header'
 
-import { useState } from "react";
+import { useState } from "react"
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../../firebase/userService"
 import { signOut } from 'firebase/auth'
@@ -21,9 +21,6 @@ const Profile = () => {
     const [userName, setUserName] = useState()
     const [render, setRender] = useState(0)
     const [post, setPost] = useState()
-
-
-    const [reviews, setReviews] = useState(null)
 
     if(!render){
         onAuthStateChanged(auth, (user) => {
@@ -79,14 +76,6 @@ const Profile = () => {
 
                     </div>
                 </div>
-
-                {reviews && reviews.map((review) => {
-                    return (
-                        <div key={review.id}>
-                            <span key={review.id}>{review.title}</span>
-                        </div>
-                    )
-                })}
 
                 <div className={styles.profile__progress}>
                     {/* <PictureWithText text='Check your progress' /> */}

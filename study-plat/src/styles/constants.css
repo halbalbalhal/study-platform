@@ -63,6 +63,7 @@
 
     /*Borders*/
     --small-radius: 4px;
+    --medium-radius: 16px;
     --big-radius: 25px;
 
     /*Transition*/

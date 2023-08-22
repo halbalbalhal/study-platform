@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: appearing_animation 1s ease ;
+    animation: appearing_animation 1s ease;
+    flex-direction: column;
 }
 
 .about__wrapper {
