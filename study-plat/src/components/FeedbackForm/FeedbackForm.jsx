@@ -20,6 +20,21 @@ const FeedbackForm = () => {
             })
     }
 
+    const clearInputs = () => {
+        document.getElementById("dropdown").style.display = 'flex'
+        const textarea1 = document.getElementById('feedbackform1')
+        const textarea2 = document.getElementById('feedbackform2')
+        const textarea3 = document.getElementById('feedbackform3')
+        console.log(
+            textarea1.value,
+            textarea2.value,
+            textarea3.value
+        )
+        textarea1.value = ''
+        textarea2.value = ''
+        textarea3.value = ''
+    }
+
 
     return (
         <div className={styles.feedback}>
@@ -32,20 +47,7 @@ const FeedbackForm = () => {
                     </div>
                     <textarea id='feedbackform3' placeholder='your message' name="message" className={styles.form__message} />
                     <div className={styles.form__button} >
-                        <Button type='submit' title='Send' tapEvent={() => {
-                            document.getElementById("dropdown").style.display = 'flex'
-                            const textarea1 = document.getElementById('feedbackform1')
-                            const textarea2 = document.getElementById('feedbackform2')
-                            const textarea3 = document.getElementById('feedbackform3')
-                            console.log(
-                                textarea1.value,
-                                textarea2.value,
-                                textarea3.value
-                            )
-                            textarea1.value = ''
-                            textarea2.value = ''
-                            textarea3.value = ''
-                        }} />
+                        <Button type='submit' title='Send' tapEvent={clearInputs} />
                     </div>
                 </form>
             </div>
