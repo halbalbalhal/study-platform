@@ -1,32 +1,32 @@
 export const Reviews = [
     {
-        id: 1,
-        title: 'First review',
-        text: 'Lorem awdpandpadbasdasdasa'
+        // id: 1,
+        title: 'Anna Dark',
+        text: '"I have no words to describe this site!"'
     },
     {
-        id: 2,
-        title: 'Second review',
-        text: 'Lorrrrrr adasdawdadasdasdas'
+        // id: 2,
+        title: 'Mark Deniel',
+        text: '"I have no words to describe this site!"'
     },
     {
-        id: 3,
-        title: 'Third review',
-        text: 'sdadasdsdasdasdvvj j j j j '
+        // id: 3,
+        title: 'Mark Deniel',
+        text: '"I have no words to describe this site!"'
     },
     {
-        id: 3,
-        title: 'Third review',
-        text: 'sdadasdsdasdasdvvj j j j j '
+        // id: 3,
+        title: 'Mark Deniel',
+        text: '"I have no words to describe this site!"'
     },
     {
-        id: 3,
-        title: 'Third review',
-        text: 'sdadasdsdasdasdvvj j j j j '
+        // id: 3,
+        title: 'Mark Deniel',
+        text: '"I have no words to describe this site!"'
     },
     {
-        id: 3,
-        title: 'Third review',
-        text: 'sdadasdsdasdasdvvj j j j j '
+        // id: 3,
+        title: 'Mark Deniel',
+        text: '"I have no words to describe this site!"'
     }
 ]
