@@ -2,7 +2,7 @@ import styles from './Profile.module.css'
 
 import Header from '../../components/Header/Header'
 
-import { useState } from "react";
+import { useState } from "react"
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../../firebase/userService"
 import { signOut } from 'firebase/auth'

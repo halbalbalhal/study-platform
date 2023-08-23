@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header'
 import Button from '../../components/Button/Button'
 import PictureWithText from '../../components/Signup&Login/PictureWithText/PictureWithText'
 
+import SwiperRev from '../../components/SwiperRev/Swiper'
+
 
 const About = () => {
     return (
@@ -19,6 +21,7 @@ const About = () => {
                         }} />
                     </div>
                 </div>
+                <SwiperRev />
             </section>
         </>
     )
