@@ -13,5 +13,20 @@ export const Reviews = [
         id: 3,
         title: 'Third review',
         text: 'sdadasdsdasdasdvvj j j j j '
+    },
+    {
+        id: 3,
+        title: 'Third review',
+        text: 'sdadasdsdasdasdvvj j j j j '
+    },
+    {
+        id: 3,
+        title: 'Third review',
+        text: 'sdadasdsdasdasdvvj j j j j '
+    },
+    {
+        id: 3,
+        title: 'Third review',
+        text: 'sdadasdsdasdasdvvj j j j j '
     }
 ]
