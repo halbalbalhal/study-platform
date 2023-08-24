@@ -35,6 +35,7 @@
     border: 1px solid #AE60EB;
     margin-top: 30px;
     border-radius: 10px;
+    background-color: var(--white-color);
 }
 
 .rev__title {
@@ -50,10 +51,17 @@
 
 .rev__block__text {
     max-width: 200px;
+    color: var(--dark-color);
+}
+
+
+.swiperslide {
+    background-color: var(--white-color);
 }
 
 .swiperslide_2 {
     display: none;
+    background-color: var(--white-color);
 }
 
 @media screen and (max-width: 800px) {
