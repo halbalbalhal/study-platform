@@ -7,12 +7,13 @@ import Input from "../../components/Input/Input"
 import Button from "../../components/Button/Button"
 import ButtonWithGoogle from "../../components/Signup&Login/ButtonWithGoogle/ButtonWithGoogle"
 import ButtonWithFacebook from "../../components/Signup&Login/ButtonWithFacebook/ButtonWithFacebook"
-import Dd from '../../components/DdMessage/Dd'
 import { login } from "../../firebase/authService"
 import { useState } from "react"
 import Preloader from "../../components/Preloader/Preloader"
 import { auth, createUser, GoogleProvider, FacebookProvider } from "../../firebase/userService"
 import { signInWithPopup, updateProfile, FacebookAuthProvider, signInWithRedirect } from "firebase/auth"
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
 
 const Login = () => {
     const [valueOfEmailInput, setValueOfEmailInput] = useState('')
@@ -41,14 +42,13 @@ const Login = () => {
                 document.querySelector('.' + styles.container).style.opacity = 1
                 document.querySelector('.' + styles.errorEmail).style.display = 'flex'
 
-                document.getElementById("dropdown").style.display = 'flex'
+                toast('wrong email!')
             }
             else if(uid === 'auth/wrong-password'){
                 document.getElementById('preloader').style.display = 'none'
                 document.querySelector('.' + styles.container).style.opacity = 1
                 document.querySelector('.' + styles.errorPassword).style.display = 'flex'
-                
-                document.getElementById("dropdown").style.display = 'flex'
+                toast('wrong password!')
             }
             else {
                 window.location.href = '/homescreen'
@@ -67,6 +67,7 @@ const Login = () => {
                 email = result.user.email
                 createUser(id, name, email, (user) => {
                     updateProfile(auth.currentUser, { displayName: name }).then(() => {
+                        toast("Logged in succesfully!")
                         window.location.href = '/homescreen'
                     }).catch((error) => {
                         alert(error)
@@ -90,6 +91,7 @@ const Login = () => {
             email = result.user.email
             createUser(id, name, email, (user) => {
                 updateProfile(auth.currentUser, { displayName: name }).then(() => {
+                    toast("Logged in succesfully!")
                     window.location.href = '/homescreen'
                 }).catch((error) => {
                     alert(error)
@@ -97,14 +99,14 @@ const Login = () => {
             })
             const user = result.user
             const credential = FacebookAuthProvider.credentialFromResult(result)
-            const accessToken = credential.accessToken
-            
+            const accessToken = credential.accessToken 
         })
         .catch((error) => {
             const errorCode = error.code
             const errorMessage = error.message
             const email = error.customData.email
             const credential = FacebookAuthProvider.credentialFromError(error)
+            toast("something went wrong!")
     
             console.log(errorCode)
             console.log(errorMessage)
@@ -115,7 +117,6 @@ const Login = () => {
 
     return(
         <div className={styles.container}>
-            <Dd title="Something went wrong" />  
             <PictureWithText text='Login to your personal account' />
             <div className={styles.wrapper}>
                 <div className={styles.column}>
@@ -131,6 +132,18 @@ const Login = () => {
             </div>
             <Link link='/signup' text='Don’t have an account? ' textLink='Sign up' />
             <Preloader />
+
+            <ToastContainer
+                position='top-right'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     )
 }

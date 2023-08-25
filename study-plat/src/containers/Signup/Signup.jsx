@@ -5,13 +5,12 @@ import Text from '../../components/Signup&Login/Text/Text'
 import Input from '../../components/Input/Input'
 import Button from '../../components/Button/Button'
 import Preloader from '../../components/Preloader/Preloader'
-import Dd from '../../components/DdMessage/Dd'
 import { createAccount } from '../../firebase/authService'
 import { auth, createUser } from '../../firebase/userService'
 import { useForm } from 'react-hook-form'
 import { updateProfile } from "firebase/auth"
-
-
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
 
 const Signup = () => {
     const {
@@ -35,13 +34,15 @@ const Signup = () => {
             (userCredential) => {
                 if(userCredential === 'auth/email-already-in-use'){
                     console.log('email is already in use')
-                    document.getElementById("dropdown").style.display = 'flex'
+                    toast("email is already in use")
                 } else {
                     createUser(userCredential.user.uid, formData['name'], formData['email'], (error) => {
                         updateProfile(auth.currentUser, { displayName: formData['name'] }).then(() => {
+                            toast("account created!")
                             window.location.href = '/homescreen'
                         }).catch((error) => {
                             alert(error)
+                            toast('something went wrong')
                         })
                     })
                 }
@@ -61,11 +62,22 @@ const Signup = () => {
                     <Input name='password' register={register} title='Password' type='password' isValid={!errors['password']} isRegister='true' />
                     {/*<Input name='password_repeat' register={register} watch={watch} title='Repeat password' type='password' isValid={!errors['password_repeat']} isRegister='true' />*/}
                     <Button title='Signup' />
-                    <Dd title="This email is already in use" />
                 </div>
             </form>
             <Link link='/login' text='Do you have an account? ' textLink='Log in' />
             <Preloader />
+
+            <ToastContainer
+                position='top-right'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     )
 }
