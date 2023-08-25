@@ -3,7 +3,9 @@ import styles from './FeedbackForm.module.css'
 import emailjs from '@emailjs/browser'
 import Button from '../Button/Button'
 import { SERVICE_ID, TEMPLATE_ID,  PUBLIC_KEY } from '../../utils/emailjsUtil'
-import Dd from '../DdMessage/Dd'
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
+
 
 const FeedbackForm = () => {
     const form = useRef()
@@ -14,27 +16,27 @@ const FeedbackForm = () => {
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then(() => {
                 console.log('Email sent succesfully!')
+                const successNotfication = () => toast('Success')
+                successNotfication()
             }, (error) => {
                 console.log(error.text)
                 console.log('Something went wrong and Email was not sent.')
+                const failNotfication = () => toast('something went wrong')
+                failNotfication()
             })
-    }
 
-    const clearInputs = () => {
-        document.getElementById("dropdown").style.display = 'flex'
-        const textarea1 = document.getElementById('feedbackform1')
-        const textarea2 = document.getElementById('feedbackform2')
-        const textarea3 = document.getElementById('feedbackform3')
-        console.log(
-            textarea1.value,
-            textarea2.value,
-            textarea3.value
-        )
-        textarea1.value = ''
-        textarea2.value = ''
-        textarea3.value = ''
+            const textarea1 = document.getElementById('feedbackform1')
+            const textarea2 = document.getElementById('feedbackform2')
+            const textarea3 = document.getElementById('feedbackform3')
+            console.log(
+                textarea1.value,
+                textarea2.value,
+                textarea3.value
+            )
+            textarea1.value = ''
+            textarea2.value = ''
+            textarea3.value = ''
     }
-
 
     return (
         <div className={styles.feedback}>
@@ -47,11 +49,21 @@ const FeedbackForm = () => {
                     </div>
                     <textarea id='feedbackform3' placeholder='your message' name="message" className={styles.form__message} />
                     <div className={styles.form__button} >
-                        <Button type='submit' title='Send' tapEvent={clearInputs} />
+                        <Button type='submit' title='Send' />
                     </div>
                 </form>
             </div>
-            <Dd title='Email sent successfully' />
+            <ToastContainer
+                position='top-right'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     )
 }
