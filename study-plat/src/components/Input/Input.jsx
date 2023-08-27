@@ -1,5 +1,5 @@
 import styles from './Input.module.css'
-import {useState} from "react"
+import { useState } from "react"
 import ShowEye from "../Signup&Login/ShowEye/ShowEye"
 import HideEye from "../Signup&Login/HideEye/HideEye"
 
