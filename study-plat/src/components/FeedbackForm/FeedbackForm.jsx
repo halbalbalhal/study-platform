@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import styles from './FeedbackForm.module.css'
 import emailjs from '@emailjs/browser'
 import Button from '../Button/Button'
@@ -13,7 +13,12 @@ const FeedbackForm = () => {
     const sendEmail = (event) => {
         event.preventDefault()
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        const textarea1 = document.getElementById('feedbackform1')
+        const textarea2 = document.getElementById('feedbackform2')
+        const textarea3 = document.getElementById('feedbackform3')
+
+        if ( (textarea1.value != '') && (textarea2.value != '') && (textarea3.value != '') ) {
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then(() => {
                 console.log('Email sent succesfully!')
                 toast('Email was successfully sent!')
@@ -22,10 +27,6 @@ const FeedbackForm = () => {
                 console.log('Something went wrong and Email was not sent.')
                 toast('something went wrong')
             })
-
-            const textarea1 = document.getElementById('feedbackform1')
-            const textarea2 = document.getElementById('feedbackform2')
-            const textarea3 = document.getElementById('feedbackform3')
             console.log(
                 textarea1.value,
                 textarea2.value,
@@ -34,6 +35,10 @@ const FeedbackForm = () => {
             textarea1.value = ''
             textarea2.value = ''
             textarea3.value = ''
+        } else {
+            toast('All fields must be filled')
+        }
+
     }
 
     return (
