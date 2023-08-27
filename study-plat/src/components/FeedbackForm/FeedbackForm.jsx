@@ -16,13 +16,11 @@ const FeedbackForm = () => {
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then(() => {
                 console.log('Email sent succesfully!')
-                const successNotfication = () => toast('Success')
-                successNotfication()
+                toast('Email was successfully sent!')
             }, (error) => {
                 console.log(error.text)
                 console.log('Something went wrong and Email was not sent.')
-                const failNotfication = () => toast('something went wrong')
-                failNotfication()
+                toast('something went wrong')
             })
 
             const textarea1 = document.getElementById('feedbackform1')
@@ -44,8 +42,8 @@ const FeedbackForm = () => {
                 <span className={styles.feedback__text}>Want to leave a feedback?</span>
                 <form ref={form} onSubmit={sendEmail}>
                     <div className={styles.user__forms}>
-                        <textarea id='feedbackform1' placeholder='your name' type="text" name="user_name" />
-                        <textarea id='feedbackform2' placeholder='your email' type="email" name="user_email" />
+                        <input className={styles.input_test} pattern='^[A-Za-zА-Яа-яЁё\s]{2,}' id='feedbackform1' placeholder='your name(not less than 2 symbols)' type="text" name="user_name" />
+                        <input className={styles.input_test} id='feedbackform2' pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}' placeholder='your email' type="email" name="user_email" />
                     </div>
                     <textarea id='feedbackform3' placeholder='your message' name="message" className={styles.form__message} />
                     <div className={styles.form__button} >
@@ -69,3 +67,4 @@ const FeedbackForm = () => {
 }
 
 export default FeedbackForm
+

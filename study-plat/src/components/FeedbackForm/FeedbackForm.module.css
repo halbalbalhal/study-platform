@@ -5,6 +5,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    animation: appear 4s ease;
 }
 
 .feedback__wrapper {
@@ -77,5 +78,44 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.input_test {
+    width: 330px;
+    height: 44px;
+    border: 1px solid var(--white-gray-color);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.input_test::placeholder {
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+.input_test:focus:valid {
+    border-color: var(--green-color);
+    color: var(--green-color);
+    box-shadow: none;
+}
+
+.input_test:focus:invalid {
+    border-color: red;
+    color: red;
+    box-shadow: none;
+}
+
+.input_test:focus:required:invalid {
+    border-color: var(--green-color);
+    color: var(--green-color);
+    box-shadow: none;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
     }
 }
