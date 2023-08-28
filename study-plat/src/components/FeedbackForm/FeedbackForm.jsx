@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 import Button from '../Button/Button'
 import { SERVICE_ID, TEMPLATE_ID,  PUBLIC_KEY } from '../../utils/emailjsUtil'
 import { ToastContainer, toast } from 'react-toastify'
-import "react-toastify/dist/ReactToastify.css"
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const FeedbackForm = () => {

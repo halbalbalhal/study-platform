@@ -17,7 +17,8 @@ const SwiperRev = () => {
 
             <Swiper style={{
                         "--swiper-pagination-color": "#AE60EB",
-                        "--swiper-pagination-bullet-inactive-color": "#AE60EB"
+                        "--swiper-pagination-bullet-inactive-color": "#AE60EB",
+                        "--swiper-navigation-color": "#AE60EB"
                     }}
                     className="mySwiper"
                     slidesPerView={3}
@@ -27,7 +28,8 @@ const SwiperRev = () => {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination, Keyboard, Mousewheel]}
+                    navigation={true}
+                    modules={[Pagination, Keyboard, Mousewheel, Navigation]}
             >
                 {Reviews.map(rev => (
                     <SwiperSlide className="swiperslide">
