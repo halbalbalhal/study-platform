@@ -25,7 +25,9 @@ const Cources = () => {
                         <div className={styles.cource__block}>
                             <img src={cource.cource_logo} />
                             <span>{cource.cource_name}</span>
-                            <Button title={cource.cource_button} />
+                            <div className={styles.coruce__button}>
+                                <Button title={cource.cource_button} />
+                            </div>
                         </div>
                     ))
                 }

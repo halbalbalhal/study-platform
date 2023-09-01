@@ -13,7 +13,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 20px;
-    grid-row-gap: 30px;
+    grid-row-gap: 20px;
     height: 70%;
     width: 1000px;
 }
@@ -23,6 +23,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: 3px solid var(--dark-purple-color);
+    height: 350px;
+    border-radius: 10px;
 }
 
 .cource__block span {
@@ -33,8 +36,27 @@
 .cource__block img {
     width: 244px;
     height: 247px;
+    background-color: none;
 }
 
 input {
     border: 1px solid gray;
+}
+
+@media screen and (max-width: 1001px) {
+    .cources__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        height: 70%;
+        width: 1000px;
+    }   
+}
+
+@media screen and (max-width: 700px) {
+    .cources__wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
