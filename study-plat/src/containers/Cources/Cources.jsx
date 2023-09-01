@@ -19,6 +19,7 @@ const Cources = () => {
         <>
         <Header />
         <section className={styles.cources}>
+            {/* <input onChange={(e) => setValue(e.target.value)} /> */}
             <div className={styles.cources__wrapper}>
                 {
                     filteredData.map((cource) =>(
