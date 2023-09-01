@@ -1,0 +1,40 @@
+@import url('../../styles/constants.css');
+
+.cources {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.cources__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    height: 70%;
+    width: 1000px;
+}
+
+.cource__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cource__block span {
+    font-size: 25px;
+    color: var(--dark-color);
+}
+
+.cource__block img {
+    width: 244px;
+    height: 247px;
+}
+
+input {
+    border: 1px solid gray;
+}
