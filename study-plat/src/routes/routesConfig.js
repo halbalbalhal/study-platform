@@ -8,6 +8,7 @@ import Profile from '../containers/Profile/Profile'
 import Main from '../containers/Main/Main'
 import About from '../containers/About/About'
 import Cources from '../containers/Cources/Cources'
+import CoursePlayer from '../containers/CoursePlayer/CoursePlayer'
 
 
 const routesConfig = [
@@ -45,6 +46,11 @@ const routesConfig = [
         path: '/course',
         exact: true,
         element: <Cources />
+    },
+    {
+        path: '/courseplayer',
+        exact: true,
+        element: <CoursePlayer />
     },
     {
         path: '/**',
