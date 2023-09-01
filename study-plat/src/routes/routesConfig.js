@@ -7,6 +7,7 @@ import Error from '../containers/Error/Error'
 import Profile from '../containers/Profile/Profile'
 import Main from '../containers/Main/Main'
 import About from '../containers/About/About'
+import Cources from '../containers/Cources/Cources'
 
 
 const routesConfig = [
@@ -43,7 +44,7 @@ const routesConfig = [
     {
         path: '/course',
         exact: true,
-        element: <Main />
+        element: <Cources />
     },
     {
         path: '/**',

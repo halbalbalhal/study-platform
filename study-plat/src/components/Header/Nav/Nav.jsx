@@ -9,8 +9,7 @@ const Nav = () => {
         <nav className={styles.nav} id='header__nav'>
 
             <Link value={'Profile'} path={'/profile'} />
-            <Link value={'Home'} path={'/homescreen'} />
-            <Link value={'Course'} path={'/course'} />
+            <Link value={'Courses'} path={'/course'} />
             <Link value={'About'} path={'/about'} />
             <Link value={'Contact'} path={'/contact'} />
         
@@ -26,17 +25,14 @@ function getSelected() {
         case '/profile':
             index = 0
             break
-        case '/homescreen':
+        case '/course':
             index = 1
             break
-        case '/course':
+        case '/about':
             index = 2
             break
-        case '/about':
-            index = 3
-            break
         case '/contact':
-            index = 4
+            index = 3
             break
         default: 
             index = 0    
