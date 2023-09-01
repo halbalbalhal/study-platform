@@ -26,12 +26,12 @@ const OnboardSlider = ({ data }) => {
     }
 
     if (userName) {
-        window.location.href = '/homescreen'
+        window.location.href = '/course'
     }
 
     const tapEvent = () => {
         if (currentSlideIndex === 2) {
-            window.location.href = '/**'
+            window.location.href = '/homescreen'
         } else {
             setCurrentSlideData(data[currentSlideIndex + 1])
             setCurrentSlideIndex(currentSlideIndex + 1)     

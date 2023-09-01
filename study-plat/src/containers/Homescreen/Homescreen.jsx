@@ -7,7 +7,6 @@ import Header from '../../components/Header'
 const Homescreen = () => {
     return (
         <div className= {styles.container}>
-            <Header />
             <Home />
         </div>
     )

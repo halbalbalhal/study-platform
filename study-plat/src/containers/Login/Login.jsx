@@ -51,7 +51,7 @@ const Login = () => {
                 toast('wrong password!')
             }
             else {
-                window.location.href = '/homescreen'
+                window.location.href = '/profile'
             }
         })
     }
@@ -68,7 +68,7 @@ const Login = () => {
                 createUser(id, name, email, (user) => {
                     updateProfile(auth.currentUser, { displayName: name }).then(() => {
                         toast("Logged in succesfully!")
-                        window.location.href = '/homescreen'
+                        window.location.href = '/profile'
                     }).catch((error) => {
                         alert(error)
                     })
@@ -92,7 +92,7 @@ const Login = () => {
             createUser(id, name, email, (user) => {
                 updateProfile(auth.currentUser, { displayName: name }).then(() => {
                     toast("Logged in succesfully!")
-                    window.location.href = '/homescreen'
+                    window.location.href = '/profile'
                 }).catch((error) => {
                     alert(error)
                 })
