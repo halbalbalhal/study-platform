@@ -9,6 +9,9 @@ import Main from '../containers/Main/Main'
 import About from '../containers/About/About'
 import Cources from '../containers/Cources/Cources'
 
+// courses
+import CoursePlayerReact from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerReact'
+
 
 const routesConfig = [
     {
@@ -45,6 +48,11 @@ const routesConfig = [
         path: '/course',
         exact: true,
         element: <Cources />
+    },
+    {
+        path: '/coursereact',
+        exact: true,
+        element: <CoursePlayerReact />
     },
     {
         path: '/**',

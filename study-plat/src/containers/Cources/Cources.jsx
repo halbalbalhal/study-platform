@@ -11,7 +11,7 @@ const Cources = () => {
     const [value, setValue] = useState('')
 
     const filteredData = data.filter(cource => {
-        return cource.cource_name.toLowerCase().includes(value.toLowerCase())
+        return cource.cource_name.toLowerCase().includes(value.toLowerCase()) 
     })
 
 
@@ -19,7 +19,7 @@ const Cources = () => {
         <>
         <Header />
         <section className={styles.cources}>
-            {/* <input onChange={(e) => setValue(e.target.value)} /> */}
+            <input className={styles.course__input} onChange={(event) => setValue(event.target.value)} placeholder={"Looking for something?"} />
             <div className={styles.cources__wrapper}>
                 {
                     filteredData.map((cource) =>(
@@ -27,7 +27,9 @@ const Cources = () => {
                             <img src={cource.cource_logo} />
                             <span>{cource.cource_name}</span>
                             <div className={styles.coruce__button}>
-                                <Button title={cource.cource_button} />
+                                <Button tapEvent={() => {
+                                    window.location.href = '/coursereact'
+                                }} title={cource.cource_button} />
                             </div>
                         </div>
                     ))
