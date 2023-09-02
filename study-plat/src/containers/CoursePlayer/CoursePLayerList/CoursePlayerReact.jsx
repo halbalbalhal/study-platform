@@ -1,7 +1,6 @@
 import '../CoursePlayer.css'
 import { useEffect } from 'react'
 import Button from '../../../components/Button/Button'
-import VideoFrame from '../../../components/VIdeoFrame/VideoFrame'
 import { reactCourse } from '../../../data/CoursePlayers'
 
 const CoursePlayer = () => {
@@ -35,17 +34,17 @@ const CoursePlayer = () => {
 
             <div className="main-video">
                 <div className="video">
-                    <iframe src={reactCourse.cource_link}></iframe>
-                    <h3 className="title">Choose your lesson</h3>
+                    <iframe width={'95%'} height={'100%'} allowFullScreen></iframe>
                 </div>
+                <h3 className="title">Choose your lesson</h3>
             </div>
 
             <div className="video-list">
                 {
                     reactCourse.map(r => (
                         <div className="vid">
-                            <iframe width="100" height="67" src={r.cource_link} ></iframe>
-                            <h3 className="title">{r.cource_title}</h3>
+                            <iframe allowFullScreen width="100" height="67" src={r.cource_link} ></iframe>
+                            <h3 allowFullScreen className="title">{r.cource_title}</h3>
                         </div>
                     ))
                 }
