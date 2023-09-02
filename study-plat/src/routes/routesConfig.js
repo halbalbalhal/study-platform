@@ -50,11 +50,6 @@ const routesConfig = [
         element: <Cources />
     },
     {
-        path: '/coursereact',
-        exact: true,
-        element: <CoursePlayerReact />
-    },
-    {
         path: '/**',
         exact: true,
         element: <Error value='404' text='Server error' description='Page not found' />
@@ -63,7 +58,14 @@ const routesConfig = [
         path: '/*',
         exact: true,
         element: <Profile />
-    }
+    },
+
+    // all courses will be here
+    {
+        path: '/coursereact',
+        exact: true,
+        element: <CoursePlayerReact />
+    },
 ]
 
 export default routesConfig
