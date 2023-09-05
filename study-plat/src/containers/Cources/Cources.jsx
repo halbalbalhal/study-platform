@@ -28,7 +28,7 @@ const Cources = () => {
                             <span>{cource.cource_name}</span>
                             <div className={styles.coruce__button}>
                                 <Button tapEvent={() => {
-                                    window.location.href = '/coursereact'
+                                    window.location.href = cource.link
                                 }} title={cource.cource_button} />
                             </div>
                         </div>
