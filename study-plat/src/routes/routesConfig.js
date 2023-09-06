@@ -11,6 +11,11 @@ import Cources from '../containers/Cources/Cources'
 
 // courses
 import CoursePlayerReact from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerReact'
+import CoursePlayerHTML from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerHTML'
+import CoursePlayerPython from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerPython'
+import CoursePlayerCSS from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerCSS'
+import CoursePlayerJS from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerJS'
+import CoursePlayerNode from '../containers/CoursePlayer/CoursePLayerList/CoursePlayerNode'
 
 
 const routesConfig = [
@@ -66,6 +71,31 @@ const routesConfig = [
         exact: true,
         element: <CoursePlayerReact />
     },
+    {
+        path: '/coursehtml',
+        exact: true,
+        element: <CoursePlayerHTML />
+    },
+    {
+        path: '/coursepython',
+        exact: true,
+        element: <CoursePlayerPython />
+    },
+    {
+        path: '/coursecss',
+        exact: true,
+        element: <CoursePlayerCSS />
+    },
+    {
+        path: '/coursejs',
+        exact: true,
+        element: <CoursePlayerJS />
+    },
+    {
+        path: '/coursenode',
+        exact: true,
+        element: <CoursePlayerNode />
+    }
 ]
 
 export default routesConfig

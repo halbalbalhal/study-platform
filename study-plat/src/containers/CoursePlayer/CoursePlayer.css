@@ -1,7 +1,7 @@
 @import url('../../styles/constants.css');
 
 .heading {
-    color: #444;
+    color: var(--dark-color);
     font-size: 40px;
     text-align: center;
     overflow-x: hidden;
@@ -25,7 +25,7 @@
 }
 
 .container .main-video {
-    background: #fff;
+    background-color: var(--white-color);
     border-radius: 5px;
 }
 
@@ -35,14 +35,14 @@
 }
 
 .container .main-video .title {
-    color: #333;
+    color: var(--dark-color);
     font-size: 23px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .container .video-list {
-    background: #fff;
+    background-color: var(--white-color);
     border-radius: 5px;
     height: 520px;
     overflow-y: scroll;
@@ -72,12 +72,16 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    background: #f7f7f7;
+    background-color: var(--transparent-purple-color);
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
     border: 1px solid rgba(0,0,0,.1);
     cursor: pointer;
+}
+
+.container .video-list .vid h3 {
+    color: var(--dark-color);
 }
 
 .container .video-list .vid:hover {
