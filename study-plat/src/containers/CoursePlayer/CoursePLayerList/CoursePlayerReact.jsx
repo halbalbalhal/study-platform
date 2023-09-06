@@ -2,10 +2,12 @@ import '../CoursePlayer.css'
 import { useEffect } from 'react'
 import Button from '../../../components/Button/Button'
 import { reactCourse } from '../../../data/CoursePlayers'
+import ThemeToggle from '../../../components/ThemeToggle/ThemeToggle'
 
-const CoursePlayer = () => {
+const CoursePlayerReact = () => {
 
-    useEffect(() => {
+    const switchPlayList = () => {
+
         let listVideo = document.querySelectorAll('.video-list .vid')
         let mainVideo = document.querySelector('.main-video iframe')
         let title = document.querySelector('.main-video .title')
@@ -23,7 +25,9 @@ const CoursePlayer = () => {
             }
         })
     
-    })
+    }
+
+    useEffect(switchPlayList)
 
     return (
         <>
@@ -48,6 +52,7 @@ const CoursePlayer = () => {
                         </div>
                     ))
                 }
+                <ThemeToggle />
             </div>
 
             <div className='video__button'>
@@ -60,4 +65,4 @@ const CoursePlayer = () => {
         </>
     )
 }
-export default CoursePlayer
+export default CoursePlayerReact
