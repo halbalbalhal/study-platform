@@ -4,11 +4,24 @@ import Button from '../../components/Button/Button'
 
 import {data} from '../../data/CourcesData'
 import { useState } from 'react'
+import { onAuthStateChanged } from "firebase/auth"
+import { auth } from "../../firebase/userService"
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
 
 const Cources = () => {
 
-    // for searching on the page
     const [value, setValue] = useState('')
+    const [userName, setUserName] = useState()
+    const [render, setRender] = useState(0)
+
+    if(!render){
+        onAuthStateChanged(auth, (user) => {
+            setUserName(user.displayName)
+            setRender(1)
+        })
+    }
+
 
     const filteredData = data.filter(cource => {
         return cource.cource_name.toLowerCase().includes(value.toLowerCase()) 
@@ -28,13 +41,28 @@ const Cources = () => {
                             <span>{cource.cource_name}</span>
                             <div className={styles.coruce__button}>
                                 <Button tapEvent={() => {
-                                    window.location.href = cource.link
+                                    if (!userName) {
+                                        toast('you must be logged in to watch the content')
+                                    } else {
+                                        window.location.href = cource.link
+                                    }
                                 }} title={cource.cource_button} />
                             </div>
                         </div>
                     ))
                 }
             </div>
+            <ToastContainer
+                position='top-right'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </section>
         </>
     )
