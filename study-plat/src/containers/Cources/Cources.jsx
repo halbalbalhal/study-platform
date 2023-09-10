@@ -35,9 +35,9 @@ const Cources = () => {
             <input className={styles.course__input} onChange={(event) => setValue(event.target.value)} placeholder={"Looking for something?"} />
             <div className={styles.cources__wrapper}>
                 {
-                    filteredData.map((cource) =>(
-                        <div className={styles.cource__block}>
-                            <img src={cource.cource_logo} />
+                    filteredData.map((cource) => (
+                        <div key={cource.id} className={styles.cource__block}>
+                            <img src={cource.cource_logo} alt='did not find' />
                             <span>{cource.cource_name}</span>
                             <div className={styles.coruce__button}>
                                 <Button tapEvent={() => {
@@ -52,7 +52,8 @@ const Cources = () => {
                     ))
                 }
             </div>
-            <ToastContainer
+        </section>
+        <ToastContainer
                 position='top-right'
                 autoClose={5000}
                 hideProgressBar={false}
@@ -62,8 +63,7 @@ const Cources = () => {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-            />
-        </section>
+        />
         </>
     )
 }

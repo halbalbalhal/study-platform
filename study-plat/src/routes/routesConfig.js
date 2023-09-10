@@ -55,12 +55,12 @@ const routesConfig = [
         element: <Cources />
     },
     {
-        path: '/**',
+        path: '*',
         exact: true,
         element: <Error value='404' text='Server error' description='Page not found' />
     },
     {
-        path: '/*',
+        path: '/profile',
         exact: true,
         element: <Profile />
     },
