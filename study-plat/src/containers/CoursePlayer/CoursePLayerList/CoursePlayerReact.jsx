@@ -46,7 +46,7 @@ const CoursePlayerReact = () => {
             <div className="video-list">
                 {
                     reactCourse.map(r => (
-                        <div className="vid">
+                        <div key={r.id} className="vid">
                             <iframe allowFullScreen width="100" height="67" src={r.cource_link} ></iframe>
                             <h3 allowFullScreen className="title">{r.cource_title}</h3>
                         </div>

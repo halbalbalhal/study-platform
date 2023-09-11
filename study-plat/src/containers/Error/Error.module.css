@@ -16,9 +16,9 @@
 
 .error__value {
     font-weight: 700;
-    font-size: 295px;
+    font-size: 135px;
     color: var(--light-purple-color);
-    line-height: 295px;
+    line-height: 195px;
 }
 
 .error__text {
